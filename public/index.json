@@ -1,0 +1,239 @@
+[
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/",
+	"title": "Create a VPN environment",
+	"tags": [],
+	"description": "",
+	"content": "Create a VPN environment Before initiating and configuring the Site-to-Site VPN connection, we need to create a branch emulator (ASG VPN) environment like the architecture below.\nContent Create ASG VPN VPC, 2 subnets, Internet Gateway Initiate EC2 on ASG VPN VPC "
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/4.1-createec2/",
+	"title": "Create EC2 Server",
+	"tags": [],
+	"description": "",
+	"content": "Create EC2 Instances in Subnets Access the AWS Management Console:\nNavigate to EC2 Click on Instances In the EC2 interface:\nSelect Instances Choose Launch instances Provide a Name and tags for the instance, enter EC2 Public\nChoose the AMI:\nSelect Quick Start Choose Amazon Linux 2 Select an AMI Select an Instance type and opt to Create a new key pair\nIn the Create key pair interface:\nSpecify the Key pair name, e.g., aws-keypair (optional name, you can set any). Choose Key pair type: RSA Select Private key file format: .pem Configure the Network:\nSelect the VPC: ASG Choose the Subnet: Public Subnet 1 Enable Auto-assign public IP For Firewall (Security Group), select Select existing security group Choose Public subnet -SG Click Launch instance Complete the instance creation\nWait for about 5 minutes until the Status check shows 2/2 checks passed\nCreate EC2 in a Private Subnet In the EC2 interface:\nSelect Instances Choose Launch instances Provide a Name and tags, enter EC2 Private\nChoose the AMI:\nSelect Quick Start Choose Amazon Linux 2 Select an AMI Make an instance type selection. Choose Key pair name: aws-keypair Configure the Network:\nSelect the VPC: ASG VPC Choose the Subnet: Private subnet 2 Disable Auto-assign public IP. If not disabling it, ensure you\u0026rsquo;ve checked the configuration for automatically allocating public IP for the subnet. Complete the instance creation:\nClick View all instances Select EC2 Private:\nChoose Details Store Private IPv4 addresses "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/",
+	"title": "Create Virtual Private Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create Virtual Private Gateway Access to VPC\nSelect Virtual Private Gateway Select Create Virtual Private Gateway In the Create Virtual Private Gateway interface\nName tag, enter VPN Gateway Select Amazon default ASN Select Create virtual private gateway Implement Attach to VPC\nSelect Actions Select Attach to VPC In the Attach to VPC interface\nSelect VPC ASG. Select Attach to VPC Finish and observe State as Attached\n"
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/3.1-createvpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create VPC Access the AWS Management Console interface: Locate and click on VPC Choose VPC Within the VPC interface: Select Your VPC Click on Create VPC Follow these steps to create a VPC: Choose Resource and select VPC only Enter Name tag as ASG Set IPv4 CIDR to 10.10.0.0/16 ::: warning Important Note For the Tenancy configuration, it\u0026rsquo;s recommended to keep the default setting. Switching to Dedicated may restrict the creation of certain EC2 Instance types within the VPC, as they require the default tenancy. :::\nClick on Create VPC Complete the process of creating the VPC Review the details of the newly created VPC. Ensure that Enable DNS resolution and DNS Hostname is disabled: Go to Edit VPC settings Navigate to DNS settings Choose and then click Save "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/",
+	"title": "Create VPC for VPN",
+	"tags": [],
+	"description": "",
+	"content": "Create a VPN Environment Access VPC Interface Select Your VPC Select Create VPC In the Create VPC Interface Resource: Select VPC only Name: Enter ASG VPN IPv4 CIDR block: Enter 10.11.0.0/16 Select Create VPC Successfully Create VPC Access VPC Interface Select Subnets Select Create subnet In the Create Subnet Interface Select ASG VPN VPC In the Subnet Settings Interface Subnet name: Enter VPN Public Select Availability Zone: ap-southeast-1a Select IPv4 CIDR block as 10.11.1.0/24 according to the architecture described Successfully Created VPN Public In the VPC Interface Select Subnets Select VPN Public Select Actions Select Edit Subnet Settings Execute Auto-assign IP Settings Select Enable auto-assign public IPv4 address Select Save Successful IP Allocation In the VPC Interface Select Internet Gateway Select Create Internet Gateway In the Create Internet Gateway Interface Name tag: Enter Internet Gateway VPN Select Create Internet Gateway After Creating Internet Gateway VPN Successfully and State is Detached Select Actions Select Attach to VPC Select VPC ASG VPN, VPC ID Will Be Automatically Filled In Select Attach Internet Gateway Attach Succeeds When State is Attached Create a Route Table to Route Out to the Internet Through the Internet Gateway In the VPC Interface Select Route Tables Select Create Route Table In the Create Route Table Interface Name: Enter Route table VPN - Public Select VPC named ASG VPN, VPC ID Will Be Automatically Filled In Select Create Route Table Successfully Created Route Table In the Route Table VPN - Public Interface Select Route Select Edit Route In the Edit Routes Interface Select Add Route Fill in the Destination CIDR: 0.0.0.0/0 representing the Internet In the Target section, select Internet Gateway, then select the Internet Gateway VPN we created. Internet Gateway ID Will Be Automatically Filled In Select Save Changes Complete and Test the Route\nIn the Route Table VPN - Public Interface\nSelect Subnet Associations Select Edit Subnet Associations In the Edit Subnet Associations Interface Expand the Subnet ID column by dragging the pane to the right Select Subnet VPN Public Select Save Associations Complete and Recheck Routes "
+},
+{
+	"uri": "//localhost:1313/",
+	"title": "Deploy fullstack app with three-tier architecture",
+	"tags": [],
+	"description": "",
+	"content": "Deploy fullstack app with three-tier architecture Overview In this workshop, we will deploy a fullstack application with three tier architecture. Then find out the definition, feature of each service used in this architecture.\nContent Introduction Preparation steps Create database with RDS Deploy App tier Create Internal LB and ASG Deploy Web tier Create External LB and ASG Clean up resources "
+},
+{
+	"uri": "//localhost:1313/1-introduce/1.1-flowexplaination/",
+	"title": "Flow explaination",
+	"tags": [],
+	"description": "",
+	"content": "Flow explaination of three-tier architecture In the diagram below, we will see the architectural model of a fullstack application implementing three-tier architecture. First, the user operation will go through the Internet gateway and then to the External (Internet facing) Application Load Balancer. Load Balancer will forward traffic to servers in the Web tier. Then the servers in the Web tier will call APIs to the Interal Load Balancer. Load Balancer will then forward traffic to servers in the App tier. Finally, the servers in the App tier will process the request, retrieve data in the Data tier (if necessary) and return results to users in the Web tier. This is the basic three-layer architectural model that we will implement in this workshop.\n"
+},
+{
+	"uri": "//localhost:1313/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Introduction to three-tier architecture The three-tier architecture is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.\nThree-tier architecture includes:\nPresentation tier / Web Tier: interface layer so users can interact directly (eg: website or mobile application UI). Logic tier / App tier: layer to process logic and execute user commands. Data tier: data storage layer of the app. Advantages of implementing three-tier architecture:\nModularity: this architecture helps us modularize the app into independent parts. This helps the dev team focus on developing each layer of the app, resulting in changes being applied as quickly as possible. In addition, it also helps recover the app faster after the server is down due to an error or disaster thanks to being able to localize and repair the faulty part. High availability: because the architecture deploys applications across multiple Availability Zones, the AZs are designed so that there is no failure that affects 2 AZs at the same time (fault isolation). High redundancy: AWS allows deploying a stand by or replica version of the primary database on the remaining AZ. If the main database is down, the application can still retrieve data from the replica database. "
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.1-clonecodefromgithub/",
+	"title": "Security Group",
+	"tags": [],
+	"description": "",
+	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/",
+	"title": "Configure VPN Connection",
+	"tags": [],
+	"description": "",
+	"content": "Configure VPN Connection In this step, we will proceed to set up a Virtual Private Gateway, Customer Gateway, and VPN Site-to-Site connection.\nContent: Create Virtual Private Gateway Create Customer Gateway Create VPN Connection Customer Gateway Configuration Configure VPN Tunnel "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/",
+	"title": "Create Customer Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create Customer Gateway Access the VPC:\nNavigate to Customer Gateways Click on Create Customer Gateway In the Create Customer Gateway interface:\nSet the Name tag to Customer Gateway Enter the IP address as the public IP address of the EC2 Customer Gateway server Click on Create Customer Gateway Wait for approximately 5 minutes for the Customer Gateway creation to complete:\n::: tip Note According to the architectural model, the Customer Gateway will reside in the VPC in the on-premise environment. The current action declares to AWS the intent to create a Customer Gateway with a public IP address, which corresponds to the public address of the EC2 instance. This Customer Gateway is located in the ASG VPN VPC. :::\n"
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/",
+	"title": "Create EC2 as a Customer Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create EC2 as a Customer Gateway Access to VPC\nSelect Security Group Select Create security group In the Create security group interface\nSecurity group name: Enter VPN Public -SG Description: Allow IPSec, SSH, and Ping for servers in the public subnet. VPC: Select ASG VPN VPC Configure Inbound rules\nSelect Add rule Type: SSH, Source: My IP (Your public IPv4 address). Click Add rule to add a new rule. Type: All ICMP IPv4, Source: Anywhere (Allow ping from any IP address). Click Add rule to add a new rule. Type: Custom UDP, Port: 400, Source: Anywhere. Click Add rule to add a new rule. Type: Custom TCP, Port: 500, Source: Anywhere. Check Outbound rules and select Create security group\nComplete the creation of VPN Public - SG. A Security Group has been created. Next, we will proceed to create an EC2 server that plays the Customer Gateway role.\nAccess to EC2\nSelect Instances Select Launch instances In the Launch instances interface\nName: Enter Customer Gateway instance Executing AMI Selection\nSelect Quick Start Select Amazon Linux Select AMI Select Instance type and select Key pair: aws-keypair (keypair created with instances)\nConfigure Network\nVPC: Select ASG VPN VPC Subnet: Select VPN Public Auto-assign public IP: Select Enable Firewall: Select Select existing security group Select VPN Public - SG Check again and select Launch instance Finish creating the EC2 instance\nSelect View all instances View details of the Customer Gateway instance\n"
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/3.2-createsubnet/",
+	"title": "Create Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Create Subnet In the VPC Interface:\nSelect Subnets Select Create subnet In the Create subnet Interface:\nSelect ASG VPC Implement Subnet Settings:\nSubnet name: Enter Public Subnet 1 Select AZ ap-southeast-1a IPv4 CIDR block: Import 10.10.1.0/24 according to the architecture description Select Create subnet Finish Creating Subnet\nFollow the same steps to create more subnets:\nPublic subnet 2 with CIDR of 10.10.2.0/24 located in Availability Zone ap-southeast-1b Private subnet 1 with CIDR of 10.10.3.0/24 located in Availability Zone ap-southeast-1a Private subnet 2 with CIDR of 10.10.4.0/24 located in Availability Zone ap-southeast-1b Note: You can see there are 2 columns: Availability Zone and Availability Zone ID. To avoid uneven usage of EC2 resources (for example, using AZ a for primary and AZ b for standby), AWS randomly assigns Availability Zone into Availability Zone ID. Availability Zone is an alias, and Availability Zone ID is the identifier. For instance, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.\nAllow Automatic Allocation of Public IP Addresses for 2 Public Subnets Tip: Another important point to note is that even though the subnets are the same, configuring the routing table and allocating a public IP address allows us to distinguish between Public and Private Subnets.\nIn the VPC Interface:\nSelect Subnets Select Public Subnet 1 Select Actions Select Edit subnet settings Under Auto-assign IP settings:\nSelect Enable auto-assign public IPv4 address Select Save Repeat the same process for Public subnet 2.\n"
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.2-networkacls/",
+	"title": "Network ACLs",
+	"tags": [],
+	"description": "",
+	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/",
+	"title": "Preparation Steps",
+	"tags": [],
+	"description": "",
+	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/4.2-connectec2/",
+	"title": "Test Connection",
+	"tags": [],
+	"description": "",
+	"content": "Checking Connection ℹ️ Note: There are several ways to connect to EC2 instances. You can follow the instructions to connect to EC2 using PuTTY. In this lab, we will use MobaXterm to establish the connection.\nDownload MobaXterm\nAccess the EC2 Page\nGo to the EC2 page. Select Instances. Choose the EC2 Public instance. Select Details. Locate the Public IPv4 address. Using MobaXterm\nAfter downloading MobaXterm, extract and open it. Select Session. Configuring Session Settings\nIn the Session settings interface, choose SSH. Session Settings Continued\nIn the Session settings interface: Enter the Remote host (Public IPv4 address). Specify the username as ec2-user. Choose the Use private key option and provide the path to the aws-keypair.pem file created and downloaded during EC2 instance creation. Successful Connection\nTesting Internet Connection of EC2 Public\nExecute the following command to test the internet connection of the EC2 Public instance\nping amazon.com -c5 Make a ping to EC2 private ping \u0026lt;IP Private EC2 Private\u0026gt; Connect to the EC2 Private Server and Check Internet Connection Access to EC2\nSelect Instances Select EC2 Private Select Details Select Private IPv4 addresses Then connect SSH to EC2 Public Perform a ping test to the EC2 Private\u0026rsquo;s private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command: ping 10.10.4.105 -c5 EC2 Private will not have a public IP address because we are not assigning this server a public IP. To be able to ssh into EC2 Private, we will make an ssh connection from EC2 Public through EC2 Private private IP address\nDownload the pscp tool to the same folder containing the aws-keypair.ppk file to copy the aws-keypair.pem file from our computer to EC2 Public . You download an RSA and DSA key generation utility as puttygen.exe\nYou download an SCP client, i.e. command-line secure file copy is pscp.exe\nWe use puttygen.exe to generate key\nSelect Load Select aws-keypair.pem\nSelect OK Select Save private key with the name aws-keypair.ppk Complete the generation key Launch Command Prompt. Change the path to the folder you just downloaded pscp. Run the command below to upload the aws-keypair.pem file to the /home/ec2-user/ directory of the EC2 Public server.\nYou will need to replace the public IP address of EC2 Public parameter before running the command. pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@\u0026lt;EC2 PUBLIC public IP address\u0026gt;:/home/ec2-user/ Access to EC2\nSelect Instances Select EC2 Public Select Details View Public IPv4 address Return to the EC2 connection interface. Make sure you copy the aws-keypair.pem file to the EC2 Public server, we execute the command ls Update the permissions for the aws-keypair.pem file by running the chmod 400 aws-keypair.pem command. AWS requires the key pair file to be restricted before it can be used to connect to the EC2 server. chmod 400 aws-keypair.pem SSH to EC2 Private server ssh -i aws-keypair.pem ec2-user@\u0026lt;EC2 Private server\u0026#39;s private IP address\u0026gt; Perform ping test to amazon.com. As you can see, we cannot connect internet from EC2 Private. In the next step, we will create NAT Gateway to allow the EC2 Private server to connect to the internet in the outbound direction. Keep the connection to EC2 Private so that we can check the connection to internet after finishing creating and configuring NAT Gateway. ping amazon.com "
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/",
+	"title": "Create Database with RDS",
+	"tags": [],
+	"description": "",
+	"content": "Create Database with RDS In this exercise, we will be constructing a model based on the following diagram:\nContent Create VPC Create Subnet Create Internet Gateway Create Route Table Create Security Group "
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/3.3-createigw/",
+	"title": "Create Internet Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create an Internet Gateway In the VPC interface:\nSelect Internet Gateways Click on Create internet gateway\nConfigure the internet gateway:\nEnter Internet Gateway for the Name tag Click on Create internet gateway\nComplete the creation of the Internet Gateway\nImplement Attach VPC:\nClick on Actions Click on Attach to VPC Select ASG; the VPC ID will be automatically populated Click on Attach internet gateway\nOnce attached successfully, the State of the internet gateway will change to Attached\n"
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/4.3-natgateway/",
+	"title": "Create NAT Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create NAT Gateway Access EC2: Select Elastic IPs Select Allocate Elastic IP address In the Allocate Elastic IP address interface: Public IPv4 address pool: Select Amazon\u0026rsquo;s pool of IPv4 addresses Select Allocate Successfully created a Public IP Address Access VPC: Select NAT Gateways Create NAT gateway In NAT gateway interface: Name: Enter NAT gateway Subnet: Select Public subnet 2 Connectivity type: Select Public Elastic IP allocation ID: Select recently created Elastic IP Select Create NAT gateway Successfully created NAT gateway Create Route table - Private and assign to private subnets In the VPC interface: Select Route Tables Select Create route table In the Route table interface: Name: Enter Route table - Private VPC: Select ASG VPC Select Create route table Finish creating Route table - Private In the Route table - Private interface: Select Subnet Associations Select Edit subnet associations In the Edit subnet associations interface: Choose 2 private subnets Select Save associations In the Route table - Private interface: Select Routes Select Edit routes In the Edit routes interface: Select Add route Destination: 0.0.0.0/0 Target: NAT Gateway Select Save changes Double check Routes Test ping amazon.com successfully from EC2 Private: ping amazon.com -c5 "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/",
+	"title": "Create VPN Connection",
+	"tags": [],
+	"description": "",
+	"content": "Create a VPN Connection Access VPC:\nSelect Site-to-Site VPN Connections Select Create VPN Connection In the Create VPN Connection Interface:\nName Tag: Enter VPN Connection Target Gateway Type: Select Virtual Private Gateway Virtual Private Gateway: Select VPN Gateway Customer Gateway: Existing Customer Gateway ID: Select Customer Gateway Continue to Perform Configuration:\nRouting Options: Static Static IP Prefixes: 10.11.0.0/16. This is the IP address resolution in a simulated On-premise environment. Other configurations keep the default. Select Create VPN Connection\nWait for about 5 minutes to finish creating the VPN Connection\nConfigure Propagation for Route Tables:\nIn the VPC interface, select Route Tables Select Route table - Public Select Route Propagation Select Edit Route Propagation In the Edit Route Propagation Interface:\nSelect Enable Select Save Complete and Recheck: Route Propagation should have changed to Yes\nSimilar Route Propagation for Private Subnet:\n"
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.3-vpc-resource-map/",
+	"title": "VPC Resource Map",
+	"tags": [],
+	"description": "",
+	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/3.4-cretaeroutetable/",
+	"title": "Create Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Create Route Table for Outbound Internet Routing via Internet Gateway In the VPC interface:\nSelect Route Tables. Click on Create route table. Configure the Route table:\nEnter a Name: Route table-Public Choose the VPC: Select ASG VPC (VPC ID will auto-fill). Click on Create route table. Complete creating the Route table.\nTo make route edits:\nSelect Actions. Choose Edit routes. In the Edit routes interface:\nClick on Add route. Fill in the Destination CIDR: 0.0.0.0/0 representing the Internet. In the Target section, select Internet Gateway, then choose the created Internet Gateway (Gateway ID auto-fills). Click Save changes. Review and confirm the updated Routes.\nEnsure that Route table - Public is selected.\nSelect Subnet Associations. Click on Edit subnet associations. In the Edit subnet associations step:\nAdjust the width of the Subnet ID column by dragging the pane to the right. Select the appropriate 2 public subnets that were created. Click on Save associations.\nReview and confirm the updated Subnet associations.\n"
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/",
+	"title": "Customer Gateway Configuration",
+	"tags": [],
+	"description": "",
+	"content": "Configure Customer Gateway Access to VPC Select Site-to-Site VPN Connection Select VPN Connection created Select Download Configuration Download Configuration In the Download Configuration dialog, choose the appropriate appliance, e.g., OpenSwan. Vendor: Select OpenSwan Platform: Select OpenSwan Software: Select OpenSwan 2.6.38+ IKE version: Select ikev1 Select Download. Save the image file information to the folder used for storing the key pair and lab tools. Modify the configuration based on your device. Connect SSH to EC2 Customer Gateway.\nInstall OpenSwan sudo su\ryum install openswan -y Check the configuration file /etc/ipsec.conf vi /etc/ipsec.conf Check the configuration is as shown below. Press the ESC key and the combination :q! to exit the vi editor. Configuration file /etc/sysctl.conf vi /etc/sysctl.conf Move down to the last position in the configuration file. Press the i key to proceed with editing the file. Add the following configuration at the end of the configuration file. net.ipv4.ip_forward = 1\rnet.ipv4.conf.all.accept_redirects = 0\rnet.ipv4.conf.all.send_redirects = 0 Press the ESC key and the combination :wq! to save the configuration file. Then to apply this configuration, run the command: sysctl -p Next we will configure the file /etc/ipsec.d/aws.conf vi /etc/ipsec.d/aws.conf Press i to proceed to edit the file. Add the following configuration to the configuration file. We will create 2 Tunnel with information taken from the VPN Connection configuration file you downloaded and saved in the folder containing the key pair earlier. Make sure you edit the IP address and network class accordingly before copying the above configuration. For Amazon Linux, we will omit the auth=esp line in the original configuration file. Since we only have 1 public IP addres for Customer Gateway, we will need to configure overlapip=yes. leftid: IP Public Address on the Onprem side. (Here is public IP of EC2 Customer Gateway in ASG VPN VPC) . right: IP Public Address on AWS VPN Tunnel side. leftsubnet: CIDR of Local Side Network (If there are multiple network layers, you can leave it as 0.0.0.0/0). rightsubnet: CIDR of Private Subnet on AWS. conn Tunnel1\rauthby=secret\rauto=start\rleft=%defaultroute\rleftid=13.229.235.99\rright=52.220.214.148\rtype=tunnel\rikelifetime=8h\rkeylife=1h\rphase2alg=aes128-sha1;modp1024\rike=aes128-sha1;modp1024\rkeyingtries=%forever\rkeyexchange=ike\rleftsubnet=\u0026lt;LOCAL NETWORK\u0026gt;\rrightsubnet=\u0026lt;REMOTE NETWORK\u0026gt;\rdpddelay=10\rdpdtimeout=30\rdpdaction=restart_by_peer\roverlapip=yes\rconn Tunnel2\rauthby=secret\rauto=start\rleft=%defaultroute\rleftid=13.229.235.99\rright=54.179.66.207\rtype=tunnel\rikelifetime=8h\rkeylife=1h\rphase2alg=aes128-sha1;modp1024\rike=aes128-sha1;modp1024\rkeyingtries=%forever\rkeyexchange=ike\rleftsubnet=\u0026lt;LOCAL NETWORK\u0026gt;\rrightsubnet=\u0026lt;REMOTE NETWORK\u0026gt;\rdpddelay=10\rdpdtimeout=30\rdpdaction=restart_by_peer\roverlapip=yes Press the ESC key and the combination :wq! to save the configuration file. Check the next step in the configuration file we downloaded. Create and configure the file etc/ipsec.d/aws.secrets Create a new file with the following configuration to set up authentication for the 2 Tunnels.\nRun the command touch /etc/ipsec.d/aws.secrets to create the file. touch /etc/ipsec.d/aws.secrets - Run the command **vi /etc/ipsec.d/aws.secrets**\rvi /etc/ipsec.d/aws.secrets Press the i key to edit the file.\nAdd the following configuration to the end of the configuration file (this configuration is in step 5 of IPSEC Tunnel #1 and IPSEC Tunnel #2) 13,229,235.99 52,220,214,148: PSK \u0026#34;zkq_xvwpA5HNictmh6x6tVCKozVHxcpA\u0026#34;\r13,229,235.99 54,179,66,207: PSK \u0026#34;c0WdOkBj4gtJ2jaGrmeA2bZ_4ZaN50o3\u0026#34; - Press the **ESC** key and the combination **:wq!** to save the configuration file.\r- Run the command **cat /etc/ipsec.d/aws.secrets** to check the content of the configuration file\rRestart Network service \u0026amp; IPSEC service service network restart\rchkconfig ipsec on\rservice ipsec start\rservice ipsec status If the status tunnel is still not running correctly, after checking and updating the configuration you will need to run the command to restart service network and IPsec : sudo service network restart\rsudo service ipsec restart After completing the configuration.Try to ping from the Customer Gateway server side to the EC2 Private server. If the VPN configuration is successful you will get the result as below. ping \u0026lt;EC2 Private IP\u0026gt; -c5 After completing the configuration.Try to ping from the EC2 Private server side to the Customer Gateway server. If the VPN configuration is successful you will get the result as below. ping \u0026lt;Customer gateway instance IP\u0026gt; -c5 "
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/",
+	"title": "Deploy Application Tier",
+	"tags": [],
+	"description": "",
+	"content": "Deploy Application Tier In this step, we will create 2 EC2 servers (EC2 instances) following the architecture shown below:\nContent Create EC2 Server Test Connection Create NAT Gateway Using Reachability Analyzer "
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/4.4.-createreachabilityanalyzer/",
+	"title": "Using Reachability Analyzer",
+	"tags": [],
+	"description": "",
+	"content": "Using Reachability Analyzer Access to VPC interface\nSelect Reachability Analyzer Select Create and analyze path Implement Path Configuration\nName tag, enter EC2 private with EC2 Public For Source type, select Instance Select source as EC2 Public For Destination type, select Instance For Destination, select EC2 Private The remaining parameters are left to default. Select Create and analyze path Wait 5 minutes will show the Reachable status Then see path details. View reverse path details. "
+},
+{
+	"uri": "//localhost:1313/4-deployapptier/4.5-eicendpoint/",
+	"title": "Create EC2 Instance Connect Endpoint (Optional)",
+	"tags": [],
+	"description": "",
+	"content": "EC2 Instance Connect Endpoint In step 4.2 test connection, to access EC2 Private you need to:\nUse the pscp tool to copy the key pair from our machine to EC2 Public Access EC2 Public Grant permission to key pair SSH to EC2 Private server -\u0026gt; As you can see, now EC2 Public acts as Bastion Host and we need to pay for this instance. So is there a way to save costs, reduce configuration steps while still accessing EC2 Private and ensuring security?\nOn June 13, 2023, AWS launched the EC2 Instance Connect Endpoint (EIC Endpoint) function to help customers access EC2 instances without needing public IP addresses, through the protocol SSH and RDP.\nEIC Endpoint replaces Bastion Host, which means eliminating the workload: patching, managing, auditing and the cost of the previous Bastion Host instance. There are no additional costs for EIC Endpoint, however data transfer costs will apply\nArchitecture description EIC Endpoint Create Security Group for EIC Endpoint\nIn the search box, enter: security groups, in the features section select Security groups Select Create security group In the Security group name section, enter EIC Endpoint\nIn the Description section, enter Allow SSH for MyIP\nIn the VPC section, select ASG VPC\nSelect Add rule In the Type section, select protocol SSH\nIn the Source section, select My IP with the meaning: only allow your IP address with SSH protocol to pass through this Security group\nThe remaining values ​​remain the same.\nSelect Create security group Create EC2 Instance Connect Endpoint\nIn the search box, enter: endpoint services , in the Features section select endpoint services Select Create endpoint In the Name tag section, enter: EC2 private endpoint\nIn the Service category section, select: EC2 Instance Connect Endpoint\nIn VPC section, select ASG-VPC In the Security groups section, select: EIC Endpoint created in step 1\nIn the Subnet section, select: subnet-0da7e5096deb895e1 (Private subnet 2) is the subnet of EC2 Private\nSelect Create endpoint Wait for Status to change to Available and go to the next step Access EC2 Private via EC2 Instance Connect Endpoint\nAt the EC2 interface, check the box of EC2 Private\nIn the Public IPv4 address section, check and see: there is no Public IP value - meaning we cannot access this EC2 via Public IP\nSelect Connect In the Connection Type section, select Connect using EC2 Instance Connect Endpoint\nIn the EC2 Instance Connect Endpoint section, select the EIC just created in step 2\nSelect Connect Congratulations, you have successfully accessed EC2 Private via EC2 Instance Connect Endpoint only from your IP address Note:\nNormally, you will do the lab using a user with AdministratorAccess permission . In the opposite case, you need to refer to the documentation to grant the User permission to operate the above steps. IAM permissions to use EC2 Instance Connect Endpoint "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/",
+	"title": "Create Internal Load Balancer and Auto Scaling Group",
+	"tags": [],
+	"description": "",
+	"content": "In this guide, we will discuss how to connect an On-premise data center to Amazon VPC using a hard or soft VPN, depending on the specific requirements. To establish a Site-to-Site VPN connection, the following steps need to be taken:\n1. Virtual Private Gateway (VPG) and Customer Gateway (CGW) Setup Virtual Private Gateway (VPG): This serves as the control center that connects the virtual private network (VPN) within AWS.\nCustomer Gateway (CGW): This component represents the hard or soft VPN device located at the Client\u0026rsquo;s end.\n2. VPN Tunnel Establishment A VPN tunnel will be initiated as soon as data traffic is exchanged between AWS and the client\u0026rsquo;s network. It is important to specify the routing type to ensure secure and efficient data transmission:\nIf the CGW on the client side supports Border Gateway Protocol (BGP), dynamic routing should be configured for the VPN connection.\nIf not, static routing must be set up. For static routing, specific routes must be entered to establish the connection from the client\u0026rsquo;s side to the VPG at AWS. Additionally, the VPC routing must be configured to allow seamless data exchange within the VPN tunnel.\n3. VPG, CGW, and VPN Features Some key features of VPG, CGW, and VPN include:\nVPG: The terminal component of the VPN tunnel within AWS.\nCGW: Can be either a hardware device or a software application located at the Client\u0026rsquo;s end in the VPN tunnel.\nVPN tunnel connections are initiated from CGW to VPG.\nVPG supports both dynamic routing (BGP) and static routing.\nEach VPN connection comprises two tunnels for high availability.\n4. Lab Setup and Configuration The lab provides hands-on experience in setting up a Site-to-Site VPN connection in AWS. This solution is popular due to its cost-effectiveness and ease of configuration, as AWS offers instructions for various types of client devices. The primary responsibility of the customer is to prepare the internet connection, which will establish a secure tunnel (using IPSec) connecting to AWS via the VPN tunnel.\nIn the lab scope, there are two VPCs: the Main office (VPC ASG) and the Branch office (VPC ASG VPN), located in different Availability Zones (AZs) to ensure network diversity. While EC2 instances can be created in each VPC with external SSH access, they cannot communicate or ping each other using private IP addresses. The goal is to configure the VPN to enable private IP addresses to communicate over the Site-to-Site VPN.\nContent: Create ASG VPN VPC and subnet Configure Site to Site VPN and test connection with private IP "
+},
+{
+	"uri": "//localhost:1313/3-createdbwithrds/3.5-createsecuritygroup/",
+	"title": "Create Security Group",
+	"tags": [],
+	"description": "",
+	"content": "Create Security Groups Create Security Group for Servers in Public Subnet In the VPC interface:\nSelect Security Group Select Create security group Configure the Security Group:\nSecurity Group name: Enter Public subnet - SG Description: Enter Allow SSH and Ping for servers in the public subnet. Select the ASG VPC Configure Inbound rules:\nIn Inbound rules, click Add rule. Select Type: SSH and Source: My IP. (Use your public IPv4 address) Select Add rule to add a new rule. Select Type: All ICMP - IPv4 and Source: Anywhere. Allow ping from any IP address. Check Outbound rules and select Create security group\nComplete the creation of the security group for the server located in the public subnet\nCreate a Security Group for a Server in a Private Subnet In the VPC interface:\nSelect Security Groups Select Create security group Configure the Security Group:\nIn the Security group name field, enter Private subnet - SG In the Description section, enter Allow SSH and Ping for servers in the private subnet. Select the VPC named ASG Configure Inbound rules:\nIn Inbound rules, select Add rule. Select Type: SSH and leave Source: Custom. Search and select Public subnet SG to allow SSH from servers in the public subnet. Select Add rule to add a new rule:\nSelect Type: All ICMP IPv4 and Source: Anywhere. Allow ping from any IP address. Select Create security group\nTwo Security Groups have been created for servers located in the public and private subnets:\nNext, we will proceed to create two EC2 servers. "
+},
+{
+	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/",
+	"title": "Modify AWS VPN Tunnel",
+	"tags": [],
+	"description": "",
+	"content": "Modify AWS VPN Tunnel Access the VPC Interface:\nGo to Site-to-Site VPN connections. Choose the recently created VPN. Click on Actions. Select Modify VPN tunnel options. Choose the VPN Tunnel Outside IP Address:\nConfirm UP Tunnel Modification and Keep Other Parameters Default:\nEnable Tunnel Activity Log:\nEnable Tunnel activity log. Choose an existing Amazon CloudWatch log group (or create one in CloudWatch if not already done). Set Output format to text. Click Save changes. Access CloudWatch:\nNavigate to Log groups. Go to Log streams. Choose a log stream. View Log Events:\nRepeat the Process for the Remaining Tunnel(s):\nVerify That Both Tunnels are UP:\n"
+},
+{
+	"uri": "//localhost:1313/6-deploywebtier/",
+	"title": "Deploy Web Tier",
+	"tags": [],
+	"description": "",
+	"content": "Deploy Web Tier\u0026quot; We will proceed to delete the resources in the following order:\nTerminate EC2 Instances Terminate EC2 instance:\nAccess the Amazon EC2 console at EC2. On the left navigation bar, select \u0026ldquo;Instances.\u0026rdquo; Select all EC2 instances related to the lab. Select Instance state. Select Terminate instance. Confirm termination.\nRemove NAT Gateway and Elastic IP Address Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;NAT Gateway.\u0026rdquo;\nSelect NAT Gateway.\nClick Action.\nClick Delete NAT Gateway.\nType \u0026ldquo;delete.\u0026rdquo;\nClick Delete to confirm the deletion of NAT Gateway.\nDelete Elastic IP Address Continue to delete Elastic IP Address.\nVisit the Amazon VPC console page at VPC.\nOn the left navigation bar, click \u0026ldquo;Elastic IP.\u0026rdquo;\nSelect the Elastic IP Address we created.\nClick Action.\nClick Release Elastic IP Address.\nClick Release.\nDelete the EC2 Instance connection endpoint Access to Endpoint transactions Select Action, select Delete VPC endpoints Enter delete Delete in the following order: VPN Site to Site connection.\nVirtual Private Gateway.\nCustomer Gateway.\nVPC ASG VPN.\nVPC ASG.\n"
+},
+{
+	"uri": "//localhost:1313/7-createexternallbandasg/",
+	"title": "Create External Load Balancer and Auto Scaling Group",
+	"tags": [],
+	"description": "",
+	"content": "Create External Load Balancer and Auto Scaling Group\u0026quot; We will proceed to delete the resources in the following order:\n"
+},
+{
+	"uri": "//localhost:1313/8-cleanupresources/",
+	"title": "Clean Up Resources",
+	"tags": [],
+	"description": "",
+	"content": "Clean Up Resources\u0026quot; We will proceed to delete the resources in the following order:\n"
+},
+{
+	"uri": "//localhost:1313/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
