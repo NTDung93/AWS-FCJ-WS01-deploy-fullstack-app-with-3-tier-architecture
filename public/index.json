@@ -1,5 +1,12 @@
 [
 {
+	"uri": "//localhost:1313/2-preparationsteps/2.1-clonecodefromgithub/",
+	"title": "Clone Code from GitHub",
+	"tags": [],
+	"description": "",
+	"content": "Clone Code from GitHub Access the folder where you want to store the code.\nRight-click and select Open Git Bash Here. Type the command git clone https://github.com/NTDung93/library-app.git and press enter. Complete the code clone from GitHub. "
+},
+{
 	"uri": "//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/",
 	"title": "Create a VPN environment",
 	"tags": [],
@@ -56,13 +63,6 @@
 	"content": "Introduction to three-tier architecture The three-tier architecture is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.\nThree-tier architecture includes:\nPresentation tier / Web Tier: interface layer so users can interact directly (eg: website or mobile application UI). Logic tier / App tier: layer to process logic and execute user commands. Data tier: data storage layer of the app. Advantages of implementing three-tier architecture:\nModularity: this architecture helps us modularize the app into independent parts. This helps the dev team focus on developing each layer of the app, resulting in changes being applied as quickly as possible. In addition, it also helps recover the app faster after the server is down due to an error or disaster thanks to being able to localize and repair the faulty part. High availability: because the architecture deploys applications across multiple Availability Zones, the AZs are designed so that there is no failure that affects 2 AZs at the same time (fault isolation). High redundancy: AWS allows deploying a stand by or replica version of the primary database on the remaining AZ. If the main database is down, the application can still retrieve data from the replica database. "
 },
 {
-	"uri": "//localhost:1313/2-preparationsteps/2.1-clonecodefromgithub/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
 	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/",
 	"title": "Configure VPN Connection",
 	"tags": [],
@@ -84,18 +84,18 @@
 	"content": "Create EC2 as a Customer Gateway Access to VPC\nSelect Security Group Select Create security group In the Create security group interface\nSecurity group name: Enter VPN Public -SG Description: Allow IPSec, SSH, and Ping for servers in the public subnet. VPC: Select ASG VPN VPC Configure Inbound rules\nSelect Add rule Type: SSH, Source: My IP (Your public IPv4 address). Click Add rule to add a new rule. Type: All ICMP IPv4, Source: Anywhere (Allow ping from any IP address). Click Add rule to add a new rule. Type: Custom UDP, Port: 400, Source: Anywhere. Click Add rule to add a new rule. Type: Custom TCP, Port: 500, Source: Anywhere. Check Outbound rules and select Create security group\nComplete the creation of VPN Public - SG. A Security Group has been created. Next, we will proceed to create an EC2 server that plays the Customer Gateway role.\nAccess to EC2\nSelect Instances Select Launch instances In the Launch instances interface\nName: Enter Customer Gateway instance Executing AMI Selection\nSelect Quick Start Select Amazon Linux Select AMI Select Instance type and select Key pair: aws-keypair (keypair created with instances)\nConfigure Network\nVPC: Select ASG VPN VPC Subnet: Select VPN Public Auto-assign public IP: Select Enable Firewall: Select Select existing security group Select VPN Public - SG Check again and select Launch instance Finish creating the EC2 instance\nSelect View all instances View details of the Customer Gateway instance\n"
 },
 {
+	"uri": "//localhost:1313/2-preparationsteps/2.2-creates3bucket/",
+	"title": "Create S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Create S3 Bucket Access the AWS interface, find the S3 service and then click to select In the S3 interface, click Create bucket In the Create bucket interface: AWS Region select Singapore ap-southeast-1 Bucket name enter demowebapp-workshop-01 Scroll down to the bottom and select Create bucket Complete creating S3 bucket "
+},
+{
 	"uri": "//localhost:1313/3-createdbwithrds/3.2-createsubnet/",
 	"title": "Create Subnet",
 	"tags": [],
 	"description": "",
 	"content": "Create Subnet In the VPC Interface:\nSelect Subnets Select Create subnet In the Create subnet Interface:\nSelect ASG VPC Implement Subnet Settings:\nSubnet name: Enter Public Subnet 1 Select AZ ap-southeast-1a IPv4 CIDR block: Import 10.10.1.0/24 according to the architecture description Select Create subnet Finish Creating Subnet\nFollow the same steps to create more subnets:\nPublic subnet 2 with CIDR of 10.10.2.0/24 located in Availability Zone ap-southeast-1b Private subnet 1 with CIDR of 10.10.3.0/24 located in Availability Zone ap-southeast-1a Private subnet 2 with CIDR of 10.10.4.0/24 located in Availability Zone ap-southeast-1b Note: You can see there are 2 columns: Availability Zone and Availability Zone ID. To avoid uneven usage of EC2 resources (for example, using AZ a for primary and AZ b for standby), AWS randomly assigns Availability Zone into Availability Zone ID. Availability Zone is an alias, and Availability Zone ID is the identifier. For instance, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.\nAllow Automatic Allocation of Public IP Addresses for 2 Public Subnets Tip: Another important point to note is that even though the subnets are the same, configuring the routing table and allocating a public IP address allows us to distinguish between Public and Private Subnets.\nIn the VPC Interface:\nSelect Subnets Select Public Subnet 1 Select Actions Select Edit subnet settings Under Auto-assign IP settings:\nSelect Enable auto-assign public IPv4 address Select Save Repeat the same process for Public subnet 2.\n"
-},
-{
-	"uri": "//localhost:1313/2-preparationsteps/2.2-networkacls/",
-	"title": "Network ACLs",
-	"tags": [],
-	"description": "",
-	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
 },
 {
 	"uri": "//localhost:1313/2-preparationsteps/",
@@ -119,6 +119,13 @@
 	"content": "Create Database with RDS In this exercise, we will be constructing a model based on the following diagram:\nContent Create VPC Create Subnet Create Internet Gateway Create Route Table Create Security Group "
 },
 {
+	"uri": "//localhost:1313/2-preparationsteps/2.3-createec2role/",
+	"title": "Create IAM EC2 Role",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM EC2 Role Find IAM service on the search bar and click on it Choose Roles on the sidebar, then click Create role In the role creation interface, at Select trusted entity step: Trusted entity type choose AWS Service Use case choose EC2 Click Next In the role creation interface, at Add permissions step: Find, choose role AmazonSSMManagedInstanceCore (allow safe connection to instance without SSH key) and AmazonS3ReadOnlyAccess (allow instance to download code from S3) Click Next In the role creation interface, at Name, review, and create step: Fill in the role name as ec2role Review the 3 steps just set up Click Create role Finish creating role "
+},
+{
 	"uri": "//localhost:1313/3-createdbwithrds/3.3-createigw/",
 	"title": "Create Internet Gateway",
 	"tags": [],
@@ -140,18 +147,18 @@
 	"content": "Create a VPN Connection Access VPC:\nSelect Site-to-Site VPN Connections Select Create VPN Connection In the Create VPN Connection Interface:\nName Tag: Enter VPN Connection Target Gateway Type: Select Virtual Private Gateway Virtual Private Gateway: Select VPN Gateway Customer Gateway: Existing Customer Gateway ID: Select Customer Gateway Continue to Perform Configuration:\nRouting Options: Static Static IP Prefixes: 10.11.0.0/16. This is the IP address resolution in a simulated On-premise environment. Other configurations keep the default. Select Create VPN Connection\nWait for about 5 minutes to finish creating the VPN Connection\nConfigure Propagation for Route Tables:\nIn the VPC interface, select Route Tables Select Route table - Public Select Route Propagation Select Edit Route Propagation In the Edit Route Propagation Interface:\nSelect Enable Select Save Complete and Recheck: Route Propagation should have changed to Yes\nSimilar Route Propagation for Private Subnet:\n"
 },
 {
-	"uri": "//localhost:1313/2-preparationsteps/2.3-vpc-resource-map/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
 	"uri": "//localhost:1313/3-createdbwithrds/3.4-cretaeroutetable/",
 	"title": "Create Route Table",
 	"tags": [],
 	"description": "",
 	"content": "Create Route Table for Outbound Internet Routing via Internet Gateway In the VPC interface:\nSelect Route Tables. Click on Create route table. Configure the Route table:\nEnter a Name: Route table-Public Choose the VPC: Select ASG VPC (VPC ID will auto-fill). Click on Create route table. Complete creating the Route table.\nTo make route edits:\nSelect Actions. Choose Edit routes. In the Edit routes interface:\nClick on Add route. Fill in the Destination CIDR: 0.0.0.0/0 representing the Internet. In the Target section, select Internet Gateway, then choose the created Internet Gateway (Gateway ID auto-fills). Click Save changes. Review and confirm the updated Routes.\nEnsure that Route table - Public is selected.\nSelect Subnet Associations. Click on Edit subnet associations. In the Edit subnet associations step:\nAdjust the width of the Subnet ID column by dragging the pane to the right. Select the appropriate 2 public subnets that were created. Click on Save associations.\nReview and confirm the updated Subnet associations.\n"
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.4-createvpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create VPC Access AWS website and find VPC Choose Your VPCs, then click Create VPC Proceed to create VPC:\nResource, choose VPC only Name tag, enter my-vpc IPv4 CIDR, enter 10.10.0.0/16 Click Create VPC Finish creating VPC View details of the created VPC, go to Edit VPC setting:\nCheck 2 options Enable DNS resolution and Enable DNS hostnames Press button Save "
 },
 {
 	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/",
@@ -196,11 +203,25 @@
 	"content": "Create Security Groups Create Security Group for Servers in Public Subnet In the VPC interface:\nSelect Security Group Select Create security group Configure the Security Group:\nSecurity Group name: Enter Public subnet - SG Description: Enter Allow SSH and Ping for servers in the public subnet. Select the ASG VPC Configure Inbound rules:\nIn Inbound rules, click Add rule. Select Type: SSH and Source: My IP. (Use your public IPv4 address) Select Add rule to add a new rule. Select Type: All ICMP - IPv4 and Source: Anywhere. Allow ping from any IP address. Check Outbound rules and select Create security group\nComplete the creation of the security group for the server located in the public subnet\nCreate a Security Group for a Server in a Private Subnet In the VPC interface:\nSelect Security Groups Select Create security group Configure the Security Group:\nIn the Security group name field, enter Private subnet - SG In the Description section, enter Allow SSH and Ping for servers in the private subnet. Select the VPC named ASG Configure Inbound rules:\nIn Inbound rules, select Add rule. Select Type: SSH and leave Source: Custom. Search and select Public subnet SG to allow SSH from servers in the public subnet. Select Add rule to add a new rule:\nSelect Type: All ICMP IPv4 and Source: Anywhere. Allow ping from any IP address. Select Create security group\nTwo Security Groups have been created for servers located in the public and private subnets:\nNext, we will proceed to create two EC2 servers. "
 },
 {
+	"uri": "//localhost:1313/2-preparationsteps/2.5-createsubnets/",
+	"title": "Create Subnets",
+	"tags": [],
+	"description": "",
+	"content": "Create Subnets In VPC interface, choose Subnets on the sidebar, then click Create subnet In Create subnet interface, choose the VPC just created is my-vpc After choosing VPC, the Subnet settings will appear\nSubnet name, enter Public Subnet 1 Availability Zone, choose AZ Singapore ap-southeast-1a IPv4 CIDR block, enter 10.10.1.0/24 Choose Create subnet Finish creating Subnet Perform the same steps to create more subnets\nPublic subnet 2 with CIDR 10.10.2.0/24 and AZ ap-southeast-1b. Private subnet 1 with CIDR 10.10.3.0/24 and AZ ap-southeast-1a. Private subnet 2 with CIDR 10.10.4.0/24 and AZ ap-southeast-1b. Private DB Subnet 1 with CIDR 10.10.5.0/24 and AZ ap-southeast-1a. Private DB Subnet 2 with CIDR 10.10.6.0/24 and AZ ap-southeast-1b. Finish creating 6 subnets. Allow auto-assign public IP address for 2 public subnets In Subnets interface, choose Public Subnet 1, choose Actions and choose Edit subnet settings Tick Enable auto-assign public IPv4 address, then choose Save Repeat the steps above to apply for Public subnet 02 Go back to Your VPCs and view the Resource map of my-vpc "
+},
+{
 	"uri": "//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/",
 	"title": "Modify AWS VPN Tunnel",
 	"tags": [],
 	"description": "",
 	"content": "Modify AWS VPN Tunnel Access the VPC Interface:\nGo to Site-to-Site VPN connections. Choose the recently created VPN. Click on Actions. Select Modify VPN tunnel options. Choose the VPN Tunnel Outside IP Address:\nConfirm UP Tunnel Modification and Keep Other Parameters Default:\nEnable Tunnel Activity Log:\nEnable Tunnel activity log. Choose an existing Amazon CloudWatch log group (or create one in CloudWatch if not already done). Set Output format to text. Click Save changes. Access CloudWatch:\nNavigate to Log groups. Go to Log streams. Choose a log stream. View Log Events:\nRepeat the Process for the Remaining Tunnel(s):\nVerify That Both Tunnels are UP:\n"
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.6-createigw/",
+	"title": "Create Internet Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create Internet Gateway In the VPC interface, choose Internet gateways on the sidebar, then click Create internet gateway In Create internet gateway interface\nName tag, enter workshop-01-igw Click Create internet gateway In the detail of the created IGW\nChoose Actions Choose Attach to VPC In Attach to VPC\nChoose VPC my-vpc Choose Attach internet gateway Finish creating and attaching IGW to VPC "
 },
 {
 	"uri": "//localhost:1313/6-deploywebtier/",
@@ -217,11 +238,25 @@
 	"content": "Create External Load Balancer and Auto Scaling Group\u0026quot; We will proceed to delete the resources in the following order:\n"
 },
 {
+	"uri": "//localhost:1313/2-preparationsteps/2.7-createnatgateway/",
+	"title": "Create NAT Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create NAT Gateway In the VPC interface, click NAT gateways on the sidebar, then click Create NAT gateway In the create NAT gateway interface\nName enter nat-gw-01 Subnet choose Public Subnet 1 EIP click Allocate Elastic IP Click Create NAT gateway Finish creating NAT gateway in Public Subnet 1 of the first AZ Repeat the steps to create NAT gateway in Public Subnet 2 of the second AZ Finish creating NAT gateway in Public Subnet 2 of the second AZ "
+},
+{
 	"uri": "//localhost:1313/8-cleanupresources/",
 	"title": "Clean Up Resources",
 	"tags": [],
 	"description": "",
 	"content": "Clean Up Resources\u0026quot; We will proceed to delete the resources in the following order:\n"
+},
+{
+	"uri": "//localhost:1313/2-preparationsteps/2.8-createroutetable/",
+	"title": "Create Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Create Route Table\u0026quot; In the VPC interface, click Route Tables on the sidebar, then click Create Route Table In the Create route table interface:\nName enter public-route-table VPC choose my-vpc Click Create route table After successfully creating the route table, click Edit routes In the Edit routes interface, choose Add route Then add a route with Destination is 0.0.0.0/0 and Target is workshop-01-igw then click Save changes After successfully creating, switch to the Subnet associations tab and click Edit subnet associations Choose 2 public subnets we have created then click Save associations Perform the same steps to create private-route-table-01 for private subnet 1 Add a route with Destination is 0.0.0.0/0 and Target is nat-gw-01 then click Save changes Choose private subnet 1 then click Save associations Create route table for 2 private db subnets Perform the same steps to create private-db-route-table: VPC choose my-vpc Add a route with Destination is 0.0.0.0/0 and Target is igw (to communicate with db instance from outside the vpc) Assign this route table to 2 subnets Private DB Subnet 1 and Private DB Subnet 2 "
 },
 {
 	"uri": "//localhost:1313/categories/",

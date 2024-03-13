@@ -1,5 +1,12 @@
 [
 {
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.1-clonecodefromgithub/",
+	"title": "Clone code từ GitHub",
+	"tags": [],
+	"description": "",
+	"content": "Clone code từ GitHub Truy cập vào folder mà bạn muốn lưu trữ code.\nChuột phải chọn Open Git Bash Here.\nGõ lệnh git clone https://github.com/NTDung93/library-app.git rồi enter. Hoàn thành clone code từ GitHub "
+},
+{
 	"uri": "//localhost:1313/vi/1-introduce/1.1-flowexplaination/",
 	"title": "Giải thích luồng chạy",
 	"tags": [],
@@ -12,13 +19,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu kiến trúc 3 tầng Kiến trúc ba tầng là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.\nKiến trúc 3 tầng bao gồm:\nPresentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile). Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng. Data tier: tầng lưu trữ dữ liệu của app. Lợi ích của việc sử dụng kiến trúc 3 tầng:\nTính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi. Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation). Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database. "
-},
-{
-	"uri": "//localhost:1313/vi/2-preparationsteps/2.1-clonecodefromgithub/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
 },
 {
 	"uri": "//localhost:1313/vi/4-deployapptier/4.1-createec2/",
@@ -84,13 +84,6 @@
 	"content": "Kiểm tra kết nối Có nhiều cách kết nối EC2, các bạn có thể tham khảo kết nối EC2 bằng PuTTY. Trong bài lab, chúng ta sử dụng MobaXterm để kết nối EC2\nThực hiện tải MobaXterm Truy cập vào trang EC2\nChọn Instances Chọn EC2 Public Chọn Details Xem Public IPv4 address Sau khi tải MobaXterm, tiến hành giải nén và mở\nChọn Session Trong giao diện Session settings\nChọn SSH Trong giao diện Session settings\nRemote host, nhập Public IPv4 address Specify username, nhập ec2-user Use private key, chọn đường dẫn của aws-keypair.pem đã tạo và tải về máy lúc tạo EC2. Kết nối thành công. Kiểm tra kết nối tới internet của EC2 Public, ta thực hiện lệnh: ping amazon.com -c5 Thực hiện ping đến EC2 private ping \u0026lt;IP Private EC2 Private\u0026gt; Kết nối vào máy chủ EC2 Private và kiểm tra kết nối internet. Truy cập vào EC2\nChọn Instances Chọn EC2 Private Chọn Details Chọn Private IPv4 addresses Sau đó kết nối SSH vào EC2 Public Thực hiện lệnh ping \u0026lt;địa chỉ IP private của EC2 Private\u0026gt; để kiểm tra kết nối từ máy chủ EC2 Public sang máy chủ EC2 Private. Chúng ta kiểm tra kết nối giữa 2 EC2 instance bằng câu lệnh: ping 10.10.4.105 -c5 EC2 Private sẽ không có public IP address vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào EC2 Private, chúng ta sẽ thực hiện kết nối ssh từ EC2 Public thông qua địa chỉ private IP address của EC2 Private\nDownload công cụ pscp vào cùng thư mục chứa file aws-keypair.ppk để thực hiện copy file aws-keypair.pem từ máy của chúng ta vào EC2 Public. Bạn tải a RSA and DSA key generation utility là dạng puttygen.exe\nBạn tải an SCP client, i.e. command-line secure file copy là dạng pscp.exe\nChúng ta sử dụng puttygen.exe để generation key\nChọn Load Chọn aws-keypair.pem\nChọn OK Chọn Save private key với tên aws-keypair.ppk Hoàn thành generation key Khởi chạy Command Prompt. Chuyển đường dẫn tới thư mục bạn vừa download pscp. Chạy lệnh dưới đây để upload file aws-keypair.pem lên thư mục /home/ec2-user/ của máy chủ EC2 Public.\nBạn sẽ cần thay thế thông số public IP address của EC2 Public trước khi chạy câu lệnh. pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@\u0026lt;EC2 PUBLIC public IP address\u0026gt;:/home/ec2-user/ Truy cập vào EC2\nChọn Instances Chọn EC2 Public Chọn Details Xem Public IPv4 address Quay trở lại giao diện kết nối EC2. Để đảm bảo bạn copy file aws-keypair.pem lên máy chủ EC2 Public ta thực hiện lệnh ls Cập nhật quyền cho file aws-keypair.pem bằng cách chạy lệnh chmod 400 aws-keypair.pem. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2. chmod 400 aws-keypair.pem SSH tới máy chủ EC2 Private ssh -i aws-keypair.pem ec2-user@\u0026lt;EC2 Private server\u0026#39;s private IP address\u0026gt; Thực hiện ping test tới amazon.com. Bạn có thể thấy, chúng ta không thể kết nối internet từ EC2 Private. Trong bước tiếp theo chúng ta sẽ tạo NAT Gateway để cho phép máy chủ EC2 Private kết nối internet theo chiều từ nội bộ đi ra. Giữ nguyên kết nối tới EC2 Private để chúng ta có thể kiểm tra kết nối tới internet sau khi hoàn tất tạo và cấu hình NAT Gateway nhé. ping amazon.com "
 },
 {
-	"uri": "//localhost:1313/vi/2-preparationsteps/2.2-networkacls/",
-	"title": "Network ACLs",
-	"tags": [],
-	"description": "",
-	"content": "Network ACLs VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC. Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập. Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định. Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa. Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766). Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng. Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại). Network ACL rules Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.\nCác thành phần của một network ACL rule:\nRule number. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách. Type.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh. Protocol. chỉ định giao thức cùng số giao thức chuẩn. Port range. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80. Source. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR). Destination. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR). Allow/Deny. chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập. "
-},
-{
 	"uri": "//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/",
 	"title": "Tạo Customer Gateway",
 	"tags": [],
@@ -105,6 +98,13 @@
 	"content": "Tạo EC2 để làm Customer Gateway Truy cập vào VPC\nChọn Security Group Chọn Create security group Trong giao diện Create security group\nSecurity group name, nhập VPN Public -SG Trong phần Description điền Allow IPSec, SSH and Ping for servers in public subnet. VPC, chọn ASG VPN vpc Tiến hành cấu hình Inbound rules\nChọn Add rule Chọn Type: SSH và Source: My IP. My IP đại diện cho 1 địa chỉ public IPv4 bạn đang sử dụng. Click Add rule để thêm 1 rule mới. Chọn Type: All ICMP IPv4 và Source: Anywhere. Cho phép ping từ bất kì địa chỉ IP nào. Click Add rule để thêm 1 rule mới. Chọn Type: Custom UDP , Port:400 và Source : Anywhere. Click Add rule để thêm 1 rule mới. Chọn Type: Custom TCP , Port:500 và Source : Anywhere Kiểm tra Outbound rules và chọn Create security group Hoàn thành tạo VPN Public - SG. Như vậy chúng ta đã tạo được Security Group. Tiếp theo chúng ta sẽ tiến hành tạo máy chủ EC2 đóng vai trò Customer Gateway. Truy cập vào EC2\nChọn Instances Chọn Launch instances Trong giao diện Launch instances\nName, nhập Customer Gateway instance Thực hiện chọn AMI\nChọn Quick Start Chọn Amazon Linux Chọn AMI Phần chọn Instance type và chọn Key pair: aws-keypair(keypair đã tạo chung với các instance) Thực hiện cấu hình Network\nVPC, chọn ASG VPN vpc Subnet, chọn VPN Public Auto-assign public IP, chọn Enable Firewall, chọn Select existing security group Chọn VPN Public - SG Kiểm tra lại và chọn Launch instance Hoàn tất tạo EC2 instance\nChọn View all instances Xem chi tiết Customer Gateway instance "
 },
 {
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/",
+	"title": "Tạo S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Tạo S3 Bucket Truy cập giao diện AWS, tìm dịch vụ S3 sau đó click chọn Trong giao diện S3, click Create bucket Trong giao diện Create bucket:\nAWS Region chọn Singapore ap-southeast-1 Bucket name nhập demowebapp-workshop-01 Kéo xuống dưới cùng và chọn Create bucket Hoàn thành tạo S3 bucket "
+},
+{
 	"uri": "//localhost:1313/vi/3-createdbwithrds/3.2-createsubnet/",
 	"title": "Tạo Subnet",
 	"tags": [],
@@ -117,6 +117,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Tạo Database với RDS Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình theo sơ đồ bên dưới:\nNội dung Tạo VPC Tạo Subnet Tạo Internet Gateway Tạo Route Table Tạo Security Group "
+},
+{
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.3-createec2role/",
+	"title": "Tạo IAM EC2 Role",
+	"tags": [],
+	"description": "",
+	"content": "Tạo IAM EC2 Role Tìm dịch vụ IAM trên thanh tìm kiếm và click chọn Chọn Roles ở sidebar, sau đó chọn Create role Trong giao diện tạo Role, ở bước Select trusted entity: Trusted entity type chọn AWS Service Use case chọn EC2 Click Next Trong giao diện tạo Role, ở bước Add permissions: Tìm, chọn role AmazonSSMManagedInstanceCore (cho phép kết nối an toàn tới instance mà không cần SSH key) và AmazonS3ReadOnlyAccess (cho phép instance downloadn code từ S3) Chọn Next Trong giao diện tạo Role, ở bước Name, review, and create: Điền tên của role là ec2role Kiểm tra lại 3 steps vừa setup Chọn Create role Hoàn thành tạo role "
 },
 {
 	"uri": "//localhost:1313/vi/3-createdbwithrds/3.3-createigw/",
@@ -140,13 +147,6 @@
 	"content": "Tạo NAT Gateway Tạo một địa chỉ Elastic IP Truy cập EC2\nChọn Elastic IPs Chọn Allocate Elastic IP address Trong giao diện Allocate Elastic IP address\nPublic IPv4 address pool, chọn Amazon\u0026rsquo;s pool of IPv4 addresses Chọn Allocate Chúng ta vừa tạo thành công một địa chỉ Public IP Address Truy cập vào VPC\nChọn NAT Gateways Create NAT gateway Trong giao diện NAT gateway\nName, nhập NAT gateway Subnet, chọn Public subnet 2 Connectivity type, chọn Public Elastic IP allocation ID, chọn Elastic IP vừa tạo. Chọn Create NAT gateway Thành công tạo NAT gateway Tạo Route table - Private và gáng vào các private subnet. Trong giao diện VPC\nChọn Route Tables Chọn Create route table Trong giao diện Route table\nName, nhập Route table - Private VPC, chọn ASG vpc Chọn Cretae route table Hoàn thành tạo Route table - Private Trong giao diện Route table - Private\nChọn Subnet Associations Chọn Edit subnet associations Trong giao diện Edit subnet associations\nChọn 2 private subnet Chọn Save associations Trong giao diện Route table - Private\nChọn Routes Chọn Edit routes Trong giao diện Edit routes\nChọn Add route Chọn Destination: 0.0.0.0/0 Target: NAT Gateway Chọn Save changes Kiểm tra lại Routes Kiểm tra ping amazon.com thành công từ EC2 Private. ping amazon.com -c5 "
 },
 {
-	"uri": "//localhost:1313/vi/2-preparationsteps/2.3-vpc-resource-map/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
 	"uri": "//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/",
 	"title": "Cấu hình Customer Gateway",
 	"tags": [],
@@ -161,6 +161,13 @@
 	"content": "Sử dụng Reachability Analyzer Truy cập vào giao diện VPC\nChọn Reachability Analyzer Chọn Create and analyze path Thực hiện Path Configuration\nName tag, nhập EC2 private with EC2 Public Đối với Source type, chọn Instance Chọn source là EC2 Public Đối với Destination type, chọn Instance Đối với Destination, chọn EC2 Private Các thông số còn lại để mặc định. Chọn Create and analyze path Đợi 5 phút sau sẽ hiển trạng thái Reachable Sau đó, xem path details. Xem reverse path details. "
 },
 {
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.4-createvpc/",
+	"title": "Tạo mới VPC",
+	"tags": [],
+	"description": "",
+	"content": "Tạo mới VPC Truy cập trang web AWS và tìm VPC chọn Your VPCs, rồi chọn Create VPC Tiến hành các bước tạo VPC:\nResource, chọn VPC only Name tag, nhập my-vpc IPv4 CIDR, nhập 10.10.0.0/16 chọn Create VPC Hoàn thành tạo VPC Xem chi tiết VPC vừa tạo, vào Edit VPC setting:\nCheck 2 option Enable DNS resolution và Enable DNS hostnames Nhấn button Save "
+},
+{
 	"uri": "//localhost:1313/vi/3-createdbwithrds/3.4-cretaeroutetable/",
 	"title": "Tạo Route Table",
 	"tags": [],
@@ -173,6 +180,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Triển khai App Tier\u0026quot; Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.\nNội dung Tạo máy chủ EC2 Kiểm tra kết nối Tạo NAT Gateway Sử dụng Reachability Analyzer Tạo EC2 Instance Connect Endpoint "
+},
+{
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/",
+	"title": "Tạo các Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Tạo các Subnet\u0026quot; Trong giao diện VPC, chọn Subnets ở side bar và chọn Create subnet Trong giao diện Create subnet, chọn VPC vừa tạo là my-vpc Sau khi chọn VPC sẽ xuất hiện phần Subnet settings\nSubnet name, nhập Public Subnet 1 Availability Zone, chọn AZ Singapore ap-southeast-1a IPv4 CIDR block, nhập 10.10.1.0/24 Chọn Create subnet Hoàn thành tạo Subnet Thực hiện tương tự các bước trên, tạo thêm các subnet\nPublic subnet 2 với CIDR là 10.10.2.0/24 và AZ ap-southeast-1b. Private subnet 1 với CIDR là 10.10.3.0/24 và AZ ap-southeast-1a. Private subnet 2 với CIDR là 10.10.4.0/24 và AZ ap-southeast-1b. Private DB Subnet 1 với CIDR là 10.10.5.0/24 và AZ ap-southeast-1a. Private DB Subnet 2 với CIDR là 10.10.6.0/24 và AZ ap-southeast-1b. Hoàn thành tạo 6 subnets. Cho phép tự động cấp phát public IP address cho 2 public subnet Trong giao diện Subnets, chọn Public Subnet 1, chọn Actions và chọn Edit subnet settings Tick chọn Enable auto-assign public IPv4 address, sau đó chọn Save Lặp lại các bước trên để apply cho Public subnet 02 Vào lại Your VPCs và xem phần Resource map của my-vpc "
 },
 {
 	"uri": "//localhost:1313/vi/4-deployapptier/4.5-eicendpoint/",
@@ -203,6 +217,13 @@
 	"content": "Tùy chỉnh AWS VPN Tunnel Truy cập vào giao diện VPC\nChọn Site-to-Site VPN connections Chọn VPN vừa tạo. Chọn Actions Chọn Modify VPN tunnel options Chọn VPN Tunnel outside IP address Chọn Confirm UP tunnel modification và các thông số còn lại mặc định. Đối với Tunnel activity log, chọn Enable\nChọn Amazon CloudWatch log group (nếu chưa có bạn có thể tạo trong CloudWatch) Đối với Output format, chọn text Chọn Save changes Truy cập vào CloudWatch\nChọn Log groups Chọn Log streams Chọn một stream. Vào xem Log events Bạn thực hiện tương tự với tunnel còn lại. Phải đảm bảo cả 2 tunnel đã UP "
 },
 {
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.6-createigw/",
+	"title": "Tạo Internet Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Internet Gateway Ở giao diện VPC, chọn Internet gateways ở sidebar, sau đó chọn Create internet gateway Ở giao diện Create internet gateway\nName tag nhập workshop-01-igw Click Create internet gateway Ở phần detail của IGW vừa tạo\nChọn Actions Chọn Attach to VPC Ở phần Attach to VPC\nChọn VPC my-vpc Chọn Attach internet gateway Hoàn thành tạo và gán IGW với VPC "
+},
+{
 	"uri": "//localhost:1313/vi/6-deploywebtier/",
 	"title": "Triển khai Web Tier",
 	"tags": [],
@@ -217,11 +238,25 @@
 	"content": "Tạo External Load Balancer và Auto Scaling Group\u0026quot; Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\n"
 },
 {
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.7-createnatgateway/",
+	"title": "Tạo NAT Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Tạo NAT Gateway Trong giao diện VPC, click chọn NAT gateways ở sidebar, sau đó chọn Create NAT gateway Trong giao diện create NAT gateway\nName nhập nat-gw-01 Subnet chọn Public Subnet 1 EIP click Allocate Elastic IP Click Create NAT gateway Hoàn thành tạo NAT gateway trong Public Subnet 1 của AZ đầu tiên Lặp lại các bước để tạo NAT gateway trong Public Subnet 2 của AZ thứ hai Hoàn thành tạo NAT gateway trong Public Subnet 2 của AZ thứ hai "
+},
+{
 	"uri": "//localhost:1313/vi/8-cleanupresources/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",
 	"content": "Dọn dẹp tài nguyên\u0026quot; Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\n"
+},
+{
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/",
+	"title": "Tạo Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Route Table Tại giao diện của VPC, click chọn Route tables ở sidebar và click Create route table Tại giao diện Create route table:\nName nhập public-route-table VPC chọn my-vpc Click Create route table Sau khi tạo thành công route table, click Edit routes Ở màn hình Edit routes, chọn Add route Sau đó thêm route với Destination là 0.0.0.0/0 và Target là workshop-01-igw sau đó click Save changes Sau khi tạo thành công, chuyển qua tab Subnet associations và click Edit subnet associations Chọn 2 public subnet ta đã tạo rồi click Save associations Thực hiện tương tự các bước trên để tạo ra private-route-table-01 cho private subnet 1 Thêm route với Destination là 0.0.0.0/0 và Target là nat-gw-01 sau đó click Save changes Chọn private subnet 1 rồi click Save associations Tạo route table cho 2 private db subnet Thực hiện tương tự các bước trên để tạo ra private-db-route-table: VPC chọn my-vpc Thêm route với Destination là 0.0.0.0/0 và Target là igw đã tạo (mục đích để có thể giao tiếp với db instance từ internet ngoài vpc) Thực hiện gán route table này cho 2 subnet là Private DB Subnet 1 và Private DB Subnet 2 "
 },
 {
 	"uri": "//localhost:1313/vi/categories/",
