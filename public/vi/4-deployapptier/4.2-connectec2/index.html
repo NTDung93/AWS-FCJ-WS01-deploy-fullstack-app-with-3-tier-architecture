@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Kiểm tra kết nối :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Kết nối tới EC2 instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710340643" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710340643" rel="stylesheet">
-    <link href="/css/hybrid.css?1710340643" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710340643" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710340643" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710340643" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710340643" rel="stylesheet">
-    <link href="/css/theme.css?1710340643" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710340643" rel="stylesheet">
+    <link href="/css/nucleus.css?1710517421" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710517421" rel="stylesheet">
+    <link href="/css/hybrid.css?1710517421" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710517421" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710517421" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710517421" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710517421" rel="stylesheet">
+    <link href="/css/theme.css?1710517421" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710517421" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710340643" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710517421" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710340643"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710517421"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710340643"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710340643"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710517421"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710517421"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710340643"></script>
+<script type="text/javascript" src="/js/search.js?1710517421"></script>
 
     
   </div>
@@ -394,6 +394,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparationsteps/2.9-createsecuritygroup/" title="Tạo Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparationsteps/2.9-createsecuritygroup/">
+           <b> 2.9 </b> Tạo Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -441,13 +469,13 @@
  
   
     
-    <li data-nav-id="/vi/3-createdbwithrds/3.1-createvpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/vi/3-createdbwithrds/3.1-createdbsubnetgroup/" title="Tạo database subnet group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-createdbwithrds/3.1-createvpc/">
-           <b> 3.1 </b> Tạo VPC
+      <a href="/vi/3-createdbwithrds/3.1-createdbsubnetgroup/">
+           <b> 3.1 </b> Tạo database subnet group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,97 +497,13 @@
  
   
     
-    <li data-nav-id="/vi/3-createdbwithrds/3.2-createsubnet/" title="Tạo Subnet" class="dd-item 
+    <li data-nav-id="/vi/3-createdbwithrds/3.2-createdbinstance/" title="Tạo database instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-createdbwithrds/3.2-createsubnet/">
-           <b> 3.2 </b> Tạo Subnet
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createdbwithrds/3.3-createigw/" title="Tạo Internet Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createdbwithrds/3.3-createigw/">
-           <b> 3.3 </b> Tạo Internet Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createdbwithrds/3.4-cretaeroutetable/" title="Tạo Route Table" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createdbwithrds/3.4-cretaeroutetable/">
-           <b> 3.4 </b> Tạo Route Table
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-createdbwithrds/3.5-createsecuritygroup/" title="Tạo Security Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-createdbwithrds/3.5-createsecuritygroup/">
-           <b> 3.5 </b> Tạo Security Group
+      <a href="/vi/3-createdbwithrds/3.2-createdbinstance/">
+           <b> 3.2 </b> Tạo database instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -647,13 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-deployapptier/4.2-connectec2/" title="Kiểm tra kết nối" class="dd-item 
+    <li data-nav-id="/vi/4-deployapptier/4.2-connectec2/" title="Kết nối tới EC2 instance" class="dd-item 
         
         active
         
         ">
       <a href="/vi/4-deployapptier/4.2-connectec2/">
-           <b> 4.2 </b> Kiểm tra kết nối
+           <b> 4.2 </b> Kết nối tới EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -675,13 +619,13 @@
  
   
     
-    <li data-nav-id="/vi/4-deployapptier/4.3-natgateway/" title="Tạo NAT Gateway" class="dd-item 
+    <li data-nav-id="/vi/4-deployapptier/4.3-downmysqloninstance/" title="Tải MySQL lên EC2 instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-deployapptier/4.3-natgateway/">
-           <b> 4.3 </b> Tạo NAT Gateway
+      <a href="/vi/4-deployapptier/4.3-downmysqloninstance/">
+           <b> 4.3 </b> Tải MySQL lên EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -703,41 +647,13 @@
  
   
     
-    <li data-nav-id="/vi/4-deployapptier/4.4.-createreachabilityanalyzer/" title="Sử dụng Reachability Analyzer" class="dd-item 
+    <li data-nav-id="/vi/4-deployapptier/4.4-runapponinstance/" title="Chạy ứng dụng trên EC2 instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-deployapptier/4.4.-createreachabilityanalyzer/">
-           <b> 4.4 </b> Sử dụng Reachability Analyzer
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-deployapptier/4.5-eicendpoint/" title="Tạo EC2 Instance Connect Endpoint (Optional)" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-deployapptier/4.5-eicendpoint/">
-           <b> 4.5 </b> Tạo EC2 Instance Connect Endpoint (Optional)
+      <a href="/vi/4-deployapptier/4.4-runapponinstance/">
+           <b> 4.4 </b> Chạy ứng dụng trên EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -797,44 +713,13 @@
  
   
     
-    <li data-nav-id="/vi/5-createinternallbandasg/5.1-createvpnenv/" title="Tạo môi trường VPN" class="dd-item 
+    <li data-nav-id="/vi/5-createinternallbandasg/5.1-createapptierami/" title="Tạo AMI cho App Tier" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-createinternallbandasg/5.1-createvpnenv/">
-           <b> 5.1 </b> Tạo môi trường VPN
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/" title="Tạo VPC cho VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/">
-           <b> 5.1.1 </b> Tạo VPC cho VPN
+      <a href="/vi/5-createinternallbandasg/5.1-createapptierami/">
+           <b> 5.1 </b> Tạo AMI cho App Tier
           
             <i class="fas fa-check read-icon"></i>
           
@@ -856,81 +741,13 @@
  
   
     
-    <li data-nav-id="/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/" title="Tạo EC2 Instance" class="dd-item 
+    <li data-nav-id="/vi/5-createinternallbandasg/5.2-createtargetgroup/" title="Tạo Target group cho App Tier" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Tạo EC2 Instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/" title="Cấu hình kết nối VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Cấu hình kết nối VPN
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/" title="Tạo Virtual Private Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/">
-           <b> 5.2.1 </b> Tạo Virtual Private Gateway
+      <a href="/vi/5-createinternallbandasg/5.2-createtargetgroup/">
+           <b> 5.2 </b> Tạo Target group cho App Tier
           
             <i class="fas fa-check read-icon"></i>
           
@@ -952,13 +769,13 @@
  
   
     
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/" title="Tạo Customer Gateway" class="dd-item 
+    <li data-nav-id="/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/" title="Tạo Internal Load Balancer" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/">
-           <b> 5.2.2 </b> Tạo Customer Gateway
+      <a href="/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/">
+           <b> 5.3 </b> Tạo Internal Load Balancer
           
             <i class="fas fa-check read-icon"></i>
           
@@ -980,13 +797,13 @@
  
   
     
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/" title="Tạo kết nối VPN" class="dd-item 
+    <li data-nav-id="/vi/5-createinternallbandasg/5.4-createlaunchtemplate/" title="Tạo Launch Template" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/">
-           <b> 5.2.3 </b> Tạo kết nối VPN
+      <a href="/vi/5-createinternallbandasg/5.4-createlaunchtemplate/">
+           <b> 5.4 </b> Tạo Launch Template
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1008,55 +825,18 @@
  
   
     
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/" title="Cấu hình Customer Gateway" class="dd-item 
+    <li data-nav-id="/vi/5-createinternallbandasg/5.5-createautoscalinggroup/" title="Tạo Auto Scaling Group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/">
-           <b> 5.2.4 </b> Cấu hình Customer Gateway
+      <a href="/vi/5-createinternallbandasg/5.5-createautoscalinggroup/">
+           <b> 5.5 </b> Tạo Auto Scaling Group
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Tùy chỉnh AWS VPN Tunnel" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/">
-           <b> 5.2.5 </b> Tùy chỉnh AWS VPN Tunnel
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -1291,7 +1071,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/4-deployapptier/'>Triển khai App Tier</a> > Kiểm tra kết nối
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/4-deployapptier/'>Triển khai App Tier</a> > Kết nối tới EC2 instance
           
         
           
@@ -1328,7 +1108,7 @@
           
             <h1>
               
-              Kiểm tra kết nối
+              Kết nối tới EC2 instance
             </h1>
           
 
@@ -1336,170 +1116,29 @@
 
 
 
-	<h4 id="kiểm-tra-kết-nối">Kiểm tra kết nối</h4>
-
-<div class="notices note" ><p>Có nhiều cách kết nối EC2, các bạn có thể tham khảo <a href="https://000004.awsstudygroup.com/vi/4-launchlinuxinstance/4.2-connectlinuxinstance/">kết nối EC2 bằng <strong>PuTTY</strong></a>. Trong bài lab, chúng ta sử dụng <a href="https://mobaxterm.mobatek.net/">MobaXterm</a> để kết nối EC2</p>
-</div>
-
+	<h4 id="kết-nối-tới-ec2-instance">Kết nối tới EC2 instance</h4>
 <ol>
-<li>Thực hiện tải <a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a></li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="2">
 <li>
-<p>Truy cập vào trang <strong>EC2</strong></p>
-<ul>
-<li>Chọn <strong>Instances</strong></li>
-<li>Chọn <strong>EC2 Public</strong></li>
-<li>Chọn <strong>Details</strong></li>
-<li>Xem <strong>Public IPv4 address</strong></li>
-</ul>
+<p>Trên giao diện các EC2 instances, chọn instance vừa tạo và bấm <strong>Connect</strong>
+<img alt="connect ec2" src="../../../images/4-2/01.png?width=50pc"></p>
+</li>
+<li>
+<p>Chuyển qua tab <strong>Session Manager</strong> và click Connect
+<img alt="connect ec2" src="../../../images/4-2/02.png?width=50pc"></p>
+</li>
+<li>
+<p>Connect thành công vào instance
+<img alt="connect ec2" src="../../../images/4-2/03.png?width=50pc"></p>
+</li>
+<li>
+<p>Chạy lệnh <strong><code>sudo -su ec2-user</code></strong> để chuyển từ user sang ec2-user, và có những quyền quản trị root đối với instance
+<img alt="connect ec2" src="../../../images/4-2/04.png?width=50pc"></p>
+</li>
+<li>
+<p>Tiếp đó chạy lệnh <strong><code>ping 8.8.8.8</code></strong> (IP address của Google’s DNS server) để test xem instance của ta có thể kết nối với internet bên ngoài thông qua igw không
+<img alt="connect ec2" src="../../../images/4-2/05.png?width=50pc"></p>
 </li>
 </ol>
-<p><img alt="Create VPC" src="/images/7/0001.png?featherlight=false&width=90pc"></p>
-<ol start="3">
-<li>
-<p>Sau khi tải <strong>MobaXterm</strong>, tiến hành giải nén và mở</p>
-<ul>
-<li>Chọn <strong>Session</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>
-<p>Trong giao diện <strong>Session settings</strong></p>
-<ul>
-<li>Chọn <strong>SSH</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
-<ol start="5">
-<li>
-<p>Trong giao diện <strong>Session settings</strong></p>
-<ul>
-<li><strong>Remote host</strong>, nhập <strong><code>Public IPv4 address</code></strong></li>
-<li><strong>Specify username</strong>, nhập <strong><code>ec2-user</code></strong></li>
-<li><strong>Use private key</strong>, chọn đường dẫn của <strong>aws-keypair.pem</strong> đã tạo và tải về máy lúc tạo EC2.</li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
-<ol start="6">
-<li>Kết nối thành công.</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0003.png?featherlight=false&width=90pc"></p>
-<ol start="7">
-<li>Kiểm tra kết nối tới internet của EC2 Public, ta thực hiện lệnh:</li>
-</ol>
-<pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img alt="Create VPC" src="/images/7/0004.png?featherlight=false&width=90pc"></p>
-<ol start="8">
-<li>Thực hiện ping đến <strong>EC2 private</strong></li>
-</ol>
-<pre tabindex="0"><code>ping &lt;IP Private EC2 Private&gt;
-</code></pre><p><img alt="Create VPC" src="/images/7/0005.png?featherlight=false&width=90pc"></p>
-<h4 id="kết-nối-vào-máy-chủ-ec2-private-và-kiểm-tra-kết-nối-internet">Kết nối vào máy chủ EC2 Private và kiểm tra kết nối internet.</h4>
-<ol start="9">
-<li>
-<p>Truy cập vào <strong>EC2</strong></p>
-<ul>
-<li>Chọn <strong>Instances</strong></li>
-<li>Chọn <strong>EC2 Private</strong></li>
-<li>Chọn <strong>Details</strong></li>
-<li>Chọn <strong>Private IPv4 addresses</strong></li>
-<li>Sau đó kết nối SSH vào <strong>EC2 Public</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0003.png?featherlight=false&width=90pc"></p>
-<ol start="10">
-<li>Thực hiện lệnh ping <strong>&lt;địa chỉ IP private của EC2 Private&gt;</strong> để kiểm tra kết nối từ máy chủ <strong>EC2 Public</strong> sang máy chủ <strong>EC2 Private</strong>. Chúng ta kiểm tra kết nối giữa 2 EC2 instance bằng câu lệnh:</li>
-</ol>
-<pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img alt="Create VPC" src="/images/7/0005.png?featherlight=false&width=90pc"></p>
-<ol start="11">
-<li>
-<p><strong>EC2 Private</strong> sẽ không có <strong>public IP address</strong> vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào <strong>EC2 Private</strong>, chúng ta sẽ thực hiện kết nối ssh từ EC2 Public thông qua địa chỉ <strong>private IP address của EC2 Private</strong></p>
-<ul>
-<li>Download công cụ <strong>pscp</strong> vào cùng thư mục chứa file <strong>aws-keypair.ppk</strong> để thực hiện copy file <strong>aws-keypair.pem</strong> từ máy của chúng ta vào <strong>EC2 Public</strong>.</li>
-</ul>
-</li>
-</ol>
-
-<div class="notices info" ><p>Bạn tải <a href="https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe">a RSA and DSA key generation utility</a> là dạng <strong>puttygen.exe</strong></p>
-</div>
-
-
-<div class="notices info" ><p>Bạn tải <a href="https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe">an SCP client, i.e. command-line secure file copy</a> là <strong>dạng pscp.exe</strong></p>
-</div>
-
-<ol start="12">
-<li>
-<p>Chúng ta sử dụng <strong>puttygen.exe</strong> để generation key</p>
-<ul>
-<li>Chọn <strong>Load</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="13">
-<li>
-<p>Chọn <strong>aws-keypair.pem</strong></p>
-<ul>
-<li>Chọn <strong>OK</strong></li>
-<li>Chọn <strong>Save private key</strong> với tên <strong>aws-keypair.ppk</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00010-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="14">
-<li>Hoàn thành generation key</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00011-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="15">
-<li>
-<p>Khởi chạy <strong>Command Prompt</strong>. Chuyển đường dẫn tới thư mục bạn vừa download <strong>pscp</strong>. Chạy lệnh dưới đây để upload file <strong>aws-keypair.pem</strong> lên thư mục <strong>/home/ec2-user/</strong> của máy chủ EC2 Public.</p>
-<ul>
-<li>Bạn sẽ cần thay thế thông số <strong>public IP address của EC2 Public</strong> trước khi chạy câu lệnh.</li>
-</ul>
-</li>
-</ol>
-<pre tabindex="0"><code>pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
-</code></pre><p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00012-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="16">
-<li>
-<p>Truy cập vào <strong>EC2</strong></p>
-<ul>
-<li>Chọn <strong>Instances</strong></li>
-<li>Chọn <strong>EC2 Public</strong></li>
-<li>Chọn <strong>Details</strong></li>
-<li>Xem <strong>Public IPv4 address</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0006.png?featherlight=false&width=90pc"></p>
-<ol start="17">
-<li>Quay trở lại giao diện kết nối EC2. Để đảm bảo bạn copy file <strong>aws-keypair.pem</strong> lên máy chủ <strong>EC2 Public</strong> ta thực hiện lệnh</li>
-</ol>
-<pre tabindex="0"><code>ls
-</code></pre><p><img alt="Create VPC" src="/images/7/0007.png?featherlight=false&width=90pc"></p>
-<ol start="18">
-<li>Cập nhật quyền cho file <strong>aws-keypair.pem</strong> bằng cách chạy lệnh <strong>chmod 400 aws-keypair.pem</strong>. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.</li>
-</ol>
-<pre tabindex="0"><code>chmod 400 aws-keypair.pem
-</code></pre><p><img alt="Create VPC" src="/images/7/0008.png?featherlight=false&width=90pc"></p>
-<ol start="19">
-<li><strong>SSH</strong> tới máy chủ <strong>EC2 Private</strong></li>
-</ol>
-<pre tabindex="0"><code>ssh -i aws-keypair.pem ec2-user@&lt;EC2 Private server&#39;s private IP address&gt;
-</code></pre><p><img alt="Create VPC" src="/images/7/0009.png?featherlight=false&width=90pc"></p>
-<ol start="20">
-<li>Thực hiện <strong>ping test tới amazon.com</strong>. Bạn có thể thấy, chúng ta không thể kết nối <strong>internet từ EC2 Private</strong>. Trong bước tiếp theo chúng ta sẽ tạo <strong>NAT Gateway</strong> để cho phép máy chủ <strong>EC2 Private</strong> kết nối internet theo chiều từ nội bộ đi ra. Giữ nguyên kết nối tới <strong>EC2 Private</strong> để chúng ta có thể kiểm tra kết nối tới <strong>internet</strong> sau khi hoàn tất tạo và cấu hình <strong>NAT Gateway</strong> nhé.</li>
-</ol>
-<pre tabindex="0"><code>ping amazon.com
-</code></pre><p><img alt="Create VPC" src="/images/7/00010.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1715,6 +1354,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1732,54 +1387,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1903,87 +1510,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2078,9 +1604,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -2148,7 +1671,7 @@
 			<a class="nav nav-prev" href="/vi/4-deployapptier/4.1-createec2/" title="Tạo máy chủ EC2"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-deployapptier/4.3-natgateway/" title="Tạo NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/4-deployapptier/4.3-downmysqloninstance/" title="Tải MySQL lên EC2 instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2158,19 +1681,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710340643"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710340643"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710340643"></script>
-    <script src="/js/jquery.sticky.js?1710340643"></script>
-    <script src="/js/featherlight.min.js?1710340643"></script>
-    <script src="/js/highlight.pack.js?1710340643"></script>
+    <script src="/js/clipboard.min.js?1710517421"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710517421"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710517421"></script>
+    <script src="/js/jquery.sticky.js?1710517421"></script>
+    <script src="/js/featherlight.min.js?1710517421"></script>
+    <script src="/js/highlight.pack.js?1710517421"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710340643"></script>
-    <script src="/js/learn.js?1710340643"></script>
-    <script src="/js/hugo-learn.js?1710340643"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710517421"></script>
+    <script src="/js/learn.js?1710517421"></script>
+    <script src="/js/hugo-learn.js?1710517421"></script>
 
-    <link href="/mermaid/mermaid.css?1710340643" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710340643"></script>
+    <link href="/mermaid/mermaid.css?1710517421" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710517421"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Test Connection :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <title>Connect to EC2 instance :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1710340643" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710340643" rel="stylesheet">
-    <link href="/css/hybrid.css?1710340643" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710340643" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710340643" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710340643" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710340643" rel="stylesheet">
-    <link href="/css/theme.css?1710340643" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710340643" rel="stylesheet">
+    <link href="/css/nucleus.css?1710517421" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710517421" rel="stylesheet">
+    <link href="/css/hybrid.css?1710517421" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710517421" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710517421" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710517421" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710517421" rel="stylesheet">
+    <link href="/css/theme.css?1710517421" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710517421" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710340643" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710517421" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710340643"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710517421"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710340643"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710340643"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710517421"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710517421"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710340643"></script>
+<script type="text/javascript" src="/js/search.js?1710517421"></script>
 
     
   </div>
@@ -394,6 +394,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-preparationsteps/2.9-createsecuritygroup/" title="Create Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-preparationsteps/2.9-createsecuritygroup/">
+           <b> 2.9 </b> Create Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -441,13 +469,13 @@
  
   
     
-    <li data-nav-id="/3-createdbwithrds/3.1-createvpc/" title="Create VPC" class="dd-item 
+    <li data-nav-id="/3-createdbwithrds/3.1-createdbsubnetgroup/" title="Create database subnet group" class="dd-item 
         
         
         
         ">
-      <a href="/3-createdbwithrds/3.1-createvpc/">
-           <b> 3.1 </b> Create VPC
+      <a href="/3-createdbwithrds/3.1-createdbsubnetgroup/">
+           <b> 3.1 </b> Create database subnet group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,97 +497,13 @@
  
   
     
-    <li data-nav-id="/3-createdbwithrds/3.2-createsubnet/" title="Create Subnet" class="dd-item 
+    <li data-nav-id="/3-createdbwithrds/3.2-createdbinstance/" title="Create database instance" class="dd-item 
         
         
         
         ">
-      <a href="/3-createdbwithrds/3.2-createsubnet/">
-           <b> 3.2 </b> Create Subnet
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-createdbwithrds/3.3-createigw/" title="Create Internet Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-createdbwithrds/3.3-createigw/">
-           <b> 3.3 </b> Create Internet Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-createdbwithrds/3.4-cretaeroutetable/" title="Create Route Table" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-createdbwithrds/3.4-cretaeroutetable/">
-           <b> 3.4 </b> Create Route Table
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-createdbwithrds/3.5-createsecuritygroup/" title="Create Security Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-createdbwithrds/3.5-createsecuritygroup/">
-           <b> 3.5 </b> Create Security Group
+      <a href="/3-createdbwithrds/3.2-createdbinstance/">
+           <b> 3.2 </b> Create database instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -647,13 +591,13 @@
  
   
     
-    <li data-nav-id="/4-deployapptier/4.2-connectec2/" title="Test Connection" class="dd-item 
+    <li data-nav-id="/4-deployapptier/4.2-connectec2/" title="Connect to EC2 instance" class="dd-item 
         
         active
         
         ">
       <a href="/4-deployapptier/4.2-connectec2/">
-           <b> 4.2 </b> Test Connection
+           <b> 4.2 </b> Connect to EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -675,13 +619,13 @@
  
   
     
-    <li data-nav-id="/4-deployapptier/4.3-natgateway/" title="Create NAT Gateway" class="dd-item 
+    <li data-nav-id="/4-deployapptier/4.3-downmysqloninstance/" title="Download MySQL on EC2 instance" class="dd-item 
         
         
         
         ">
-      <a href="/4-deployapptier/4.3-natgateway/">
-           <b> 4.3 </b> Create NAT Gateway
+      <a href="/4-deployapptier/4.3-downmysqloninstance/">
+           <b> 4.3 </b> Download MySQL on EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -703,41 +647,13 @@
  
   
     
-    <li data-nav-id="/4-deployapptier/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+    <li data-nav-id="/4-deployapptier/4.4-runapponinstance/" title="Run App on EC2 instance" class="dd-item 
         
         
         
         ">
-      <a href="/4-deployapptier/4.4.-createreachabilityanalyzer/">
-           <b> 4.4 </b> Using Reachability Analyzer
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-deployapptier/4.5-eicendpoint/" title="Create EC2 Instance Connect Endpoint (Optional)" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-deployapptier/4.5-eicendpoint/">
-           <b> 4.5 </b> Create EC2 Instance Connect Endpoint (Optional)
+      <a href="/4-deployapptier/4.4-runapponinstance/">
+           <b> 4.4 </b> Run App on EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -797,44 +713,13 @@
  
   
     
-    <li data-nav-id="/5-createinternallbandasg/5.1-createvpnenv/" title="Create a VPN environment" class="dd-item 
+    <li data-nav-id="/5-createinternallbandasg/5.1-createapptierami/" title="Create AMI for App Tier" class="dd-item 
         
         
         
         ">
-      <a href="/5-createinternallbandasg/5.1-createvpnenv/">
-           <b> 5.1 </b> Create a VPN environment
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/" title="Create VPC for VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/">
-           <b> 5.1.1 </b> Create VPC for VPN
+      <a href="/5-createinternallbandasg/5.1-createapptierami/">
+           <b> 5.1 </b> Create AMI for App Tier
           
             <i class="fas fa-check read-icon"></i>
           
@@ -856,81 +741,13 @@
  
   
     
-    <li data-nav-id="/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
+    <li data-nav-id="/5-createinternallbandasg/5.2-createtargetgroup/" title="Create Target group for App Tier" class="dd-item 
         
         
         
         ">
-      <a href="/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configure VPN Connection
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/" title="Create Virtual Private Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/">
-           <b> 5.2.1 </b> Create Virtual Private Gateway
+      <a href="/5-createinternallbandasg/5.2-createtargetgroup/">
+           <b> 5.2 </b> Create Target group for App Tier
           
             <i class="fas fa-check read-icon"></i>
           
@@ -952,13 +769,13 @@
  
   
     
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/" title="Create Customer Gateway" class="dd-item 
+    <li data-nav-id="/5-createinternallbandasg/5.3-createinternalloadbalancer/" title="Create Internal Load Balancer" class="dd-item 
         
         
         
         ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/">
-           <b> 5.2.2 </b> Create Customer Gateway
+      <a href="/5-createinternallbandasg/5.3-createinternalloadbalancer/">
+           <b> 5.3 </b> Create Internal Load Balancer
           
             <i class="fas fa-check read-icon"></i>
           
@@ -980,13 +797,13 @@
  
   
     
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/" title="Create VPN Connection" class="dd-item 
+    <li data-nav-id="/5-createinternallbandasg/5.4-createlaunchtemplate/" title="Create Launch Template" class="dd-item 
         
         
         
         ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/">
-           <b> 5.2.3 </b> Create VPN Connection
+      <a href="/5-createinternallbandasg/5.4-createlaunchtemplate/">
+           <b> 5.4 </b> Create Launch Template
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1008,55 +825,18 @@
  
   
     
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/" title="Customer Gateway Configuration" class="dd-item 
+    <li data-nav-id="/5-createinternallbandasg/5.5-createautoscalinggroup/" title="Create Auto Scaling Group" class="dd-item 
         
         
         
         ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/">
-           <b> 5.2.4 </b> Customer Gateway Configuration
+      <a href="/5-createinternallbandasg/5.5-createautoscalinggroup/">
+           <b> 5.5 </b> Create Auto Scaling Group
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/">
-           <b> 5.2.5 </b> Modify AWS VPN Tunnel
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -1291,7 +1071,7 @@
             
           
           
-            <a href='/'>Deploy fullstack app with three-tier architecture</a> > <a href='/4-deployapptier/'>Deploy Application Tier</a> > Test Connection
+            <a href='/'>Deploy fullstack app with three-tier architecture</a> > <a href='/4-deployapptier/'>Deploy Application Tier</a> > Connect to EC2 instance
           
         
           
@@ -1306,8 +1086,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#checking-connection">Checking Connection</a></li>
-    <li><a href="#connect-to-the-ec2-private-server-and-check-internet-connection">Connect to the EC2 Private Server and Check Internet Connection</a></li>
+    <li><a href="#connect-to-ec2-instance">Connect to EC2 instance</a></li>
   </ul>
 </nav>
     </div>
@@ -1325,7 +1104,7 @@
           
             <h1>
               
-              Test Connection
+              Connect to EC2 instance
             </h1>
           
 
@@ -1333,171 +1112,29 @@
 
 
 
-	<h2 id="checking-connection">Checking Connection</h2>
-<blockquote>
-<p>ℹ️ <strong>Note:</strong> There are several ways to connect to EC2 instances. You can follow the instructions to <a href="https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/">connect to EC2 using PuTTY</a>. In this lab, we will use <a href="https://mobaxterm.mobatek.net/">MobaXterm</a> to establish the connection.</p>
-</blockquote>
+	<h2 id="connect-to-ec2-instance">Connect to EC2 instance</h2>
 <ol>
 <li>
-<p><strong>Download MobaXterm</strong></p>
-<p><img alt="Download MobaXterm" src="https://mobaxterm.mobatek.net/download.html"></p>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&width=90pc"></p>
+<p>On the EC2 instances interface, select the instance you just created and click <strong>Connect</strong>
+<img alt="connect ec2" src="../../../images/4-2/01.png?width=50pc"></p>
 </li>
 <li>
-<p><strong>Access the EC2 Page</strong></p>
-<ul>
-<li>Go to the <strong>EC2</strong> page.</li>
-<li>Select <strong>Instances</strong>.</li>
-<li>Choose the <strong>EC2 Public</strong> instance.</li>
-<li>Select <strong>Details</strong>.</li>
-<li>Locate the <strong>Public IPv4 address</strong>.</li>
-</ul>
-<p><img alt="Create VPC" src="/images/7/0001.png?featherlight=false&width=90pc"></p>
+<p>Switch to the <strong>Session Manager</strong> tab and click Connect
+<img alt="connect ec2" src="../../../images/4-2/02.png?width=50pc"></p>
 </li>
 <li>
-<p><strong>Using MobaXterm</strong></p>
-<ul>
-<li>After downloading MobaXterm, extract and open it.</li>
-<li>Select <strong>Session</strong>.</li>
-</ul>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
+<p>Successfully connect to the instance
+<img alt="connect ec2" src="../../../images/4-2/03.png?width=50pc"></p>
 </li>
 <li>
-<p><strong>Configuring Session Settings</strong></p>
-<ul>
-<li>In the <strong>Session settings</strong> interface, choose <strong>SSH</strong>.</li>
-</ul>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
+<p>Run the command <strong><code>sudo -su ec2-user</code></strong> to switch from user to ec2-user, and have root administrative rights for the instance
+<img alt="connect ec2" src="../../../images/4-2/04.png?width=50pc"></p>
 </li>
 <li>
-<p><strong>Session Settings Continued</strong></p>
-<ul>
-<li>In the <strong>Session settings</strong> interface:
-<ul>
-<li>Enter the <strong>Remote host</strong> (Public IPv4 address).</li>
-<li>Specify the <strong>username</strong> as <code>ec2-user</code>.</li>
-<li>Choose the <strong>Use private key</strong> option and provide the path to the <code>aws-keypair.pem</code> file created and downloaded during EC2 instance creation.</li>
-</ul>
-</li>
-</ul>
-<p><img alt="Create VPC" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p><strong>Successful Connection</strong></p>
-<p><img alt="Create VPC" src="/images/7/0003.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p><strong>Testing Internet Connection of EC2 Public</strong></p>
-<p>Execute the following command to test the internet connection of the EC2 Public instance</p>
+<p>Then run the command <strong><code>ping 8.8.8.8</code></strong> (IP address of Google’s DNS server) to test whether our instance can connect to the outside internet through igw or not
+<img alt="connect ec2" src="../../../images/4-2/05.png?width=50pc"></p>
 </li>
 </ol>
-<pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img alt="Create VPC" src="/images/7/0004.png?featherlight=false&width=90pc"></p>
-<ol start="8">
-<li>Make a ping to <strong>EC2 private</strong></li>
-</ol>
-<pre tabindex="0"><code>ping &lt;IP Private EC2 Private&gt;
-</code></pre><p><img alt="Create VPC" src="/images/7/0005.png?featherlight=false&width=90pc"></p>
-<h2 id="connect-to-the-ec2-private-server-and-check-internet-connection">Connect to the EC2 Private Server and Check Internet Connection</h2>
-<ol start="9">
-<li>
-<p>Access to <strong>EC2</strong></p>
-<ul>
-<li>Select <strong>Instances</strong></li>
-<li>Select <strong>EC2 Private</strong></li>
-<li>Select <strong>Details</strong></li>
-<li>Select <strong>Private IPv4 addresses</strong></li>
-<li>Then connect SSH to <strong>EC2 Public</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0003.png?featherlight=false&width=90pc"></p>
-<ol start="10">
-<li>Perform a ping test to the EC2 Private&rsquo;s private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command:</li>
-</ol>
-<pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img alt="Create VPC" src="/images/7/0005.png?featherlight=false&width=90pc"></p>
-<ol start="11">
-<li>
-<p><strong>EC2 Private</strong> will not have a <strong>public IP address</strong> because we are not assigning this server a public IP. To be able to ssh into <strong>EC2 Private</strong>, we will make an ssh connection from EC2 Public through EC2 Private <strong>private IP address</strong></p>
-<ul>
-<li>Download the <strong>pscp</strong> tool to the same folder containing the <strong>aws-keypair.ppk</strong> file to copy the <strong>aws-keypair.pem</strong> file from our computer to <strong>EC2 Public</strong> .</li>
-</ul>
-</li>
-</ol>
-
-<div class="notices info" ><p>You download <a href="https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe">an RSA and DSA key generation utility</a> as <strong>puttygen.exe</strong></p>
-</div>
-
-
-<div class="notices info" ><p>You download <a href="https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe">an SCP client, i.e. command-line secure file copy</a> is <strong>pscp.exe</strong></p>
-</div>
-
-<ol start="12">
-<li>
-<p>We use <strong>puttygen.exe</strong> to generate key</p>
-<ul>
-<li>Select <strong>Load</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="13">
-<li>
-<p>Select <strong>aws-keypair.pem</strong></p>
-<ul>
-<li>Select <strong>OK</strong></li>
-<li>Select <strong>Save private key</strong> with the name <strong>aws-keypair.ppk</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00010-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="14">
-<li>Complete the generation key</li>
-</ol>
-<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00011-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="15">
-<li>
-<p>Launch <strong>Command Prompt</strong>. Change the path to the folder you just downloaded <strong>pscp</strong>. Run the command below to upload the <strong>aws-keypair.pem</strong> file to the <strong>/home/ec2-user/</strong> directory of the EC2 Public server.</p>
-<ul>
-<li>You will need to replace the <strong>public IP address of EC2 Public</strong> parameter before running the command.</li>
-</ul>
-</li>
-</ol>
-<pre tabindex="0"><code>pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
-</code></pre><p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.2-ec2connect/00012-ec2connect.png?featherlight=false&width=90pc"></p>
-<ol start="16">
-<li>
-<p>Access to <strong>EC2</strong></p>
-<ul>
-<li>Select <strong>Instances</strong></li>
-<li>Select <strong>EC2 Public</strong></li>
-<li>Select <strong>Details</strong></li>
-<li>View <strong>Public IPv4 address</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Create VPC" src="/images/7/0006.png?featherlight=false&width=90pc"></p>
-<ol start="17">
-<li>Return to the EC2 connection interface. Make sure you copy the <strong>aws-keypair.pem</strong> file to the <strong>EC2 Public</strong> server, we execute the command</li>
-</ol>
-<pre tabindex="0"><code>ls
-</code></pre><p><img alt="Create VPC" src="/images/7/0007.png?featherlight=false&width=90pc"></p>
-<ol start="18">
-<li>Update the permissions for the <strong>aws-keypair.pem</strong> file by running the <strong>chmod 400 aws-keypair.pem</strong> command. AWS requires the key pair file to be restricted before it can be used to connect to the EC2 server.</li>
-</ol>
-<pre tabindex="0"><code>chmod 400 aws-keypair.pem
-</code></pre><p><img alt="Create VPC" src="/images/7/0008.png?featherlight=false&width=90pc"></p>
-<ol start="19">
-<li><strong>SSH</strong> to <strong>EC2 Private</strong> server</li>
-</ol>
-<pre tabindex="0"><code>ssh -i aws-keypair.pem ec2-user@&lt;EC2 Private server&#39;s private IP address&gt;
-</code></pre><p><img alt="Create VPC" src="/images/7/0009.png?featherlight=false&width=90pc"></p>
-<ol start="20">
-<li>Perform <strong>ping test to amazon.com</strong>. As you can see, we cannot connect <strong>internet from EC2 Private</strong>. In the next step, we will create <strong>NAT Gateway</strong> to allow the <strong>EC2 Private</strong> server to connect to the internet in the outbound direction. Keep the connection to <strong>EC2 Private</strong> so that we can check the connection to <strong>internet</strong> after finishing creating and configuring <strong>NAT Gateway</strong>.</li>
-</ol>
-<pre tabindex="0"><code>ping amazon.com
-</code></pre><p><img alt="Create VPC" src="/images/7/00010.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1713,6 +1350,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1730,54 +1383,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1901,87 +1506,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2076,9 +1600,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -2146,7 +1667,7 @@
 			<a class="nav nav-prev" href="/4-deployapptier/4.1-createec2/" title="Create EC2 Server"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-deployapptier/4.3-natgateway/" title="Create NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-deployapptier/4.3-downmysqloninstance/" title="Download MySQL on EC2 instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2156,19 +1677,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710340643"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710340643"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710340643"></script>
-    <script src="/js/jquery.sticky.js?1710340643"></script>
-    <script src="/js/featherlight.min.js?1710340643"></script>
-    <script src="/js/highlight.pack.js?1710340643"></script>
+    <script src="/js/clipboard.min.js?1710517421"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710517421"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710517421"></script>
+    <script src="/js/jquery.sticky.js?1710517421"></script>
+    <script src="/js/featherlight.min.js?1710517421"></script>
+    <script src="/js/highlight.pack.js?1710517421"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710340643"></script>
-    <script src="/js/learn.js?1710340643"></script>
-    <script src="/js/hugo-learn.js?1710340643"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710517421"></script>
+    <script src="/js/learn.js?1710517421"></script>
+    <script src="/js/hugo-learn.js?1710517421"></script>
 
-    <link href="/mermaid/mermaid.css?1710340643" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710340643"></script>
+    <link href="/mermaid/mermaid.css?1710517421" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710517421"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

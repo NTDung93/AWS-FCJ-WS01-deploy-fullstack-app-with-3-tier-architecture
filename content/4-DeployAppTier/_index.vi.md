@@ -6,16 +6,13 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-#### Triển khai App Tier"
+#### Triển khai App Tier
 
-Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.
-
-![Create EC2](/images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
+Trong section này, chúng ta sẽ tạo máy chủ EC2 nằm trong private subnet, sau đó kết nối tới instance, cài đặt MySQL lên instance và chạy app của chúng ta trên instance.
 
 #### Nội dung 
 
 1. [Tạo máy chủ EC2](4.1-createec2/)
-2. [Kiểm tra kết nối](4.2-connectec2/)
-3. [Tạo NAT Gateway](4.3-natgateway/)
-4. [Sử dụng Reachability Analyzer](4.4.-createreachabilityanalyzer/)
-5. [Tạo EC2 Instance Connect Endpoint](4.5-EICEndpoint/)
+2. [Kết nối tới EC2 instance](4.2-connectec2/)
+3. [Tải MySQL lên instance](4.3-DownMySQLOnInstance/)
+4. [Chạy app trên instance](4.4-RunAppOnInstance/)

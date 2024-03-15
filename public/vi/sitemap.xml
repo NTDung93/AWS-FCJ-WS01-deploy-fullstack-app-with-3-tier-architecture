@@ -38,6 +38,30 @@
                 href="//localhost:1313/vi/1-introduce/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-createinternallbandasg/5.1-createapptierami/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-createdbwithrds/3.1-createdbsubnetgroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/4-deployapptier/4.1-createec2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -48,54 +72,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/4-deployapptier/4.1-createec2/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.1-createvpgw/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-createdbwithrds/3.1-createvpc/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.1-createvpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.1-createvpc/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.1-createvpnvpc/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/</loc>
@@ -122,18 +98,6 @@
                 href="//localhost:1313/vi/2-preparationsteps/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/4-deployapptier/4.2-connectec2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -146,28 +110,16 @@
                 href="//localhost:1313/vi/4-deployapptier/4.2-connectec2/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/</loc>
+    <loc>//localhost:1313/vi/3-createdbwithrds/3.2-createdbinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/"
+                href="//localhost:1313/3-createdbwithrds/3.2-createdbinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.2-createcustomergw/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.1-createvpnenv/5.1.2-createec2vpn/"
+                href="//localhost:1313/vi/3-createdbwithrds/3.2-createdbinstance/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/</loc>
@@ -182,16 +134,28 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createdbwithrds/3.2-createsubnet/</loc>
+    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-createtargetgroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.2-createsubnet/"
+                href="//localhost:1313/5-createinternallbandasg/5.2-createtargetgroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.2-createsubnet/"
+                href="//localhost:1313/vi/5-createinternallbandasg/5.2-createtargetgroup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-deployapptier/4.3-downmysqloninstance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-createdbwithrds/</loc>
@@ -218,64 +182,40 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.3-createec2role/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createdbwithrds/3.3-createigw/</loc>
+    <loc>//localhost:1313/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.3-createigw/"
+                href="//localhost:1313/5-createinternallbandasg/5.3-createinternalloadbalancer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.3-createigw/"
+                href="//localhost:1313/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/</loc>
+    <loc>//localhost:1313/vi/4-deployapptier/4.4-runapponinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/"
+                href="//localhost:1313/4-deployapptier/4.4-runapponinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.3-createvpnconnection/"
+                href="//localhost:1313/vi/4-deployapptier/4.4-runapponinstance/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-deployapptier/4.3-natgateway/</loc>
+    <loc>//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.3-natgateway/"
+                href="//localhost:1313/5-createinternallbandasg/5.4-createlaunchtemplate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.3-natgateway/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.4-configurecustomergw/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-deployapptier/4.4.-createreachabilityanalyzer/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.4.-createreachabilityanalyzer/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.4.-createreachabilityanalyzer/"
+                href="//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.4-createvpc/</loc>
@@ -290,18 +230,6 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.4-createvpc/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-createdbwithrds/3.4-cretaeroutetable/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.4-cretaeroutetable/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.4-cretaeroutetable/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/4-deployapptier/</loc>
     <xhtml:link
                 rel="alternate"
@@ -312,6 +240,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/4-deployapptier/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/5-createinternallbandasg/5.5-createautoscalinggroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-createinternallbandasg/5.5-createautoscalinggroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-createinternallbandasg/5.5-createautoscalinggroup/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/</loc>
@@ -326,18 +266,6 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-deployapptier/4.5-eicendpoint/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.5-eicendpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.5-eicendpoint/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/5-createinternallbandasg/</loc>
     <xhtml:link
                 rel="alternate"
@@ -348,30 +276,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/5-createinternallbandasg/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-createdbwithrds/3.5-createsecuritygroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.5-createsecuritygroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.5-createsecuritygroup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-vpnsitetosite/5.2.5-modifyvpn/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.6-createigw/</loc>
@@ -444,6 +348,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-preparationsteps/2.9-createsecuritygroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparationsteps/2.9-createsecuritygroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparationsteps/2.9-createsecuritygroup/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
