@@ -39,7 +39,7 @@
 	"title": "Deploy fullstack app with three-tier architecture",
 	"tags": [],
 	"description": "",
-	"content": "Deploy fullstack app with three-tier architecture Overview In this workshop, we will deploy a fullstack application (Spring Boot, React, MySQL) with three tier architecture. Then find out the definition, feature of each service used in this architecture.\nContent Introduction Preparation steps Create database with RDS Deploy App tier Create Internal LB and ASG Deploy Web tier Create External LB and ASG Clean up resources "
+	"content": "Deploy fullstack app with three-tier architecture Overview In this workshop, we will deploy a fullstack application (Spring Boot, React, MySQL) with three tier architecture. Then find out the definition, feature of each service used in this architecture.\nContent Introduction Preparation steps Create database with RDS Deploy App tier Create Internal LB and ASG Deploy Web tier Create External LB and ASG Demo web after successful deployment Clean up resources "
 },
 {
 	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/1.1-flowexplaination/",

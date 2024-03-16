@@ -60,7 +60,7 @@
 	"title": "Triển khai fullstack app với kiến trúc ba tầng",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Dọn dẹp tài nguyên "
+	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Demo web sau khi deploy thành công Dọn dẹp tài nguyên "
 },
 {
 	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/",
