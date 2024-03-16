@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Tạo máy chủ EC2 :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/4-deployapptier/4.1-createec2/">English</option>
+                      <option id="en" value="/4-deployapptier/4.1-createec2/">English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/4-deployapptier/4.1-createec2/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-deployapptier/4.1-createec2/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-DeployAppTier/4.1-CreateEc2/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1421,20 +1432,20 @@
 	<h4 id="tạo-ec2-instance-cho-app-tier">Tạo EC2 instance cho App Tier</h4>
 <ol>
 <li>Tìm và chọn dịch vụ <strong>EC2</strong>
-<img alt="Git Bash" src="../../../images/4-1/01.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/01.png?width=50pc"></li>
 <li>Chọn <strong>Instances</strong> ở sidebar, sau đó click <strong>Launch instances</strong>
-<img alt="Git Bash" src="../../../images/4-1/02.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/02.png?width=50pc"></li>
 <li><strong>Name and tags</strong> điền <strong>My App Server 1</strong>
-<img alt="Git Bash" src="../../../images/4-1/03.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/03.png?width=50pc"></li>
 <li>Ở phần <strong>AMI</strong>:
 <ul>
 <li>chọn <strong>Amazon Linux</strong></li>
 <li><strong>AMI</strong> chọn <strong>Amazon Linux 2 AMI (HVM)</strong>
-<img alt="Git Bash" src="../../../images/4-1/04.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/04.png?width=50pc"></li>
 </ul>
 </li>
 <li>Ở phần <strong>Key pair</strong>, ta chọn <strong>Proceed without a key pair</strong> vì ta sẽ connect EC2 instance thông qua <strong>AWS Systems Manager Session Manager</strong>.
-<img alt="Git Bash" src="../../../images/4-1/05.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/05.png?width=50pc"></li>
 <li>Ở phần <strong>Network settings</strong>:
 <ul>
 <li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
@@ -1442,15 +1453,15 @@
 <li><strong>Auto-assign public IP</strong> chọn <strong>Enable</strong></li>
 <li><strong>SG</strong> chọn <strong>Select existing security group</strong></li>
 <li><strong>Common SG</strong> chọn <strong>AppTier-SG</strong>
-<img alt="Git Bash" src="../../../images/4-1/06.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/06.png?width=50pc"></li>
 </ul>
 </li>
 <li>Ở phần <strong>Advanced details</strong>, <strong>IAM instance profile</strong> chọn <strong>ec2role</strong> ta tạo ở trên
-<img alt="Git Bash" src="../../../images/4-1/07.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/07.png?width=50pc"></li>
 <li>Click <strong>Launch instance</strong>
-<img alt="Git Bash" src="../../../images/4-1/08.png?width=40pc"></li>
+<img alt="Git Bash" src="/images/4-1/08.png?width=40pc"></li>
 <li>Hoàn thành tạo EC2 instance cho một server ở <strong>AppTier</strong> ở <strong>private subnet 1</strong>
-<img alt="Git Bash" src="../../../images/4-1/09.png?width=50pc"></li>
+<img alt="Git Bash" src="/images/4-1/09.png?width=50pc"></li>
 </ol>
 
 
@@ -2155,19 +2166,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -18,10 +18,10 @@ pre : " <b> 5.1 </b> "
     - Chọn **Instances** ở sidebar
     - Chọn instance **My App Server 1**
     - Click **Actions**, sau đó click **Image and template** và chọn **Create image**
-![AMI](../../../images/5-1/01.png?width=50pc)
+![AMI](/images/5-1/01.png?width=50pc)
 
 2. Ở giao diện tạo image:
     - **Image name** điền **`AppTierImage`**
     - **Image description** điền **`App tier`**
     - Lướt xuống dưới cùng, click **Create image**
-![AMI](../../../images/5-1/02.png?width=50pc)
+![AMI](/images/5-1/02.png?width=50pc)

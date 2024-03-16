@@ -1,3 +1,4 @@
+# relativeURLs = true
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
@@ -9,7 +10,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
-  editURL = ""
+  editURL = "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/"
   description = ""
   author = "journeyoftheaverageguy@gmail.com"
   showVisitedLinks = true

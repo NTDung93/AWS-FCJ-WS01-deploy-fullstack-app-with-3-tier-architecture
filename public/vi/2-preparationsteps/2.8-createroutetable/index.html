@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Tạo Route Table :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/2-preparationsteps/2.8-createroutetable/">English</option>
+                      <option id="en" value="/2-preparationsteps/2.8-createroutetable/">English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/2-preparationsteps/2.8-createroutetable/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-PreparationSteps/2.8-CreateRouteTable/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1422,7 +1433,7 @@
 <ol>
 <li>
 <p>Tại giao diện của VPC, click chọn <strong>Route tables</strong> ở sidebar và click <strong>Create route table</strong>
-<img alt="Create route table" src="../../../images/2-8/01.png?width=50pc"></p>
+<img alt="Create route table" src="/images/2-8/01.png?width=50pc"></p>
 </li>
 <li>
 <p>Tại giao diện Create route table:</p>
@@ -1430,40 +1441,40 @@
 <li><strong>Name</strong> nhập <strong><code>public-route-table</code></strong></li>
 <li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
 <li>Click <strong>Create route table</strong>
-<img alt="Create route table" src="../../../images/2-8/02.png?width=50pc"></li>
+<img alt="Create route table" src="/images/2-8/02.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Sau khi tạo thành công route table, click <strong>Edit routes</strong>
-<img alt="Edit routes" src="../../../images/2-8/03.png?width=50pc"></p>
+<img alt="Edit routes" src="/images/2-8/03.png?width=50pc"></p>
 </li>
 <li>
 <p>Ở màn hình Edit routes, chọn <strong>Add route</strong>
-<img alt="Add route" src="../../../images/2-8/04.png?width=50pc"></p>
+<img alt="Add route" src="/images/2-8/04.png?width=50pc"></p>
 </li>
 <li>
 <p>Sau đó thêm route với <strong>Destination</strong> là <strong><code>0.0.0.0/0</code></strong> và <strong>Target</strong> là <strong>workshop-01-igw</strong> sau đó click <strong>Save changes</strong>
-<img alt="Add route" src="../../../images/2-8/05.png?width=50pc"></p>
+<img alt="Add route" src="/images/2-8/05.png?width=50pc"></p>
 </li>
 <li>
 <p>Sau khi tạo thành công, chuyển qua tab <strong>Subnet associations</strong> và click <strong>Edit subnet associations</strong>
-<img alt="Edit subnet associations" src="../../../images/2-8/06.png?width=50pc"></p>
+<img alt="Edit subnet associations" src="/images/2-8/06.png?width=50pc"></p>
 </li>
 <li>
 <p>Chọn 2 public subnet ta đã tạo rồi click <strong>Save associations</strong>
-<img alt="Edit subnet associations" src="../../../images/2-8/07.png?width=50pc"></p>
+<img alt="Edit subnet associations" src="/images/2-8/07.png?width=50pc"></p>
 </li>
 <li>
 <p>Thực hiện tương tự các bước trên để tạo ra <strong>private-route-table-01</strong> cho <strong>private subnet 1</strong>
-<img alt="Create route table" src="../../../images/2-8/08.png?width=50pc"></p>
+<img alt="Create route table" src="/images/2-8/08.png?width=50pc"></p>
 </li>
 <li>
 <p>Thêm route với <strong>Destination</strong> là <strong><code>0.0.0.0/0</code></strong> và <strong>Target</strong> là <strong>nat-gw-01</strong> sau đó click <strong>Save changes</strong>
-<img alt="Add route" src="../../../images/2-8/09.png?width=50pc"></p>
+<img alt="Add route" src="/images/2-8/09.png?width=50pc"></p>
 </li>
 <li>
 <p>Chọn <strong>private subnet 1</strong> rồi click <strong>Save associations</strong>
-<img alt="Edit subnet associations" src="../../../images/2-8/10.png?width=50pc"></p>
+<img alt="Edit subnet associations" src="/images/2-8/10.png?width=50pc"></p>
 </li>
 </ol>
 <h4 id="tạo-route-table-cho-2-private-db-subnet">Tạo route table cho 2 private db subnet</h4>
@@ -1473,7 +1484,7 @@
 <li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
 <li>Thêm route với <strong>Destination</strong> là <strong><code>0.0.0.0/0</code></strong> và <strong>Target</strong> là <strong>igw</strong> đã tạo (mục đích để có thể giao tiếp với db instance từ internet ngoài vpc)</li>
 <li>Thực hiện gán route table này cho 2 subnet là <strong>Private DB Subnet 1</strong> và <strong>Private DB Subnet 2</strong>
-<img alt="Create route table" src="../../../images/2-8/11.png?width=50pc"></li>
+<img alt="Create route table" src="/images/2-8/11.png?width=50pc"></li>
 </ul>
 </li>
 </ol>
@@ -2183,19 +2194,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

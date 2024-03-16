@@ -12,7 +12,7 @@ chapter : false
 Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.
 
 
-![Architecture diagram](../images/1-Introduce/workshop01.drawio.png?width=50pc)
+![Architecture diagram](/images/1-Introduce/workshop01.drawio.png?width=50pc)
 
 #### Nội dung
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Tạo database instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/3-createdbwithrds/3.2-createdbinstance/">English</option>
+                      <option id="en" value="/3-createdbwithrds/3.2-createdbinstance/">English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/3-createdbwithrds/3.2-createdbinstance/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-createdbwithrds/3.2-createdbinstance/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-CreateDbWithRDS/3.2-CreateDbInstance/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1422,25 +1433,25 @@
 <ol>
 <li>
 <p>Trong giao diện Amazon RDS, chọn <strong>Databases</strong> ở sidebar sau đó click <strong>Create database</strong>
-<img alt="create db instance" src="../../../images/3-2/01.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/01.png?width=50pc"></p>
 </li>
 <li>
 <p>Ở giao diện Create database:</p>
 <ul>
 <li><strong>Creation method</strong> chọn <strong>Standard create</strong></li>
 <li><strong>Engine type</strong> chọn <strong>MySQL</strong>
-<img alt="create db instance" src="../../../images/3-2/02.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/02.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p><strong>Templates</strong> chọn <strong>Dev/Test</strong>, <strong>Deployment options</strong> chọn <strong>Multi-AZ DB instance</strong> (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover)
 → Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy
-<img alt="create db instance" src="../../../images/3-2/03.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/03.png?width=50pc"></p>
 </li>
 </ol>
 <ul>
 <li>Nhưng chúng ta có thể chọn option khác là <strong>Free tier</strong> để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí
-<img alt="create db instance" src="../../../images/3-2/04.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/04.png?width=50pc"></li>
 </ul>
 <ol start="4">
 <li>
@@ -1449,7 +1460,7 @@
 <li><strong>DB instance identifier</strong> điền <strong><code>database-1</code></strong></li>
 <li><strong>Master username</strong> điền <strong><code>admin</code></strong></li>
 <li><strong>Master password</strong> điền <strong><code>12345678</code></strong>
-<img alt="create db instance" src="../../../images/3-2/05.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/05.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1459,24 +1470,24 @@
 <li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
 <li><strong>DB subnet group</strong> chọn <strong>db-subnet-group</strong> ta đã tạo</li>
 <li><strong>Public access</strong> chọn <strong>No</strong> (chọn <strong>Yes</strong> nếu muốn test connection từ public network)
-<img alt="create db instance" src="../../../images/3-2/06.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/06.png?width=50pc"></li>
 <li><strong>VPC SG</strong> chọn <strong>Choose existing</strong></li>
 <li><strong>Existing VPC SG</strong> chọn <strong>DataTier-SG</strong></li>
 <li><strong>AZ</strong> chọn <strong>ap-southeast-1a</strong>
-<img alt="create db instance" src="../../../images/3-2/07.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/07.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Ở phần <strong>Additional configuration</strong>, điền db name là <strong><code>demodb</code></strong> (<strong>master name: admin, pass: 12345678</strong>)
-<img alt="create db instance" src="../../../images/3-2/08.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/08.png?width=50pc"></p>
 </li>
 <li>
 <p>Kéo xuống dưới cùng và chọn <strong>Create database</strong>:
-<img alt="create db instance" src="../../../images/3-2/09.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/09.png?width=50pc"></p>
 </li>
 <li>
 <p>Hoàn thành tạo database instance
-<img alt="create db instance" src="../../../images/3-2/10.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/10.png?width=50pc"></p>
 </li>
 </ol>
 <h4 id="config-lại-để-test-connection-từ-public-network">Config lại để test connection từ public network</h4>
@@ -1500,20 +1511,20 @@
 <li><strong>Username</strong> điền <strong><code>admin</code></strong></li>
 <li><strong>Password</strong> click <strong>Store in Vault</strong> rồi nhập <strong><code>12345678</code></strong></li>
 <li>Sau cùng, nhấn <strong>Test Connection</strong>
-<img alt="create db instance" src="../../../images/3-2/11.png?width=50pc"></li>
+<img alt="create db instance" src="/images/3-2/11.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Test connection thành công
-<img alt="create db instance" src="../../../images/3-2/12.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/12.png?width=50pc"></p>
 </li>
 <li>
 <p>Vào file <strong>application.properties</strong> và config lại <strong>datasource url</strong>, <strong>username</strong> và <strong>password</strong> như hình dưới
-<img alt="create db instance" src="../../../images/3-2/13.png?width=50pc"></p>
+<img alt="create db instance" src="/images/3-2/13.png?width=50pc"></p>
 </li>
 <li>
 <p>Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế <strong>code first</strong> (chỉ để test vì trong workshop này chúng ta sẽ sử dụng <strong>database first</strong>)
-<img alt="create db instance" src="../../../images/3-2/14.png?width=40pc"></p>
+<img alt="create db instance" src="/images/3-2/14.png?width=40pc"></p>
 </li>
 </ol>
 
@@ -2222,19 +2233,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

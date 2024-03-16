@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Tải MySQL lên EC2 instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/4-deployapptier/4.3-downmysqloninstance/">English</option>
+                      <option id="en" value="/4-deployapptier/4.3-downmysqloninstance/">English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-deployapptier/4.3-downmysqloninstance/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-DeployAppTier/4.3-DownMySQLOnInstance/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1426,7 +1437,7 @@
 <li><strong><code>sudo yum install -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</code></strong></li>
 <li><strong><code>sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</code></strong></li>
 <li><strong><code>sudo yum install -y mysql-community-client</code></strong>
-<img alt="download mysql" src="../../../images/4-3/01.png?width=50pc"></li>
+<img alt="download mysql" src="/images/4-3/01.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1434,40 +1445,40 @@
 <ul>
 <li>Chạy command <strong>mysql -h <!-- raw HTML omitted --> -u <!-- raw HTML omitted --> -p</strong> (<strong><code>mysql -h database-1.cbk6is6oozuw.ap-southeast-1.rds.amazonaws.com -u admin -p</code></strong>)</li>
 <li>Sau đó điền password <strong><code>12345678</code></strong>
-<img alt="connect to rds" src="../../../images/4-3/02.png?width=50pc"></li>
+<img alt="connect to rds" src="/images/4-3/02.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Chạy <strong><code>create database librarydb;</code></strong> để tạo mới 1 db
-<img alt="create db" src="../../../images/4-3/03.png?width=50pc"></p>
+<img alt="create db" src="/images/4-3/03.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy <strong><code>show database;</code></strong> để show các db hiện có
-<img alt="show db" src="../../../images/4-3/04.png?width=50pc"></p>
+<img alt="show db" src="/images/4-3/04.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy <strong><code>use librarydb;</code></strong> để sử dụng db vừa tạo
-<img alt="use db" src="../../../images/4-3/05.png?width=50pc"></p>
+<img alt="use db" src="/images/4-3/05.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy <strong><code>show tables;</code></strong> để show những bảng trong db, lúc này db chưa có bảng nào
-<img alt="show tables" src="../../../images/4-3/06.png?width=50pc"></p>
+<img alt="show tables" src="/images/4-3/06.png?width=50pc"></p>
 </li>
 <li>
 <p>Để tạo bảng cho db, ta vào file <strong>application.properties</strong> của back-end và config lại các thông tin như hình dưới
-<img alt="application properties" src="../../../images/4-3/07.png?width=50pc"></p>
+<img alt="application properties" src="/images/4-3/07.png?width=50pc"></p>
 </li>
 <li>
 <p>Sau đó ta sẽ chạy app. Sau khi app chạy thành công, chạy lệnh <strong><code>show tables;</code></strong> lần nữa để kiểm tra
-<img alt="show tables" src="../../../images/4-3/08.png?width=50pc"></p>
+<img alt="show tables" src="/images/4-3/08.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy lệnh <strong>insert into librarydb.book (author, category, copies, copies_available, description, img, title) values (&lsquo;John&rsquo;, &lsquo;Programming&rsquo;, 10, 8, &lsquo;Tutorial about Java&rsquo;, &lsquo;&rsquo;, &lsquo;Java Advanced&rsquo;);</strong> để thêm 1 dòng data vào bảng book
-<img alt="insert data" src="../../../images/4-3/09.png?width=50pc"></p>
+<img alt="insert data" src="/images/4-3/09.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy <strong><code>select * from librarydb.book;</code></strong> để show những dòng data trong bảng book
-<img alt="show data" src="../../../images/4-3/10.png?width=50pc"></p>
+<img alt="show data" src="/images/4-3/10.png?width=50pc"></p>
 </li>
 </ol>
 
@@ -1476,7 +1487,7 @@
 
 <ol start="11">
 <li>Mở MySQL, truy cập vào connection đã tạo và import file <strong><code>React-Springboot-Add-Tables-Script-1.sql</code></strong> ở trong folder <strong><code>starter-files</code></strong>, sau đó chạy scripts có sẵn để tạo db tên <strong>librarydb</strong> và các bảng trong db
-<img alt="import sql" src="../../../images/4-3/11.png?width=50pc"></li>
+<img alt="import sql" src="/images/4-3/11.png?width=50pc"></li>
 </ol>
 
 
@@ -2184,19 +2195,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

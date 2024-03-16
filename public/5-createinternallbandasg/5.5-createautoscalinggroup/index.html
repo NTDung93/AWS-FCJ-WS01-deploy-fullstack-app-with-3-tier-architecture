@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Create Auto Scaling Group :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1188,13 +1188,13 @@
  
   
     
-    <li data-nav-id="/8-demoweb/" title="Clean Up Resources" class="dd-item 
+    <li data-nav-id="/8-demoweb/" title="Demo deploy successfully" class="dd-item 
         
         
         
         ">
       <a href="/8-demoweb/">
-           <b> 9. </b> Clean Up Resources
+           <b> 8. </b> Demo deploy successfully
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/5-createinternallbandasg/5.5-createautoscalinggroup/" selected>English</option>
+                      <option id="en" value="/5-createinternallbandasg/5.5-createautoscalinggroup/" selected>English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/5-createinternallbandasg/5.5-createautoscalinggroup/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/5-createinternallbandasg/5.5-createautoscalinggroup/">Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-CreateInternalLbAndASG/5.5-CreateAutoScalingGroup/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1422,7 +1433,7 @@
 <ol>
 <li>
 <p>In interfatce of EC2, choose <strong>Auto scaling group</strong> at sidebar, then click <strong>Create auto scaling group.</strong>
-<img src="../../../images/5-5/01.png?width=50pc"></p>
+<img src="/images/5-5/01.png?width=50pc"></p>
 </li>
 <li>
 <p>In the interface of creating ASG:</p>
@@ -1430,7 +1441,7 @@
 <li><strong>Name</strong> fill in <strong><code>AppTierASG</code></strong></li>
 <li><strong>Launch template</strong> choose <strong>AppTier-LaunchTemplate</strong></li>
 <li>Scroll downw and click <strong>Next</strong>
-<img src="../../../images/5-5/02.png?width=50pc"></li>
+<img src="/images/5-5/02.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1439,7 +1450,7 @@
 <li><strong>VPC: my-vpc</strong></li>
 <li><strong>AZs and subnets</strong> choose <strong>Private Subnet 1</strong> and <strong>Private Subnet 2</strong></li>
 <li>Click <strong>Next</strong>
-<img src="../../../images/5-5/03.png?width=50pc"></li>
+<img src="/images/5-5/03.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1448,7 +1459,7 @@
 <li><strong>Load balancing</strong> choose <strong>Attach to an existing load balancer</strong></li>
 <li>Choose <strong>Choose from your load balancer target group</strong> then choose <strong>AppTierTargetGroup</strong></li>
 <li>Scroll downw and click <strong>Next</strong>
-<img src="../../../images/5-5/04.png?width=50pc"></li>
+<img src="/images/5-5/04.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1459,16 +1470,16 @@
 <li><strong>Max desired capacity</strong>: <strong>2</strong></li>
 <li>Scroll downw and click <strong>Next</strong></li>
 <li><strong>Next</strong> to the last step then click <strong>Create auto scaling group</strong>
-<img src="../../../images/5-5/05.png?width=50pc"></li>
+<img src="/images/5-5/05.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Finish creating ASG:
-<img src="../../../images/5-5/06.png?width=50pc"></p>
+<img src="/images/5-5/06.png?width=50pc"></p>
 </li>
 <li>
 <p>After creating ASG successfully, 2 new ec2 instances will be created:
-<img src="../../../images/5-5/07.png?width=50pc"></p>
+<img src="/images/5-5/07.png?width=50pc"></p>
 </li>
 </ol>
 
@@ -1481,7 +1492,7 @@
 
 <ol start="8">
 <li>Try to terminate both instances in ASG, 2 new instances will be launched immediately by ASG
-<img src="../../../images/5-5/08.png?width=50pc"></li>
+<img src="/images/5-5/08.png?width=50pc"></li>
 </ol>
 
 
@@ -2189,19 +2200,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

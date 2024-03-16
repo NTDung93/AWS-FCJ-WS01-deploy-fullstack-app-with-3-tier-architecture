@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Chạy ứng dụng trên EC2 instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/4-deployapptier/4.4-runapponinstance/">English</option>
+                      <option id="en" value="/4-deployapptier/4.4-runapponinstance/">English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/4-deployapptier/4.4-runapponinstance/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-deployapptier/4.4-runapponinstance/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-DeployAppTier/4.4-RunAppOnInstance/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1426,19 +1437,19 @@
 <ol>
 <li>
 <p>Tải java 17 trên instance bằng lệnh <strong><code>sudo yum install java-17-amazon-corretto-headless</code></strong>. Sau đó check tải thành công bằng lệnh <strong><code>java -version</code></strong>
-!<img alt="run app" src="../../../images/4-4/01.png?width=50pc"></p>
+!<img alt="run app" src="/images/4-4/01.png?width=50pc"></p>
 </li>
 <li>
 <p>Để generate ra file jar của app, ta vào IDE, mở project back end, truy cập vào <strong>Maven</strong>, chuột phải vào <strong>install</strong> trong <strong>Lifecycle</strong> và chọn <strong>Run Maven Build</strong>.
-!<img alt="run app" src="../../../images/4-4/02.png?width=50pc"></p>
+!<img alt="run app" src="/images/4-4/02.png?width=50pc"></p>
 </li>
 <li>
 <p>Hoàn thành tạo file jar của app, file jar vừa tạo sẽ nằm trong folder target
-!<img alt="run app" src="../../../images/4-4/03.png?width=50pc"></p>
+!<img alt="run app" src="/images/4-4/03.png?width=50pc"></p>
 </li>
 <li>
 <p>Truy cập vào S3, vào bucket đã tạo, tạo folder mới tên <strong><code>library-app-be</code></strong>. Sau khi tạo xong folder, ta upload file jar vừa tạo bằng cách kéo thả vào folder
-!<img alt="run app" src="../../../images/4-4/04.png?width=50pc"></p>
+!<img alt="run app" src="/images/4-4/04.png?width=50pc"></p>
 </li>
 <li>
 <p>Trước khi download s3 lên instance, ta cần <strong>make s3 public</strong> bằng cách thêm policy cho nó:</p>
@@ -1460,43 +1471,43 @@
         }
     ]
 }
-</code></pre><p><img alt="run app" src="../../../images/4-4/05.png?width=50pc"></p>
+</code></pre><p><img alt="run app" src="/images/4-4/05.png?width=50pc"></p>
 <ol start="6">
 <li>
 <p>Truy cập vào file jar trên bucket và copy <strong>Object URL</strong> của nó
-<img alt="run app" src="../../../images/4-4/06.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/06.png?width=50pc"></p>
 </li>
 <li>
 <p>Ở session manager, chạy lệnh <strong>sudo wget <!-- raw HTML omitted --></strong> (<strong><code>sudo wget https://demowebapp-workshop-01.s3.ap-southeast-1.amazonaws.com/library-app-be/library-app-be-0.0.1-SNAPSHOT.jar</code></strong>) để tải file jar lên instance
-<img alt="run app" src="../../../images/4-4/07.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/07.png?width=50pc"></p>
 </li>
 <li>
 <p>Chạy lệnh <strong><code>java -jar library-app-be-0.0.1-SNAPSHOT.jar</code></strong> để chạy app trên instance
-<img alt="run app" src="../../../images/4-4/08.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/08.png?width=50pc"></p>
 </li>
 <li>
 <p>Để có thể tạm test bằng <strong>Postman</strong>, ta có thể tạm thời gán <strong>public-route-table</strong> (mục đích để có thể sử dụng IGW) cho <strong>private-subnet-1</strong> (subnet chứa ec2 instance)
-<img alt="run app" src="../../../images/4-4/09.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/09.png?width=50pc"></p>
 </li>
 <li>
 <p>Truy cập postman, ta có thể sử dụng <strong>Public IPv4 address</strong> hoặc <strong>Public IPv4 DNS</strong> để gọi tới các API
-<img alt="run app" src="../../../images/4-4/10.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/10.png?width=50pc"></p>
 </li>
 </ol>
 <ul>
 <li>sử dụng <strong>Public IPv4 address</strong>
-<img alt="run app" src="../../../images/4-4/11.png?width=50pc"></li>
+<img alt="run app" src="/images/4-4/11.png?width=50pc"></li>
 <li>sử dụng <strong>Public IPv4 DNS</strong>
-<img alt="run app" src="../../../images/4-4/12.png?width=50pc"></li>
+<img alt="run app" src="/images/4-4/12.png?width=50pc"></li>
 </ul>
 <ol start="11">
 <li>
 <p>Để có thể giữ cho app chạy sau khi terminate session, chúng ta sẽ sử dụng nohup bằng lệnh sau <strong>nohup java -jar <!-- raw HTML omitted --></strong> (ex: <strong><code>nohup java -jar library-app-be-0.0.1-SNAPSHOT.jar</code></strong>)
-<img alt="run app" src="../../../images/4-4/13.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/13.png?width=50pc"></p>
 </li>
 <li>
 <p>Để dừng app sau khi chạy bằng nohup, ta chạy lệnh sau <strong><code>pkill -f 'java -jar library-app-be-0.0.1-SNAPSHOT.jar'</code></strong>
-<img alt="run app" src="../../../images/4-4/14.png?width=50pc"></p>
+<img alt="run app" src="/images/4-4/14.png?width=50pc"></p>
 </li>
 </ol>
 
@@ -2238,19 +2249,19 @@ WantedBy=multi-user.target
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

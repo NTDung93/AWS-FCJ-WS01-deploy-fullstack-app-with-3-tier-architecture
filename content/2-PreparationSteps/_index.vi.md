@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-#### Các bước chuẩn bị
-
 Trong section 2 này, chúng ta sẽ cùng nhau setup những thứ quan trọng và cần thiết để thực hiện workshop này.
 
 #### Nội dung

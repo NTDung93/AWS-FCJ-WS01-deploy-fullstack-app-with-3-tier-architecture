@@ -11,7 +11,7 @@ chapter : false
 
 In this workshop, we will deploy a fullstack application (Spring Boot, React, MySQL) with three tier architecture. Then find out the definition, feature of each service used in this architecture.
 
-![Architecture diagram](../images/1-Introduce/workshop01.drawio.png?width=50pc)
+![Architecture diagram](/images/1-Introduce/workshop01.drawio.png?width=50pc)
 
 #### Content
 

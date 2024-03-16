@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.123.3">
@@ -12,21 +12,21 @@
     <title>Download MySQL on EC2 instance :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1710556102" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710556102" rel="stylesheet">
-    <link href="/css/hybrid.css?1710556102" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710556102" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710556102" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710556102" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710556102" rel="stylesheet">
-    <link href="/css/theme.css?1710556102" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710556102" rel="stylesheet">
+    <link href="/css/nucleus.css?1710579090" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710579090" rel="stylesheet">
+    <link href="/css/hybrid.css?1710579090" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710579090" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710579090" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710579090" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710579090" rel="stylesheet">
+    <link href="/css/theme.css?1710579090" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710579090" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710556102" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710579090" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710556102"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710579090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710556102"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710556102"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710579090"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710579090"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710556102"></script>
+<script type="text/javascript" src="/js/search.js?1710579090"></script>
 
     
   </div>
@@ -1188,13 +1188,13 @@
  
   
     
-    <li data-nav-id="/8-demoweb/" title="Clean Up Resources" class="dd-item 
+    <li data-nav-id="/8-demoweb/" title="Demo deploy successfully" class="dd-item 
         
         
         
         ">
       <a href="/8-demoweb/">
-           <b> 9. </b> Clean Up Resources
+           <b> 8. </b> Demo deploy successfully
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1271,7 +1271,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/4-deployapptier/4.3-downmysqloninstance/" selected>English</option>
+                      <option id="en" value="/4-deployapptier/4.3-downmysqloninstance/" selected>English</option>
                     
                   
               
@@ -1285,7 +1285,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-deployapptier/4.3-downmysqloninstance/">Tiếng Việt</option>
                     
                   
               
@@ -1348,6 +1348,17 @@
               
               <div>
                 <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-DeployAppTier/4.3-DownMySQLOnInstance/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -1422,7 +1433,7 @@
 <li><strong><code>sudo yum install -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</code></strong></li>
 <li><strong><code>sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</code></strong></li>
 <li><strong><code>sudo yum install -y mysql-community-client</code></strong>
-<img alt="download mysql" src="../../../images/4-3/01.png?width=50pc"></li>
+<img alt="download mysql" src="/images/4-3/01.png?width=50pc"></li>
 </ul>
 </li>
 <li>
@@ -1430,40 +1441,40 @@
 <ul>
 <li>Run command <strong>mysql -h <!-- raw HTML omitted --> -u <!-- raw HTML omitted --> -p</strong> (<strong><code>mysql -h database-1.cbk6is6oozuw.ap-southeast-1.rds.amazonaws.com -u admin -p</code></strong>)</li>
 <li>Then enter password <strong><code>12345678</code></strong>
-<img alt="connect to rds" src="../../../images/4-3/02.png?width=50pc"></li>
+<img alt="connect to rds" src="/images/4-3/02.png?width=50pc"></li>
 </ul>
 </li>
 <li>
 <p>Run <strong><code>create database librarydb;</code></strong> to create a new db
-<img alt="create db" src="../../../images/4-3/03.png?width=50pc"></p>
+<img alt="create db" src="/images/4-3/03.png?width=50pc"></p>
 </li>
 <li>
 <p>Run <strong><code>show database;</code></strong> to show existing dbs
-<img alt="show db" src="../../../images/4-3/04.png?width=50pc"></p>
+<img alt="show db" src="/images/4-3/04.png?width=50pc"></p>
 </li>
 <li>
 <p>Run <strong><code>use librarydb;</code></strong> to use the newly created db
-<img alt="use db" src="../../../images/4-3/05.png?width=50pc"></p>
+<img alt="use db" src="/images/4-3/05.png?width=50pc"></p>
 </li>
 <li>
 <p>Run <strong><code>show tables;</code></strong> to show tables in the db, at this time the db has no tables
-<img alt="show tables" src="../../../images/4-3/06.png?width=50pc"></p>
+<img alt="show tables" src="/images/4-3/06.png?width=50pc"></p>
 </li>
 <li>
 <p>To create tables for the db, go to the <strong>application.properties</strong> file of the back-end and reconfigure the information as shown below
-<img alt="application properties" src="../../../images/4-3/07.png?width=50pc"></p>
+<img alt="application properties" src="/images/4-3/07.png?width=50pc"></p>
 </li>
 <li>
 <p>Then we will run the app. After the app runs successfully, run the <strong><code>show tables;</code></strong> command again to check
-<img alt="show tables" src="../../../images/4-3/08.png?width=50pc"></p>
+<img alt="show tables" src="/images/4-3/08.png?width=50pc"></p>
 </li>
 <li>
 <p>Run the command <strong>insert into librarydb.book (author, category, copies, copies_available, description, img, title) values (&lsquo;John&rsquo;, &lsquo;Programming&rsquo;, 10, 8, &lsquo;Tutorial about Java&rsquo;, &lsquo;&rsquo;, &lsquo;Java Advanced&rsquo;);</strong> to add a row of data to the book table
-<img alt="insert data" src="../../../images/4-3/09.png?width=50pc"></p>
+<img alt="insert data" src="/images/4-3/09.png?width=50pc"></p>
 </li>
 <li>
 <p>Run <strong><code>select * from librarydb.book;</code></strong> to show the rows of data in the book table
-<img alt="show data" src="../../../images/4-3/10.png?width=50pc"></p>
+<img alt="show data" src="/images/4-3/10.png?width=50pc"></p>
 </li>
 </ol>
 
@@ -1472,7 +1483,7 @@
 
 <ol start="11">
 <li>Open MySQL, access the created connection and import the <strong><code>React-Springboot-Add-Tables-Script-1.sql</code></strong> file in the <strong><code>starter-files</code></strong> folder, then run the available scripts to create the db named <strong>librarydb</strong> and the tables in the db
-<img alt="import sql" src="../../../images/4-3/11.png?width=50pc"></li>
+<img alt="import sql" src="/images/4-3/11.png?width=50pc"></li>
 </ol>
 
 
@@ -2180,19 +2191,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710556102"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710556102"></script>
-    <script src="/js/jquery.sticky.js?1710556102"></script>
-    <script src="/js/featherlight.min.js?1710556102"></script>
-    <script src="/js/highlight.pack.js?1710556102"></script>
+    <script src="/js/clipboard.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710579090"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710579090"></script>
+    <script src="/js/jquery.sticky.js?1710579090"></script>
+    <script src="/js/featherlight.min.js?1710579090"></script>
+    <script src="/js/highlight.pack.js?1710579090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710556102"></script>
-    <script src="/js/learn.js?1710556102"></script>
-    <script src="/js/hugo-learn.js?1710556102"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710579090"></script>
+    <script src="/js/learn.js?1710579090"></script>
+    <script src="/js/hugo-learn.js?1710579090"></script>
 
-    <link href="/mermaid/mermaid.css?1710556102" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710556102"></script>
+    <link href="/mermaid/mermaid.css?1710579090" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710579090"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

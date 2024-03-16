@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-## Firewall in VPC
-
 In this section, we will setup the necessary and important things to perform this workshop.
 
 ### Contents
