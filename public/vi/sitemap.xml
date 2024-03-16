@@ -38,6 +38,18 @@
                 href="//localhost:1313/vi/1-introduce/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/6-deploywebtier/6.1-updateconfigfile/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-deploywebtier/6.1-updateconfigfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-deploywebtier/6.1-updateconfigfile/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/</loc>
     <xhtml:link
                 rel="alternate"
@@ -48,6 +60,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/7-createexternallbandasg/7.1-createwebtierami/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-createexternallbandasg/7.1-createwebtierami/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-createexternallbandasg/7.1-createwebtierami/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-createdbwithrds/3.1-createdbsubnetgroup/</loc>
@@ -146,6 +170,30 @@
                 href="//localhost:1313/vi/5-createinternallbandasg/5.2-createtargetgroup/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/7-createexternallbandasg/7.2-createtargetgroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-createexternallbandasg/7.2-createtargetgroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-createexternallbandasg/7.2-createtargetgroup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-deploywebtier/6.2-uploadcodetos3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-deploywebtier/6.2-uploadcodetos3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-deploywebtier/6.2-uploadcodetos3/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/</loc>
     <xhtml:link
                 rel="alternate"
@@ -168,6 +216,30 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/3-createdbwithrds/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-deploywebtier/6.3-createec2instance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-deploywebtier/6.3-createec2instance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-deploywebtier/6.3-createec2instance/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-createexternallbandasg/7.3-createexternalloadbalancer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.3-createec2role/</loc>
@@ -206,6 +278,18 @@
                 href="//localhost:1313/vi/4-deployapptier/4.4-runapponinstance/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/6-deploywebtier/6.4-connecttoinstance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-deploywebtier/6.4-connecttoinstance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-deploywebtier/6.4-connecttoinstance/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/</loc>
     <xhtml:link
                 rel="alternate"
@@ -216,6 +300,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/7-createexternallbandasg/7.4-createlaunchtemplate/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-createexternallbandasg/7.4-createlaunchtemplate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-createexternallbandasg/7.4-createlaunchtemplate/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.4-createvpc/</loc>
@@ -252,6 +348,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/5-createinternallbandasg/5.5-createautoscalinggroup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/7-createexternallbandasg/7.5-createautoscalinggroup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/7-createexternallbandasg/7.5-createautoscalinggroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/7-createexternallbandasg/7.5-createautoscalinggroup/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/</loc>
@@ -326,16 +434,16 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.7-createnatgateway/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/8-cleanupresources/</loc>
+    <loc>//localhost:1313/vi/8-demoweb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/8-cleanupresources/"
+                href="//localhost:1313/8-demoweb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/8-cleanupresources/"
+                href="//localhost:1313/vi/8-demoweb/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/</loc>
@@ -348,6 +456,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/9-cleanupresources/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/9-cleanupresources/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/9-cleanupresources/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.9-createsecuritygroup/</loc>

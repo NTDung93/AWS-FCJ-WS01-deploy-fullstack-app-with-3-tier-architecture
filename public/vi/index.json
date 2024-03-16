@@ -4,7 +4,7 @@
 	"title": "Clone code từ GitHub",
 	"tags": [],
 	"description": "",
-	"content": "Clone code từ GitHub Truy cập vào folder mà bạn muốn lưu trữ code.\nChuột phải chọn Open Git Bash Here.\nGõ lệnh git clone https://github.com/NTDung93/library-app.git rồi enter. Hoàn thành clone code từ GitHub "
+	"content": "Clone code từ GitHub Truy cập vào folder mà bạn muốn lưu trữ code.\nChuột phải chọn Open Git Bash Here. Gõ lệnh git clone https://github.com/NTDung93/library-app.git rồi enter.\nHoàn thành clone code từ GitHub Checkout qua nhánh deploy bằng lệnh git checkout deploy (nhánh đã được tinh chỉnh source code để thuận tiện cho việc deploy) Nếu bạn có mở source code phần Front-end, nó sẽ báo lỗi đỏ khắp màn hình, đừng lo lắng vì source đó đã xóa folder Node_modules để phục vụ cho việc deploy trong các section tới, bạn chỉ cần chạy lệnh npm install để cài đặt lại các package cần thiết. Nhưng nếu bạn không có nhu cầu mở source code phần Front-end, bạn có thể bỏ qua bước này.\n"
 },
 {
 	"uri": "//localhost:1313/vi/1-introduce/1.1-flowexplaination/",
@@ -21,11 +21,25 @@
 	"content": "Giới thiệu kiến trúc 3 tầng Kiến trúc ba tầng là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.\nKiến trúc 3 tầng bao gồm:\nPresentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile). Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng. Data tier: tầng lưu trữ dữ liệu của app. Lợi ích của việc sử dụng kiến trúc 3 tầng:\nTính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi. Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation). Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database. "
 },
 {
+	"uri": "//localhost:1313/vi/6-deploywebtier/6.1-updateconfigfile/",
+	"title": "Sửa lại file cấu hình Nginx",
+	"tags": [],
+	"description": "",
+	"content": "Sửa lại file cấu hình Nginx Mở file nginx.conf từ project đã clone Sau đó sửa dòng số 58 trong file thành DNS Name của load balancer app-tier-internal-lb "
+},
+{
 	"uri": "//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/",
 	"title": "Tạo AMI cho App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Vì sao chúng ta cần tạo Amazon Machine Image (AMI)? AMI bao gồm operating system, applications, configurations, và data volumes. Reproduce config hoặc launch instance mới dễ dàng - một khi đã tạo một instance với những config mong muốn, ta tạo AMI từ instance đó. Khi ta tạo ra những instance mới từ AMI đó, sẽ đảm bảo được tính consistency, các instance đều có những config tương đồng nhau. Backup và recovery - AMI như snapshot dùng để backup, recovery khi có thiên tai, để reproduce những instance bị fail → Nếu có instance nào fail hoặc cần thay thế, sẽ dễ dàng và nhanh chóng hơn nếu tạo từ AMI thay vì từ đầu. Auto scaling - Khi chúng ta sử dụng ASG (Auto Scaling Group) để scale up app, AMI sẽ đảm bảo những instance mới sẽ có những config cần thiết. Tạo AMI từ instance Truy cập vào dịch vụ EC2:\nChọn Instances ở sidebar Chọn instance My App Server 1 Click Actions, sau đó click Image and template và chọn Create image Ở giao diện tạo image:\nImage name điền AppTierImage Image description điền App tier Lướt xuống dưới cùng, click Create image "
+},
+{
+	"uri": "//localhost:1313/vi/7-createexternallbandasg/7.1-createwebtierami/",
+	"title": "Tạo AMI cho Web Tier",
+	"tags": [],
+	"description": "",
+	"content": "Tạo AMI từ instance Truy cập vào dịch vụ EC2:\nChọn Instances ở sidebar Chọn instance My Web Server 1 Click Actions, sau đó click Image and template và chọn Create image Ở giao diện tạo image:\nImage name điền WebTierImage Image description điền Web tier Lướt xuống dưới cùng, click Create image "
 },
 {
 	"uri": "//localhost:1313/vi/3-createdbwithrds/3.1-createdbsubnetgroup/",
@@ -46,7 +60,7 @@
 	"title": "Triển khai fullstack app với kiến trúc ba tầng",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Dọn dẹp tài nguyên "
+	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Dọn dẹp tài nguyên "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/",
@@ -84,6 +98,20 @@
 	"content": "Tại sao cần tạo Target group? Vì khi đăng ký các ec2 instances vào target group, load balancer có thể theo dõi health của từng instance và route traffic tới healthy instance → ensure high availability. Tạo Target group Tại giao diện EC2, chọn Target Groups ở nhóm Load balancing ở sidebar, sau đó chọn Create target group Tại giao diện tạo target group:\nTarget group name điền AppTierTargetGroup Protocol: HTTP, Port: 8080 VPC chọn my-vpc Kéo xuống dưới cùng click Next rồi click Create target group Hoàn thành tạo target group "
 },
 {
+	"uri": "//localhost:1313/vi/7-createexternallbandasg/7.2-createtargetgroup/",
+	"title": "Tạo Target group cho Web Tier",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Target group Tại giao diện EC2, chọn Target Groups ở nhóm Load balancing ở sidebar, sau đó chọn Create target group Tại giao diện tạo target group:\nTarget group name điền WebTierTargetGroup Protocol: HTTP, Port: 80 (đây là port mà nginx listen) VPC chọn my-vpc Health check path điền /health Kéo xuống dưới cùng click Next rồi click Create target group Hoàn thành tạo target group "
+},
+{
+	"uri": "//localhost:1313/vi/6-deploywebtier/6.2-uploadcodetos3/",
+	"title": "Upaload code lên S3",
+	"tags": [],
+	"description": "",
+	"content": "Upaload code lên S3 Vào folder library-app-fe dưới local, xóa folder node_modules (nếu có) Truy cập vào bucket đã tạo của S3, kéo thả folder library-app-fe và file nginx.config dưới local vào bucket để tải folder và file lên bucket. "
+},
+{
 	"uri": "//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/",
 	"title": "Tải MySQL lên EC2 instance",
 	"tags": [],
@@ -96,6 +124,20 @@
 	"tags": [],
 	"description": "",
 	"content": "RDS là gì? Dịch vụ cơ sở dữ liệu quan hệ của Amazon (Amazon RDS) là một dịch vụ được quản lý, giúp bạn dễ dàng thiết lập, vận hành và điều chỉnh quy mô cơ sở dữ liệu quan hệ trên đám mây. Dịch vụ này cung cấp tính năng hiệu quả về chi phí và có thể thay đổi quy mô, trong khi vẫn quản lý được các tác vụ quản trị cơ sở dữ liệu tiêu tốn nhiều thời gian, giúp bạn thoải mái tập trung vào các ứng dụng và công việc của bạn.\nNội dung Tạo database subnet group Tạo database instance "
+},
+{
+	"uri": "//localhost:1313/vi/6-deploywebtier/6.3-createec2instance/",
+	"title": "Tạo EC2 instance",
+	"tags": [],
+	"description": "",
+	"content": "Tạo EC2 instance Tương tự như tạo instance cho App server, ta tạo một instance cho web server với những thay đổi sau:\nInstance name điền My Web Server 1 Subnet chọn Public Subnet 1 Security group chọn WebTier-SG Advanced details, IAM instance profile chọn ec2role Cuối cùng chọn Launch instance Hoàn thành tạo EC2 instance cho web server "
+},
+{
+	"uri": "//localhost:1313/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/",
+	"title": "Tạo External Load Balancer",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Internal Load Balancer Ở giao diện EC2, chọn Load balancers ở sidebar, sau đó click Create load balancer Tại giao diện chọn balancer type, click chọn Create của Application Load Balancer Tại màn hình tạo ALB:\nLB Name điền web-tier-internal-lb Scheme chọn Internet-facing Ở phần Network mapping:\nVPC: my-vpc Tick chọn ap-southeast-1a, sau đó chọn Public Subnet 1 Tick chọn ap-southeast-1b, sau đó chọn Public Subnet 2 Ở phần Security groups chọn InternetFacing-LB-SG. Ở phần Listeners and routing, default action chọn WebTierTargetGroup. Lướt xuống dưới cùng và click Create load balancer. Hoàn thành tạo load balancer cho app tier. "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.3-createec2role/",
@@ -119,11 +161,25 @@
 	"content": "Chạy ứng dụng trên EC2 instance Ý tưởng: Ta sẽ build ra file jar của app, sau đó upload file jar đó lên s3 bucket. Tiếp đó tải file jar lên ec2 instance và chạy file jar trên instance.\nTải java 17 trên instance bằng lệnh sudo yum install java-17-amazon-corretto-headless. Sau đó check tải thành công bằng lệnh java -version !\nĐể generate ra file jar của app, ta vào IDE, mở project back end, truy cập vào Maven, chuột phải vào install trong Lifecycle và chọn Run Maven Build. !\nHoàn thành tạo file jar của app, file jar vừa tạo sẽ nằm trong folder target !\nTruy cập vào S3, vào bucket đã tạo, tạo folder mới tên library-app-be. Sau khi tạo xong folder, ta upload file jar vừa tạo bằng cách kéo thả vào folder !\nTrước khi download s3 lên instance, ta cần make s3 public bằng cách thêm policy cho nó:\nChọn s3 bucket đã tạo, vào tab permission Ở Bucket policy chọn edit và paste đoạn mã sau vào, sau đó nhấn Save changes {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;PublicReadGetObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: \u0026#34;*\u0026#34;,\r\u0026#34;Action\u0026#34;: \u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:s3:::demowebapp-workshop-01/*\u0026#34;\r}\r]\r} Truy cập vào file jar trên bucket và copy Object URL của nó Ở session manager, chạy lệnh sudo wget (sudo wget https://demowebapp-workshop-01.s3.ap-southeast-1.amazonaws.com/library-app-be/library-app-be-0.0.1-SNAPSHOT.jar) để tải file jar lên instance Chạy lệnh java -jar library-app-be-0.0.1-SNAPSHOT.jar để chạy app trên instance Để có thể tạm test bằng Postman, ta có thể tạm thời gán public-route-table (mục đích để có thể sử dụng IGW) cho private-subnet-1 (subnet chứa ec2 instance) Truy cập postman, ta có thể sử dụng Public IPv4 address hoặc Public IPv4 DNS để gọi tới các API sử dụng Public IPv4 address sử dụng Public IPv4 DNS Để có thể giữ cho app chạy sau khi terminate session, chúng ta sẽ sử dụng nohup bằng lệnh sau nohup java -jar (ex: nohup java -jar library-app-be-0.0.1-SNAPSHOT.jar) Để dừng app sau khi chạy bằng nohup, ta chạy lệnh sau pkill -f 'java -jar library-app-be-0.0.1-SNAPSHOT.jar' Nhưng ta cần phải tìm cách để app chạy tự động sau khi instance reboot, vì vậy ta sẽ sử dụng systemd để tạo service cho app (run java app as a service)\nTa sẽ chạy lần lượt các lệnh sau: sudo chmod +x /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar sudo vim /etc/systemd/system/library.service Insert the code below into your-application.service:\n[Unit]\rDescription=Java Application as a Service\rAfter=syslog.target\r[Service]\rUser=ec2-user\rExecStart=ExecStart=/usr/bin/java -jar /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar\rSuccessExitStatus=143\r[Install]\rWantedBy=multi-user.target cd /etc/systemd/system/ sudo chmod 777 library.service sudo nano library.service sudo systemctl daemon-reload sudo systemctl enable library.service sudo systemctl start library.service sudo systemctl status library.service -l sudo systemctl stop library.service "
 },
 {
+	"uri": "//localhost:1313/vi/6-deploywebtier/6.4-connecttoinstance/",
+	"title": "Kết nối tới EC2 instance",
+	"tags": [],
+	"description": "",
+	"content": "Kết nối tới EC2 instance Làm tương tự như khi kết nối vào instance của app server, ta connect thông qua Session manager. Switch qua ec2-user. Kiểm tra kết nối bằng việc ping tới ip của Google DNS server → kết nối được internet thông qua IGW. Tải NPM về instance:\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash source ~/.bashrc để reload the bash shell configuration file thì mới apply được npm vừa tải Chạy nvm install 16 sau đó chạy nvm use 16 để tải và sử dụng Node.js version 16 Để copy code từ folder library-app-fe từ S3 bucket ta chạy những lệnh sau:\ncd để về user’s home directory aws s3 cp s3://demowebapp-workshop-01/library-app-fe/ web-tier --recursive để copy tất cả các file từ folder library-app-fe và các sub-folder của nó về folder web-tier ở instance (nếu chưa tồn tại folder web-tier, instance sẽ tự động tạo mới folder) Tải các dependencies:\ncd web-tier để truy cập vào folder ls -ltr để list các file và sub-folder của web-tier npm install để tải các thư viện hay phụ thuộc cần thiết npm run build để build source code sudo amazon-linux-extras install nginx1 -y để tải nginx (nginx đóng vai trò như 1 web server để giúp app chạy trên port 80, cũng như giúp direct API calls tới internal load balancer) Config Nginx:\ncd /etc/nginx ls Chúng ta sẽ thấy có file nginx.conf ở trong folder nginx. Chúng ta cần xóa file này đi và replace bằng file mà ta đã config và up trên s3 bucket. sudo rm nginx.conf sudo aws s3 cp s3://demowebapp-workshop-01/nginx.conf . để copy file trên bucket về folder nginx sudo service nginx restart để restart Nginx chmod -R 755 /home/ec2-user để cấp quyền cho Nginx access vào các tất cả các files sudo chkconfig nginx on để chạy Nginx service tự động mỗi khi instance restart "
+},
+{
 	"uri": "//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/",
 	"title": "Tạo Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Sự khác nhau giữa Launch template và AMI? Launch template và AMI (Amazon Machine Images) đều là cơ sở quan trọng để khởi chạy các phiên bản EC2 trên AWS, nhưng chúng phục vụ cho các mục đích khác nhau:\nAMI (Amazon Machine Image): Một AMI là một template mô phỏng toàn bộ môi trường phần mềm của một phiên bản EC2 đang chạy. Nó bao gồm hệ điều hành, ứng dụng, cấu hình và khối lượng dữ liệu. AMI hoạt động như bản thiết kế cho việc tạo ra các phiên bản mới với cùng một setup. Bạn có thể coi chúng như các bản snapshots của một máy ảo. Launch template: Một Launch template xác định các chi tiết cấu hình cần thiết để khởi chạy một phiên bản EC2. Điều này bao gồm ID AMI (xác định môi trường phần mềm), security group, user data (scripts to run on instance startup), và các tham số khởi chạy khác. Nó về cơ bản xác định cách một phiên bản sẽ được cung cấp ngoài phần mềm cơ sở được cung cấp bởi AMI. Dưới đây là một ví dụ: Hãy tưởng tượng AMI như một công thức làm bánh, xác định các thành phần (hệ điều hành, ứng dụng). Một Launch template sẽ giống như hướng dẫn nướng bánh, bao gồm nhiệt độ lò (loại phiên bản), thời gian nướng, và bất kỳ bước nào bổ sung (các script dữ liệu người dùng). Bạn có thể sử dụng cùng một công thức làm bánh (AMI) với các hướng dẫn nướng khác nhau (Launch template) để tạo ra các loại bánh có biến thể (cấu hình phiên bản khác nhau).\nTạo Launch Template Tại giao diện EC2, chọn Launch templates ở sidebar, sau đó click Create launch template Tại giao diện tạo launch template, ở phần Launch template name and description, Launch template name điền AppTier-LaunchTemplate Ở phần chọn AMI, chọn Owned by me sau đó chọn AppTierImage Chọn Instance type là t2.micro Keypair để Don’t include in launch template Network settings:\nSubnet chọn Don’t include in launch template SG chọn existing sg, sau đó chọn AppTier-SG Advanced details, IAM instance profile chọn ec2role Kéo xuống dưới cùng, chọn Create launch template. Hoàn thành! "
+},
+{
+	"uri": "//localhost:1313/vi/7-createexternallbandasg/7.4-createlaunchtemplate/",
+	"title": "Tạo Launch Template",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Launch Template Tại giao diện EC2, chọn Launch templates ở sidebar, sau đó click Create launch template Tại giao diện tạo launch template, ở phần Launch template name and description, Launch template name điền WebTier-LaunchTemplate Ở phần chọn AMI, chọn Owned by me sau đó chọn WebTierImage Chọn Instance type là t2.micro Keypair để Don’t include in launch template Network settings:\nSubnet chọn Don’t include in launch template SG chọn existing sg, sau đó chọn WebTier-SG Advanced details, IAM instance profile chọn ec2role Kéo xuống dưới cùng, chọn Create launch template. Hoàn thành! "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.4-createvpc/",
@@ -144,7 +200,14 @@
 	"title": "Tạo Auto Scaling Group",
 	"tags": [],
 	"description": "",
-	"content": "Tạo Auto Scaling Group Ở giao diện EC2, chọn Auto scaling group ở sidebar, sau đó click Create auto scaling group.\nỞ giao diện tạo ASG:\nName điền AppTierASG Launch template chọn AppTier-LaunchTemplate Kéo xuống dưới cùng và click Next Ở giao diện tạo ASG phần Network:\nVPC: my-vpc AZs and subnets chọn Private Subnet 1 và Private Subnet 2 Click Next Ở giao diện config tiếp theo:\nLoad balancing chọn Attach to an existing load balancer Chọn Choose from your load balancer target group sau đó chọn AppTierTargetGroup Lướt xuống cuối và click Next Ở giao diện config tiếp theo:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Lướt xuống cuối và click Next Next tới bước cuối cùng thì click Create auto scaling group Hoàn thành tạo ASG:\nSau khi tạo ASG thành công, 2 ec2 instance mới sẽ được tạo:\n→ Bây giờ chúng ta có 3 ec2 instances, giờ chúng ta có thể terminate con instance gốc My App Server 1 đi (nhưng recommend nên giữ lại để dễ dàng troubleshoot sau này)\n→Nếu terminate bất kỳ con nào trong ASG, thì con mới sẽ được launched bởi ASG ngay tức thì\nThử terminate cả 2 con trong ASG đi, 2 con mới sẽ được launched ngay lập tức bởi ASG "
+	"content": "Tạo Auto Scaling Group Ở giao diện EC2, chọn Auto scaling group ở sidebar, sau đó click Create auto scaling group. Ở giao diện tạo ASG:\nName điền AppTierASG Launch template chọn AppTier-LaunchTemplate Kéo xuống dưới cùng và click Next Ở giao diện tạo ASG phần Network:\nVPC: my-vpc AZs and subnets chọn Private Subnet 1 và Private Subnet 2 Click Next Ở giao diện config tiếp theo:\nLoad balancing chọn Attach to an existing load balancer Chọn Choose from your load balancer target group sau đó chọn AppTierTargetGroup Lướt xuống cuối và click Next Ở giao diện config tiếp theo:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Lướt xuống cuối và click Next Next tới bước cuối cùng thì click Create auto scaling group Hoàn thành tạo ASG: Sau khi tạo ASG thành công, 2 ec2 instance mới sẽ được tạo: → Bây giờ chúng ta có 3 ec2 instances, giờ chúng ta có thể terminate con instance gốc My App Server 1 đi (nhưng recommend nên giữ lại để dễ dàng troubleshoot sau này)\n→Nếu terminate bất kỳ con nào trong ASG, thì con mới sẽ được launched bởi ASG ngay tức thì\nThử terminate cả 2 con trong ASG đi, 2 con mới sẽ được launched ngay lập tức bởi ASG "
+},
+{
+	"uri": "//localhost:1313/vi/7-createexternallbandasg/7.5-createautoscalinggroup/",
+	"title": "Tạo Auto Scaling Group",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Auto Scaling Group Ở giao diện EC2, chọn Auto scaling group ở sidebar, sau đó click Create auto scaling group. Ở giao diện tạo ASG:\nName điền WebTierASG Launch template chọn WebTier-LaunchTemplate Kéo xuống dưới cùng và click Next Ở giao diện tạo ASG phần Network:\nVPC: my-vpc AZs and subnets chọn Public Subnet 1 và Public Subnet 2 Click Next Ở giao diện config tiếp theo:\nLoad balancing chọn Attach to an existing load balancer Chọn Choose from your load balancer target group sau đó chọn WebTierTargetGroup Lướt xuống cuối và click Next Ở giao diện config tiếp theo:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Lướt xuống cuối và click Next Next tới bước cuối cùng thì click Create auto scaling group Hoàn thành tạo ASG: Sau khi tạo ASG thành công, 2 ec2 instance mới sẽ được tạo: Giờ chúng ta có thể open web bằng DNS name của web-tier-external-lb "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/",
@@ -172,14 +235,14 @@
 	"title": "Triển khai Web Tier",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai Web Tier\u0026quot; Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\nTerminate các EC2 Instance. Terminate EC2 instance. Truy cập Amazon EC2 console tại địa chỉ EC2. Trên thanh điều hướng bên trái, chọn Intances Chọn tất cả EC2 Instance liên quan tới bài lab. Chọn Instance state Chọn Terminate instance Xác nhận terminate. Xóa NAT Gateway, Elastic IP Address Xóa NAT Gateway và Elastic IP Address. AWS sẽ thu tiền cho các EIP lãng phí nên bạn cần kiểm tra kỹ để tránh bị trừ chi phí ngoài ý muốn. Truy cập trang Amazon VPC console tại địa chỉ VPC Trên thanh điều hướng bên trái , click NAT Gateway. Chọn NAT Gateway. Click Action. Click Delete NAT Gateway. Gõ delete. Click Delete để xác nhận xóa NAT Gateway Xóa xóa Elastic IP Address. Tiếp tục xóa Elastic IP Address. Truy cập trang Amazon VPC console tại địa chỉ https://console.aws.amazon.com/vpc/ Trên thanh điều hướng bên trái , click Elastic IP. Chọn Elastic IP Address chúng ta đã tạo. Click Action. Click Release Elastic IP Address Click Release. Xóa EC2 Instance concect endpoint Truy cập vào giao dịch Endpoint Chọn Action, chọn Delete VPC endpoints Nhập delete Tiếp tục làm tương tự và xóa theo thứ tự sau nhé: VPN Site to Site connection. Virtual Private Gateway. Customer Gateway. VPC ASG VPN VPC ASG. "
+	"content": "Giới thiệu Trong phần này, chúng ta sẽ tiến hành triển khai Web Tier bằng cách upload mã nguồn của ứng dụng lên Amazon S3 và triển khai ứng dụng trên Amazon EC2. Ngoài ra chúng ta sẽ sử dụng Nginx trong workshop này. Nginx sẽ đóng vai trò là 1 web server mà chúng ta sẽ config để chạy úng dụng trên port 80, cũng như giúp chuyển hướng API request từ Web Tier đến App Tier thông qua Internal Load Balancer.\nNội dung: Sửa lại file cấu hình Nginx Upload mã nguồn ứng dụng lên Amazon S3 Tạo EC2 Instance Kết nối tới EC2 Instance "
 },
 {
 	"uri": "//localhost:1313/vi/7-createexternallbandasg/",
 	"title": "Tạo External Load Balancer và Auto Scaling Group",
 	"tags": [],
 	"description": "",
-	"content": "Tạo External Load Balancer và Auto Scaling Group\u0026quot; Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\n"
+	"content": "Giới thiệu Ở section này, chúng ta sẽ tạo External Load Balancer để cân bằng tải các traffic từ người dùng (internet) tới Web Tier và Auto Scaling Group cho Web Tier.\nNội dung: Tạo AMI cho Web Tier Tạo Tartget Group cho Web Tier Tạo External Load Balancer Tạo Launch Template cho Web Tier Tạo Auto Scaling Group "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.7-createnatgateway/",
@@ -189,11 +252,11 @@
 	"content": "Tạo NAT Gateway Trong giao diện VPC, click chọn NAT gateways ở sidebar, sau đó chọn Create NAT gateway Trong giao diện create NAT gateway\nName nhập nat-gw-01 Subnet chọn Public Subnet 1 EIP click Allocate Elastic IP Click Create NAT gateway Hoàn thành tạo NAT gateway trong Public Subnet 1 của AZ đầu tiên Lặp lại các bước để tạo NAT gateway trong Public Subnet 2 của AZ thứ hai Hoàn thành tạo NAT gateway trong Public Subnet 2 của AZ thứ hai "
 },
 {
-	"uri": "//localhost:1313/vi/8-cleanupresources/",
-	"title": "Dọn dẹp tài nguyên",
+	"uri": "//localhost:1313/vi/8-demoweb/",
+	"title": "Demo deploy thành công",
 	"tags": [],
 	"description": "",
-	"content": "Dọn dẹp tài nguyên\u0026quot; Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\n"
+	"content": "Demo deploy thành công Truy cập vào trang web bằng DNS name của web-tier-external-lb Demo giao diện home và api load sách sử dụng pagination Để test việc call api thành công, trước khi truy cập vào web, ta sẽ inspect trên browser và mở tab Network và tick vào Fetch/XHRđ để xem request gửi đi và response nhận lại từ server. chọn tab Headers để xem request gửi đi Chọn tab Response để xem response từ server Demo giao diện search sách và api search sách Truy cập vào giao diện search sách bằng cách click vào Search Books trên header Sau đó nhập tên sách muốn tìm kiếm vào ô search và click vào nút Search (ngoài ra bạn có thể filter theo category của sách) Demo chuyển trang sử dụng pagination Trong giao diện Search Books, kéo xuống dưới cùng và click chọn page number để chuyển trang (hoặc sử dụng nút First Page và Last Page) Vì EC2 instance ta đang sử dụng chưa đủ mạnh nên khi upload code của front-end S3, tôi đã cắt giảm source code của front end khá nhiều dẫn tới việc app chỉ hoạt động trên một số tính năng cơ bản. Nếu bạn muốn app có thể chạy hoàn chỉnh, bạn có thể clone source code từ nhánh Main và sử dụng instance có cấu hình mạnh hơn.\n"
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/",
@@ -201,6 +264,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Tạo Route Table Tại giao diện của VPC, click chọn Route tables ở sidebar và click Create route table Tại giao diện Create route table:\nName nhập public-route-table VPC chọn my-vpc Click Create route table Sau khi tạo thành công route table, click Edit routes Ở màn hình Edit routes, chọn Add route Sau đó thêm route với Destination là 0.0.0.0/0 và Target là workshop-01-igw sau đó click Save changes Sau khi tạo thành công, chuyển qua tab Subnet associations và click Edit subnet associations Chọn 2 public subnet ta đã tạo rồi click Save associations Thực hiện tương tự các bước trên để tạo ra private-route-table-01 cho private subnet 1 Thêm route với Destination là 0.0.0.0/0 và Target là nat-gw-01 sau đó click Save changes Chọn private subnet 1 rồi click Save associations Tạo route table cho 2 private db subnet Thực hiện tương tự các bước trên để tạo ra private-db-route-table: VPC chọn my-vpc Thêm route với Destination là 0.0.0.0/0 và Target là igw đã tạo (mục đích để có thể giao tiếp với db instance từ internet ngoài vpc) Thực hiện gán route table này cho 2 subnet là Private DB Subnet 1 và Private DB Subnet 2 "
+},
+{
+	"uri": "//localhost:1313/vi/9-cleanupresources/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Dọn dẹp tài nguyên Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau:\nXóa NAT Gateway Xóa Elastic IPs Xóa Auto Scaling Group Xóa Load Balancer Xóa Target group Xóa Launch template Xóa AMIs Xóa EC2 instances Xóa Database RDS Xóa Route tables\nTa phải xóa các subnet associations của từng route table trước (vào subnet -\u0026gt; table associations -\u0026gt; edit subnet associations -\u0026gt; unchecked các subnet đã gán -\u0026gt; save) Xóa route table Xóa Internet Gateway\ndetach IGW ra khỏi VPC Xóa IGW Xóa VPC Xóa S3 bucket\nXóa các file trong bucket Xóa bucket "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.9-createsecuritygroup/",
