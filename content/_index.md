@@ -22,4 +22,5 @@ In this workshop, we will deploy a fullstack application (Spring Boot, React, My
 5. [Create Internal LB and ASG](5-CreateInternalLbAndASG/)
 6. [Deploy Web tier](6-DeployWebTier/)
 7. [Create External LB and ASG](7-CreateExternalLbAndASG/)
-8. [Clean up resources](8-CleanUpResources/)
+8. [Demo web after successful deployment](8-DemoWeb/)
+9. [Clean up resources](9-CleanUpResources/)

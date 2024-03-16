@@ -23,5 +23,6 @@ Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (
 5. [Tạo Internal LB và ASG](5-CreateInternalLbAndASG/)
 6. [Triển khai Web tier](6-DeployWebTier/)
 7. [Tạo External LB và ASG](7-CreateExternalLbAndASG/)
-8. [Dọn dẹp tài nguyên](8-CleanUpResources/)
+8. [Demo web sau khi deploy thành công](8-DemoWeb/)
+9. [Dọn dẹp tài nguyên](9-CleanUpResources/)
 
