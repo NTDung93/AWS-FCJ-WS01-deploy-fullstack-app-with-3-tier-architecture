@@ -15,27 +15,27 @@ pre : " <b> 5.4 </b> "
 
 #### Create Launch Template
 1. In the EC2 dashboard, select **Launch templates** in the sidebar, then click **Create launch template**
-![](/images/5-4/01.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/01.png?width=50pc)
 
 2. In the launch template creation interface, under **Launch template name and description**, fill in **Launch template name** as **`AppTier-LaunchTemplate`**
-![](/images/5-4/02.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/02.png?width=50pc)
 
 3. Under the AMI selection, choose **Owned by me** then select **AppTierImage**
-![](/images/5-4/03.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/03.png?width=50pc)
 
 4. Choose **Instance type** as **t2.micro**
-![](/images/5-4/04.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/04.png?width=50pc)
 
 5. **Keypair** to **Don’t include in launch template**
-![](/images/5-4/05.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/05.png?width=50pc)
 
 6. **Network settings**:
     - **Subnet** to **Don’t include in launch template**
     - **SG** to existing sg, then select **AppTier-SG**
-![](/images/5-4/06.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/06.png?width=50pc)
 
 7. **Advanced details, IAM instance profile** to **ec2role**
-![](/images/5-4/07.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/07.png?width=50pc)
 
 8. Scroll down to the bottom, select **Create launch template**. Done!
-![](/images/5-4/08.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/5-4/08.png?width=50pc)

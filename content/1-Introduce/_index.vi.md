@@ -10,7 +10,7 @@ pre : " <b> 1. </b> "
 
 **Kiến trúc ba tầng** là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.
 
-![Three tier example](/images/1-Introduce/3TierExample.png?featherlight=false&width=50pc)
+![Three tier example](/workshop01-AWS-FCJ-2024/images/1-Introduce/3TierExample.png?featherlight=false&width=50pc)
 
 **Kiến trúc 3 tầng bao gồm**:
 - Presentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile).

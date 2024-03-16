@@ -1,293 +1,293 @@
 [
 {
-	"uri": "/vi/2-preparationsteps/2.1-clonecodefromgithub/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.1-clonecodefromgithub/",
 	"title": "Clone code từ GitHub",
 	"tags": [],
 	"description": "",
 	"content": "Clone code từ GitHub Truy cập vào folder mà bạn muốn lưu trữ code.\nChuột phải chọn Open Git Bash Here. Gõ lệnh git clone https://github.com/NTDung93/library-app.git rồi enter.\nHoàn thành clone code từ GitHub Checkout qua nhánh deploy bằng lệnh git checkout deploy (nhánh đã được tinh chỉnh source code để thuận tiện cho việc deploy) Nếu bạn có mở source code phần Front-end, nó sẽ báo lỗi đỏ khắp màn hình, đừng lo lắng vì source đó đã xóa folder Node_modules để phục vụ cho việc deploy trong các section tới, bạn chỉ cần chạy lệnh npm install để cài đặt lại các package cần thiết. Nhưng nếu bạn không có nhu cầu mở source code phần Front-end, bạn có thể bỏ qua bước này.\n"
 },
 {
-	"uri": "/vi/1-introduce/1.1-flowexplaination/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/1-introduce/1.1-flowexplaination/",
 	"title": "Giải thích luồng chạy",
 	"tags": [],
 	"description": "",
 	"content": "Giải thích luồng chạy của kiến trúc ba tầng Trong hình dưới đây, chúng ta sẽ thấy mô hình kiến trúc của ứng dụng fullstack với kiến trúc ba tầng. Đầu tiên, thao tác của người dùng sẽ đi qua Internet gateway và sau đó đến External (Internet facing) Application Load Balancer. Load Balancer sẽ chuyển tiếp các traffic đến các máy chủ ở Web tier. Sau đó các máy chủ ở Web tier sẽ gọi các API đến Interal Load Balancer. Load Balancer sau đó sẽ chuyển tiếp các traffic đến các máy chủ ở App tier. Cuối cùng, các máy chủ ở App tier sẽ xử lý yêu cầu, truy xuất dữ liệu ở Data tier (nếu cần) và trả kết quả về cho người dùng ở Web tier. Đây là mô hình kiến trúc ba lớp cơ bản mà chúng ta sẽ triển khai trong workshop này.\n"
 },
 {
-	"uri": "/vi/1-introduce/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/1-introduce/",
 	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu kiến trúc 3 tầng Kiến trúc ba tầng là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.\nKiến trúc 3 tầng bao gồm:\nPresentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile). Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng. Data tier: tầng lưu trữ dữ liệu của app. Lợi ích của việc sử dụng kiến trúc 3 tầng:\nTính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi. Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation). Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database. "
 },
 {
-	"uri": "/vi/6-deploywebtier/6.1-updateconfigfile/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.1-updateconfigfile/",
 	"title": "Sửa lại file cấu hình Nginx",
 	"tags": [],
 	"description": "",
 	"content": "Sửa lại file cấu hình Nginx Mở file nginx.conf từ project đã clone Sau đó sửa dòng số 58 trong file thành DNS Name của load balancer app-tier-internal-lb "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/5.1-createapptierami/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.1-createapptierami/",
 	"title": "Tạo AMI cho App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Vì sao chúng ta cần tạo Amazon Machine Image (AMI)? AMI bao gồm operating system, applications, configurations, và data volumes. Reproduce config hoặc launch instance mới dễ dàng - một khi đã tạo một instance với những config mong muốn, ta tạo AMI từ instance đó. Khi ta tạo ra những instance mới từ AMI đó, sẽ đảm bảo được tính consistency, các instance đều có những config tương đồng nhau. Backup và recovery - AMI như snapshot dùng để backup, recovery khi có thiên tai, để reproduce những instance bị fail → Nếu có instance nào fail hoặc cần thay thế, sẽ dễ dàng và nhanh chóng hơn nếu tạo từ AMI thay vì từ đầu. Auto scaling - Khi chúng ta sử dụng ASG (Auto Scaling Group) để scale up app, AMI sẽ đảm bảo những instance mới sẽ có những config cần thiết. Tạo AMI từ instance Truy cập vào dịch vụ EC2:\nChọn Instances ở sidebar Chọn instance My App Server 1 Click Actions, sau đó click Image and template và chọn Create image Ở giao diện tạo image:\nImage name điền AppTierImage Image description điền App tier Lướt xuống dưới cùng, click Create image "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/7.1-createwebtierami/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.1-createwebtierami/",
 	"title": "Tạo AMI cho Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Tạo AMI từ instance Truy cập vào dịch vụ EC2:\nChọn Instances ở sidebar Chọn instance My Web Server 1 Click Actions, sau đó click Image and template và chọn Create image Ở giao diện tạo image:\nImage name điền WebTierImage Image description điền Web tier Lướt xuống dưới cùng, click Create image "
 },
 {
-	"uri": "/vi/3-createdbwithrds/3.1-createdbsubnetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/3.1-createdbsubnetgroup/",
 	"title": "Tạo database subnet group",
 	"tags": [],
 	"description": "",
 	"content": "Database subnet group là gì và tại sao chúng ta cần nó? Database subnet group là một tập hợp các subnet mà bạn tạo ra trong VPC của bạn. Khi tạo một database instance, bạn cần phải chỉ định một database subnet group. Database subnet group phải chứa ít nhất một subnet trong mỗi AZ. Database subnet group đảm bảo rằng database instance có thể được triển khai trên nhiều AZ để có được tính sẵn sàng cao.\nTạo database subnet group Tìm và truy cập vào dịch vụ RDS Chọn Subnet groups ở sidebar và click Create DB subnet group Ở giao diện tạo DB subnet group:\nName điền db-subnet-group Description điền db-subnet-group VPC chọn my-vpc Ở phần Add subnets:\nAZ chọn ap-southeast-1a và ap-southeast-1b Subnets chọn Private DB Subnet 1 và Private DB Subnet 2 (có thể vào lại list các subnet, xem CIDR của mỗi subnet để chọn cho đúng) Sau đó click Create Hoàn thành tạo Subnet group. "
 },
 {
-	"uri": "/vi/4-deployapptier/4.1-createec2/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.1-createec2/",
 	"title": "Tạo máy chủ EC2",
 	"tags": [],
 	"description": "",
 	"content": "Tạo EC2 instance cho App Tier Tìm và chọn dịch vụ EC2 Chọn Instances ở sidebar, sau đó click Launch instances Name and tags điền My App Server 1 Ở phần AMI: chọn Amazon Linux AMI chọn Amazon Linux 2 AMI (HVM) Ở phần Key pair, ta chọn Proceed without a key pair vì ta sẽ connect EC2 instance thông qua AWS Systems Manager Session Manager. Ở phần Network settings: VPC chọn my-vpc Subnet chọn Private Subnet 1 Auto-assign public IP chọn Enable SG chọn Select existing security group Common SG chọn AppTier-SG Ở phần Advanced details, IAM instance profile chọn ec2role ta tạo ở trên Click Launch instance Hoàn thành tạo EC2 instance cho một server ở AppTier ở private subnet 1 "
 },
 {
-	"uri": "/vi/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/",
 	"title": "Triển khai fullstack app với kiến trúc ba tầng",
 	"tags": [],
 	"description": "",
 	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Dọn dẹp tài nguyên "
 },
 {
-	"uri": "/vi/2-preparationsteps/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/",
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
 	"content": "Trong section 2 này, chúng ta sẽ cùng nhau setup những thứ quan trọng và cần thiết để thực hiện workshop này.\nNội dung Clone clode từ GitHub Tạo S3 Bucket Tạo EC2 role Tạo VPC Tạo Subnet Tạo Internet Gateway Tạo NAT Gateway Tạo Route Table Tạo Security Group "
 },
 {
-	"uri": "/vi/4-deployapptier/4.2-connectec2/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.2-connectec2/",
 	"title": "Kết nối tới EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Kết nối tới EC2 instance Trên giao diện các EC2 instances, chọn instance vừa tạo và bấm Connect Chuyển qua tab Session Manager và click Connect Connect thành công vào instance Chạy lệnh sudo -su ec2-user để chuyển từ user sang ec2-user, và có những quyền quản trị root đối với instance Tiếp đó chạy lệnh ping 8.8.8.8 (IP address của Google’s DNS server) để test xem instance của ta có thể kết nối với internet bên ngoài thông qua igw không "
 },
 {
-	"uri": "/vi/3-createdbwithrds/3.2-createdbinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/3.2-createdbinstance/",
 	"title": "Tạo database instance",
 	"tags": [],
 	"description": "",
 	"content": "Tạo database instance Trong giao diện Amazon RDS, chọn Databases ở sidebar sau đó click Create database Ở giao diện Create database:\nCreation method chọn Standard create Engine type chọn MySQL Templates chọn Dev/Test, Deployment options chọn Multi-AZ DB instance (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover) → Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy Nhưng chúng ta có thể chọn option khác là Free tier để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí Ở phần Settings:\nDB instance identifier điền database-1 Master username điền admin Master password điền 12345678 Ở phần Connectivity:\nComputer resource chọn Dont connect to EC2 VPC chọn my-vpc DB subnet group chọn db-subnet-group ta đã tạo Public access chọn No (chọn Yes nếu muốn test connection từ public network) VPC SG chọn Choose existing Existing VPC SG chọn DataTier-SG AZ chọn ap-southeast-1a Ở phần Additional configuration, điền db name là demodb (master name: admin, pass: 12345678) Kéo xuống dưới cùng và chọn Create database: Hoàn thành tạo database instance Config lại để test connection từ public network Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)\nVào route table private-db-route-table, thêm một route mới với destination là 0.0.0.0/0 và target là internet gateway ta đã tạo Vào security group DataTier-SG, thêm một inbound rule mới cho phép All traffic truy cập Cập nhật lại trạng thái của Public access ở phần Connectivity trong db instance từ No thành Yes Test connection tới endpoint của db instance vừa tạo Vào phần mềm MySQL Workbench, tạo connect mới:\nConnection Name điền db-ws-01 Hostname copy và paste endpoint của db instance vừa tạo Port điền 3306 Username điền admin Password click Store in Vault rồi nhập 12345678 Sau cùng, nhấn Test Connection Test connection thành công Vào file application.properties và config lại datasource url, username và password như hình dưới Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế code first (chỉ để test vì trong workshop này chúng ta sẽ sử dụng database first) "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.2-creates3bucket/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.2-creates3bucket/",
 	"title": "Tạo S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Tạo S3 Bucket Truy cập giao diện AWS, tìm dịch vụ S3 sau đó click chọn Trong giao diện S3, click Create bucket Trong giao diện Create bucket:\nAWS Region chọn Singapore ap-southeast-1 Bucket name nhập demowebapp-workshop-01 Kéo xuống dưới cùng và chọn Create bucket Hoàn thành tạo S3 bucket "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/5.2-createtargetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.2-createtargetgroup/",
 	"title": "Tạo Target group cho App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Tại sao cần tạo Target group? Vì khi đăng ký các ec2 instances vào target group, load balancer có thể theo dõi health của từng instance và route traffic tới healthy instance → ensure high availability. Tạo Target group Tại giao diện EC2, chọn Target Groups ở nhóm Load balancing ở sidebar, sau đó chọn Create target group Tại giao diện tạo target group:\nTarget group name điền AppTierTargetGroup Protocol: HTTP, Port: 8080 VPC chọn my-vpc Kéo xuống dưới cùng click Next rồi click Create target group Hoàn thành tạo target group "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/7.2-createtargetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.2-createtargetgroup/",
 	"title": "Tạo Target group cho Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Target group Tại giao diện EC2, chọn Target Groups ở nhóm Load balancing ở sidebar, sau đó chọn Create target group Tại giao diện tạo target group:\nTarget group name điền WebTierTargetGroup Protocol: HTTP, Port: 80 (đây là port mà nginx listen) VPC chọn my-vpc Health check path điền /health Kéo xuống dưới cùng click Next rồi click Create target group Hoàn thành tạo target group "
 },
 {
-	"uri": "/vi/6-deploywebtier/6.2-uploadcodetos3/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.2-uploadcodetos3/",
 	"title": "Upaload code lên S3",
 	"tags": [],
 	"description": "",
 	"content": "Upaload code lên S3 Vào folder library-app-fe dưới local, xóa folder node_modules (nếu có) Truy cập vào bucket đã tạo của S3, kéo thả folder library-app-fe và file nginx.config dưới local vào bucket để tải folder và file lên bucket. "
 },
 {
-	"uri": "/vi/4-deployapptier/4.3-downmysqloninstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.3-downmysqloninstance/",
 	"title": "Tải MySQL lên EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Tải MySQL lên EC2 instance Chạy các command sau một cách lần lượt để tải MySQL lên instance:\nsudo yum install -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 sudo yum install -y mysql-community-client Connect tới RDS database:\nChạy command mysql -h -u -p (mysql -h database-1.cbk6is6oozuw.ap-southeast-1.rds.amazonaws.com -u admin -p) Sau đó điền password 12345678 Chạy create database librarydb; để tạo mới 1 db Chạy show database; để show các db hiện có Chạy use librarydb; để sử dụng db vừa tạo Chạy show tables; để show những bảng trong db, lúc này db chưa có bảng nào Để tạo bảng cho db, ta vào file application.properties của back-end và config lại các thông tin như hình dưới Sau đó ta sẽ chạy app. Sau khi app chạy thành công, chạy lệnh show tables; lần nữa để kiểm tra Chạy lệnh insert into librarydb.book (author, category, copies, copies_available, description, img, title) values (\u0026lsquo;John\u0026rsquo;, \u0026lsquo;Programming\u0026rsquo;, 10, 8, \u0026lsquo;Tutorial about Java\u0026rsquo;, \u0026lsquo;\u0026rsquo;, \u0026lsquo;Java Advanced\u0026rsquo;); để thêm 1 dòng data vào bảng book Chạy select * from librarydb.book; để show những dòng data trong bảng book Những bước trên chỉ để test db đã hoạt động tốt theo những query mà ta đã viết. Nhưng trong workshop này chúng ta sẽ sử dụng database first approach, tức là ta sẽ tạo db trước và sau đó tạo entity và repository trong app để map với db.\nMở MySQL, truy cập vào connection đã tạo và import file React-Springboot-Add-Tables-Script-1.sql ở trong folder starter-files, sau đó chạy scripts có sẵn để tạo db tên librarydb và các bảng trong db "
 },
 {
-	"uri": "/vi/3-createdbwithrds/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/",
 	"title": "Tạo Database với RDS",
 	"tags": [],
 	"description": "",
 	"content": "RDS là gì? Dịch vụ cơ sở dữ liệu quan hệ của Amazon (Amazon RDS) là một dịch vụ được quản lý, giúp bạn dễ dàng thiết lập, vận hành và điều chỉnh quy mô cơ sở dữ liệu quan hệ trên đám mây. Dịch vụ này cung cấp tính năng hiệu quả về chi phí và có thể thay đổi quy mô, trong khi vẫn quản lý được các tác vụ quản trị cơ sở dữ liệu tiêu tốn nhiều thời gian, giúp bạn thoải mái tập trung vào các ứng dụng và công việc của bạn.\nNội dung Tạo database subnet group Tạo database instance "
 },
 {
-	"uri": "/vi/6-deploywebtier/6.3-createec2instance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.3-createec2instance/",
 	"title": "Tạo EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Tạo EC2 instance Tương tự như tạo instance cho App server, ta tạo một instance cho web server với những thay đổi sau:\nInstance name điền My Web Server 1 Subnet chọn Public Subnet 1 Security group chọn WebTier-SG Advanced details, IAM instance profile chọn ec2role Cuối cùng chọn Launch instance Hoàn thành tạo EC2 instance cho web server "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/",
 	"title": "Tạo External Load Balancer",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Internal Load Balancer Ở giao diện EC2, chọn Load balancers ở sidebar, sau đó click Create load balancer Tại giao diện chọn balancer type, click chọn Create của Application Load Balancer Tại màn hình tạo ALB:\nLB Name điền web-tier-internal-lb Scheme chọn Internet-facing Ở phần Network mapping:\nVPC: my-vpc Tick chọn ap-southeast-1a, sau đó chọn Public Subnet 1 Tick chọn ap-southeast-1b, sau đó chọn Public Subnet 2 Ở phần Security groups chọn InternetFacing-LB-SG. Ở phần Listeners and routing, default action chọn WebTierTargetGroup. Lướt xuống dưới cùng và click Create load balancer. Hoàn thành tạo load balancer cho app tier. "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.3-createec2role/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.3-createec2role/",
 	"title": "Tạo IAM EC2 Role",
 	"tags": [],
 	"description": "",
 	"content": "Tạo IAM EC2 Role Tìm dịch vụ IAM trên thanh tìm kiếm và click chọn Chọn Roles ở sidebar, sau đó chọn Create role Trong giao diện tạo Role, ở bước Select trusted entity: Trusted entity type chọn AWS Service Use case chọn EC2 Click Next Trong giao diện tạo Role, ở bước Add permissions: Tìm, chọn role AmazonSSMManagedInstanceCore (cho phép kết nối an toàn tới instance mà không cần SSH key) và AmazonS3ReadOnlyAccess (cho phép instance downloadn code từ S3) Chọn Next Trong giao diện tạo Role, ở bước Name, review, and create: Điền tên của role là ec2role Kiểm tra lại 3 steps vừa setup Chọn Create role Hoàn thành tạo role "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/",
 	"title": "Tạo Internal Load Balancer",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Internal Load Balancer Ở giao diện EC2, chọn Load balancers ở sidebar, sau đó click Create load balancer Tại giao diện chọn balancer type, click chọn Create của Application Load Balancer Tại màn hình tạo ALB:\nLB Name điền app-tier-internal-lb Scheme chọn Internal Ở phần Network mapping:\nVPC: my-vpc Tick chọn ap-southeast-1a, sau đó chọn Private Subnet 1 Tick chọn ap-southeast-1b, sau đó chọn Private Subnet 2 Ở phần Security groups chọn Internal-LB-SG. Ở phần Listeners and routing, default action chọn AppTierTargetGroup. Lướt xuống dưới cùng và click Create load balancer. Hoàn thành tạo load balancer cho app tier. "
 },
 {
-	"uri": "/vi/4-deployapptier/4.4-runapponinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.4-runapponinstance/",
 	"title": "Chạy ứng dụng trên EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Chạy ứng dụng trên EC2 instance Ý tưởng: Ta sẽ build ra file jar của app, sau đó upload file jar đó lên s3 bucket. Tiếp đó tải file jar lên ec2 instance và chạy file jar trên instance.\nTải java 17 trên instance bằng lệnh sudo yum install java-17-amazon-corretto-headless. Sau đó check tải thành công bằng lệnh java -version !\nĐể generate ra file jar của app, ta vào IDE, mở project back end, truy cập vào Maven, chuột phải vào install trong Lifecycle và chọn Run Maven Build. !\nHoàn thành tạo file jar của app, file jar vừa tạo sẽ nằm trong folder target !\nTruy cập vào S3, vào bucket đã tạo, tạo folder mới tên library-app-be. Sau khi tạo xong folder, ta upload file jar vừa tạo bằng cách kéo thả vào folder !\nTrước khi download s3 lên instance, ta cần make s3 public bằng cách thêm policy cho nó:\nChọn s3 bucket đã tạo, vào tab permission Ở Bucket policy chọn edit và paste đoạn mã sau vào, sau đó nhấn Save changes {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;PublicReadGetObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: \u0026#34;*\u0026#34;,\r\u0026#34;Action\u0026#34;: \u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:s3:::demowebapp-workshop-01/*\u0026#34;\r}\r]\r} Truy cập vào file jar trên bucket và copy Object URL của nó Ở session manager, chạy lệnh sudo wget (sudo wget https://demowebapp-workshop-01.s3.ap-southeast-1.amazonaws.com/library-app-be/library-app-be-0.0.1-SNAPSHOT.jar) để tải file jar lên instance Chạy lệnh java -jar library-app-be-0.0.1-SNAPSHOT.jar để chạy app trên instance Để có thể tạm test bằng Postman, ta có thể tạm thời gán public-route-table (mục đích để có thể sử dụng IGW) cho private-subnet-1 (subnet chứa ec2 instance) Truy cập postman, ta có thể sử dụng Public IPv4 address hoặc Public IPv4 DNS để gọi tới các API sử dụng Public IPv4 address sử dụng Public IPv4 DNS Để có thể giữ cho app chạy sau khi terminate session, chúng ta sẽ sử dụng nohup bằng lệnh sau nohup java -jar (ex: nohup java -jar library-app-be-0.0.1-SNAPSHOT.jar) Để dừng app sau khi chạy bằng nohup, ta chạy lệnh sau pkill -f 'java -jar library-app-be-0.0.1-SNAPSHOT.jar' Nhưng ta cần phải tìm cách để app chạy tự động sau khi instance reboot, vì vậy ta sẽ sử dụng systemd để tạo service cho app (run java app as a service)\nTa sẽ chạy lần lượt các lệnh sau: sudo chmod +x /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar sudo vim /etc/systemd/system/library.service Insert the code below into your-application.service:\n[Unit]\rDescription=Java Application as a Service\rAfter=syslog.target\r[Service]\rUser=ec2-user\rExecStart=ExecStart=/usr/bin/java -jar /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar\rSuccessExitStatus=143\r[Install]\rWantedBy=multi-user.target cd /etc/systemd/system/ sudo chmod 777 library.service sudo nano library.service sudo systemctl daemon-reload sudo systemctl enable library.service sudo systemctl start library.service sudo systemctl status library.service -l sudo systemctl stop library.service "
 },
 {
-	"uri": "/vi/6-deploywebtier/6.4-connecttoinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.4-connecttoinstance/",
 	"title": "Kết nối tới EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Kết nối tới EC2 instance Làm tương tự như khi kết nối vào instance của app server, ta connect thông qua Session manager. Switch qua ec2-user. Kiểm tra kết nối bằng việc ping tới ip của Google DNS server → kết nối được internet thông qua IGW. Tải NPM về instance:\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash source ~/.bashrc để reload the bash shell configuration file thì mới apply được npm vừa tải Chạy nvm install 16 sau đó chạy nvm use 16 để tải và sử dụng Node.js version 16 Để copy code từ folder library-app-fe từ S3 bucket ta chạy những lệnh sau:\ncd để về user’s home directory aws s3 cp s3://demowebapp-workshop-01/library-app-fe/ web-tier --recursive để copy tất cả các file từ folder library-app-fe và các sub-folder của nó về folder web-tier ở instance (nếu chưa tồn tại folder web-tier, instance sẽ tự động tạo mới folder) Tải các dependencies:\ncd web-tier để truy cập vào folder ls -ltr để list các file và sub-folder của web-tier npm install để tải các thư viện hay phụ thuộc cần thiết npm run build để build source code sudo amazon-linux-extras install nginx1 -y để tải nginx (nginx đóng vai trò như 1 web server để giúp app chạy trên port 80, cũng như giúp direct API calls tới internal load balancer) Config Nginx:\ncd /etc/nginx ls Chúng ta sẽ thấy có file nginx.conf ở trong folder nginx. Chúng ta cần xóa file này đi và replace bằng file mà ta đã config và up trên s3 bucket. sudo rm nginx.conf sudo aws s3 cp s3://demowebapp-workshop-01/nginx.conf . để copy file trên bucket về folder nginx sudo service nginx restart để restart Nginx chmod -R 755 /home/ec2-user để cấp quyền cho Nginx access vào các tất cả các files sudo chkconfig nginx on để chạy Nginx service tự động mỗi khi instance restart "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/5.4-createlaunchtemplate/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.4-createlaunchtemplate/",
 	"title": "Tạo Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Sự khác nhau giữa Launch template và AMI? Launch template và AMI (Amazon Machine Images) đều là cơ sở quan trọng để khởi chạy các phiên bản EC2 trên AWS, nhưng chúng phục vụ cho các mục đích khác nhau:\nAMI (Amazon Machine Image): Một AMI là một template mô phỏng toàn bộ môi trường phần mềm của một phiên bản EC2 đang chạy. Nó bao gồm hệ điều hành, ứng dụng, cấu hình và khối lượng dữ liệu. AMI hoạt động như bản thiết kế cho việc tạo ra các phiên bản mới với cùng một setup. Bạn có thể coi chúng như các bản snapshots của một máy ảo. Launch template: Một Launch template xác định các chi tiết cấu hình cần thiết để khởi chạy một phiên bản EC2. Điều này bao gồm ID AMI (xác định môi trường phần mềm), security group, user data (scripts to run on instance startup), và các tham số khởi chạy khác. Nó về cơ bản xác định cách một phiên bản sẽ được cung cấp ngoài phần mềm cơ sở được cung cấp bởi AMI. Dưới đây là một ví dụ: Hãy tưởng tượng AMI như một công thức làm bánh, xác định các thành phần (hệ điều hành, ứng dụng). Một Launch template sẽ giống như hướng dẫn nướng bánh, bao gồm nhiệt độ lò (loại phiên bản), thời gian nướng, và bất kỳ bước nào bổ sung (các script dữ liệu người dùng). Bạn có thể sử dụng cùng một công thức làm bánh (AMI) với các hướng dẫn nướng khác nhau (Launch template) để tạo ra các loại bánh có biến thể (cấu hình phiên bản khác nhau).\nTạo Launch Template Tại giao diện EC2, chọn Launch templates ở sidebar, sau đó click Create launch template Tại giao diện tạo launch template, ở phần Launch template name and description, Launch template name điền AppTier-LaunchTemplate Ở phần chọn AMI, chọn Owned by me sau đó chọn AppTierImage Chọn Instance type là t2.micro Keypair để Don’t include in launch template Network settings:\nSubnet chọn Don’t include in launch template SG chọn existing sg, sau đó chọn AppTier-SG Advanced details, IAM instance profile chọn ec2role Kéo xuống dưới cùng, chọn Create launch template. Hoàn thành! "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/7.4-createlaunchtemplate/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.4-createlaunchtemplate/",
 	"title": "Tạo Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Launch Template Tại giao diện EC2, chọn Launch templates ở sidebar, sau đó click Create launch template Tại giao diện tạo launch template, ở phần Launch template name and description, Launch template name điền WebTier-LaunchTemplate Ở phần chọn AMI, chọn Owned by me sau đó chọn WebTierImage Chọn Instance type là t2.micro Keypair để Don’t include in launch template Network settings:\nSubnet chọn Don’t include in launch template SG chọn existing sg, sau đó chọn WebTier-SG Advanced details, IAM instance profile chọn ec2role Kéo xuống dưới cùng, chọn Create launch template. Hoàn thành! "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.4-createvpc/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.4-createvpc/",
 	"title": "Tạo mới VPC",
 	"tags": [],
 	"description": "",
 	"content": "Tạo mới VPC Truy cập trang web AWS và tìm VPC chọn Your VPCs, rồi chọn Create VPC Tiến hành các bước tạo VPC:\nResource, chọn VPC only Name tag, nhập my-vpc IPv4 CIDR, nhập 10.10.0.0/16 chọn Create VPC Hoàn thành tạo VPC Xem chi tiết VPC vừa tạo, vào Edit VPC setting:\nCheck 2 option Enable DNS resolution và Enable DNS hostnames Nhấn button Save "
 },
 {
-	"uri": "/vi/4-deployapptier/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/",
 	"title": "Triển khai App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Triển khai App Tier Trong section này, chúng ta sẽ tạo máy chủ EC2 nằm trong private subnet, sau đó kết nối tới instance, cài đặt MySQL lên instance và chạy app của chúng ta trên instance.\nNội dung Tạo máy chủ EC2 Kết nối tới EC2 instance Tải MySQL lên instance Chạy app trên instance "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/5.5-createautoscalinggroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.5-createautoscalinggroup/",
 	"title": "Tạo Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Auto Scaling Group Ở giao diện EC2, chọn Auto scaling group ở sidebar, sau đó click Create auto scaling group. Ở giao diện tạo ASG:\nName điền AppTierASG Launch template chọn AppTier-LaunchTemplate Kéo xuống dưới cùng và click Next Ở giao diện tạo ASG phần Network:\nVPC: my-vpc AZs and subnets chọn Private Subnet 1 và Private Subnet 2 Click Next Ở giao diện config tiếp theo:\nLoad balancing chọn Attach to an existing load balancer Chọn Choose from your load balancer target group sau đó chọn AppTierTargetGroup Lướt xuống cuối và click Next Ở giao diện config tiếp theo:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Lướt xuống cuối và click Next Next tới bước cuối cùng thì click Create auto scaling group Hoàn thành tạo ASG: Sau khi tạo ASG thành công, 2 ec2 instance mới sẽ được tạo: → Bây giờ chúng ta có 3 ec2 instances, giờ chúng ta có thể terminate con instance gốc My App Server 1 đi (nhưng recommend nên giữ lại để dễ dàng troubleshoot sau này)\n→Nếu terminate bất kỳ con nào trong ASG, thì con mới sẽ được launched bởi ASG ngay tức thì\nThử terminate cả 2 con trong ASG đi, 2 con mới sẽ được launched ngay lập tức bởi ASG "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/7.5-createautoscalinggroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.5-createautoscalinggroup/",
 	"title": "Tạo Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Auto Scaling Group Ở giao diện EC2, chọn Auto scaling group ở sidebar, sau đó click Create auto scaling group. Ở giao diện tạo ASG:\nName điền WebTierASG Launch template chọn WebTier-LaunchTemplate Kéo xuống dưới cùng và click Next Ở giao diện tạo ASG phần Network:\nVPC: my-vpc AZs and subnets chọn Public Subnet 1 và Public Subnet 2 Click Next Ở giao diện config tiếp theo:\nLoad balancing chọn Attach to an existing load balancer Chọn Choose from your load balancer target group sau đó chọn WebTierTargetGroup Lướt xuống cuối và click Next Ở giao diện config tiếp theo:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Lướt xuống cuối và click Next Next tới bước cuối cùng thì click Create auto scaling group Hoàn thành tạo ASG: Sau khi tạo ASG thành công, 2 ec2 instance mới sẽ được tạo: Giờ chúng ta có thể open web bằng DNS name của web-tier-external-lb "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.5-createsubnets/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.5-createsubnets/",
 	"title": "Tạo các Subnet",
 	"tags": [],
 	"description": "",
 	"content": "Tạo các Subnet\u0026quot; Trong giao diện VPC, chọn Subnets ở side bar và chọn Create subnet Trong giao diện Create subnet, chọn VPC vừa tạo là my-vpc Sau khi chọn VPC sẽ xuất hiện phần Subnet settings\nSubnet name, nhập Public Subnet 1 Availability Zone, chọn AZ Singapore ap-southeast-1a IPv4 CIDR block, nhập 10.10.1.0/24 Chọn Create subnet Hoàn thành tạo Subnet Thực hiện tương tự các bước trên, tạo thêm các subnet\nPublic subnet 2 với CIDR là 10.10.2.0/24 và AZ ap-southeast-1b. Private subnet 1 với CIDR là 10.10.3.0/24 và AZ ap-southeast-1a. Private subnet 2 với CIDR là 10.10.4.0/24 và AZ ap-southeast-1b. Private DB Subnet 1 với CIDR là 10.10.5.0/24 và AZ ap-southeast-1a. Private DB Subnet 2 với CIDR là 10.10.6.0/24 và AZ ap-southeast-1b. Hoàn thành tạo 6 subnets. Cho phép tự động cấp phát public IP address cho 2 public subnet Trong giao diện Subnets, chọn Public Subnet 1, chọn Actions và chọn Edit subnet settings Tick chọn Enable auto-assign public IPv4 address, sau đó chọn Save Lặp lại các bước trên để apply cho Public subnet 02 Vào lại Your VPCs và xem phần Resource map của my-vpc "
 },
 {
-	"uri": "/vi/5-createinternallbandasg/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/",
 	"title": "Tạo Internal Load Balancer và Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu Ở section này, chúng ta sẽ tạo Internal Load Balancer để cân bằng tải các traffic từ Web Tier tới App Tier và Auto Scaling Group cho App Tier.\nNội dung: Tạo AMI cho App Tier Tạo Tartget Group cho App Tier Tạo Internal Load Balancer Tạo Launch Template cho App Tier Tạo Auto Scaling Group "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.6-createigw/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.6-createigw/",
 	"title": "Tạo Internet Gateway",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Internet Gateway Ở giao diện VPC, chọn Internet gateways ở sidebar, sau đó chọn Create internet gateway Ở giao diện Create internet gateway\nName tag nhập workshop-01-igw Click Create internet gateway Ở phần detail của IGW vừa tạo\nChọn Actions Chọn Attach to VPC Ở phần Attach to VPC\nChọn VPC my-vpc Chọn Attach internet gateway Hoàn thành tạo và gán IGW với VPC "
 },
 {
-	"uri": "/vi/6-deploywebtier/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/",
 	"title": "Triển khai Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu Trong phần này, chúng ta sẽ tiến hành triển khai Web Tier bằng cách upload mã nguồn của ứng dụng lên Amazon S3 và triển khai ứng dụng trên Amazon EC2. Ngoài ra chúng ta sẽ sử dụng Nginx trong workshop này. Nginx sẽ đóng vai trò là 1 web server mà chúng ta sẽ config để chạy úng dụng trên port 80, cũng như giúp chuyển hướng API request từ Web Tier đến App Tier thông qua Internal Load Balancer.\nNội dung: Sửa lại file cấu hình Nginx Upload mã nguồn ứng dụng lên Amazon S3 Tạo EC2 Instance Kết nối tới EC2 Instance "
 },
 {
-	"uri": "/vi/7-createexternallbandasg/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/",
 	"title": "Tạo External Load Balancer và Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu Ở section này, chúng ta sẽ tạo External Load Balancer để cân bằng tải các traffic từ người dùng (internet) tới Web Tier và Auto Scaling Group cho Web Tier.\nNội dung: Tạo AMI cho Web Tier Tạo Tartget Group cho Web Tier Tạo External Load Balancer Tạo Launch Template cho Web Tier Tạo Auto Scaling Group "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.7-createnatgateway/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.7-createnatgateway/",
 	"title": "Tạo NAT Gateway",
 	"tags": [],
 	"description": "",
 	"content": "Tạo NAT Gateway Trong giao diện VPC, click chọn NAT gateways ở sidebar, sau đó chọn Create NAT gateway Trong giao diện create NAT gateway\nName nhập nat-gw-01 Subnet chọn Public Subnet 1 EIP click Allocate Elastic IP Click Create NAT gateway Hoàn thành tạo NAT gateway trong Public Subnet 1 của AZ đầu tiên Lặp lại các bước để tạo NAT gateway trong Public Subnet 2 của AZ thứ hai Hoàn thành tạo NAT gateway trong Public Subnet 2 của AZ thứ hai "
 },
 {
-	"uri": "/vi/8-demoweb/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/8-demoweb/",
 	"title": "Demo deploy thành công",
 	"tags": [],
 	"description": "",
 	"content": "Demo deploy thành công Truy cập vào trang web bằng DNS name của web-tier-external-lb Demo giao diện home và api load sách sử dụng pagination Để test việc call api thành công, trước khi truy cập vào web, ta sẽ inspect trên browser và mở tab Network và tick vào Fetch/XHRđ để xem request gửi đi và response nhận lại từ server. chọn tab Headers để xem request gửi đi Chọn tab Response để xem response từ server Demo giao diện search sách và api search sách Truy cập vào giao diện search sách bằng cách click vào Search Books trên header Sau đó nhập tên sách muốn tìm kiếm vào ô search và click vào nút Search (ngoài ra bạn có thể filter theo category của sách) Demo chuyển trang sử dụng pagination Trong giao diện Search Books, kéo xuống dưới cùng và click chọn page number để chuyển trang (hoặc sử dụng nút First Page và Last Page) Vì EC2 instance ta đang sử dụng chưa đủ mạnh nên khi upload code của front-end S3, tôi đã cắt giảm source code của front end khá nhiều dẫn tới việc app chỉ hoạt động trên một số tính năng cơ bản. Nếu bạn muốn app có thể chạy hoàn chỉnh, bạn có thể clone source code từ nhánh Main và sử dụng instance có cấu hình mạnh hơn.\n"
 },
 {
-	"uri": "/vi/2-preparationsteps/2.8-createroutetable/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.8-createroutetable/",
 	"title": "Tạo Route Table",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Route Table Tại giao diện của VPC, click chọn Route tables ở sidebar và click Create route table Tại giao diện Create route table:\nName nhập public-route-table VPC chọn my-vpc Click Create route table Sau khi tạo thành công route table, click Edit routes Ở màn hình Edit routes, chọn Add route Sau đó thêm route với Destination là 0.0.0.0/0 và Target là workshop-01-igw sau đó click Save changes Sau khi tạo thành công, chuyển qua tab Subnet associations và click Edit subnet associations Chọn 2 public subnet ta đã tạo rồi click Save associations Thực hiện tương tự các bước trên để tạo ra private-route-table-01 cho private subnet 1 Thêm route với Destination là 0.0.0.0/0 và Target là nat-gw-01 sau đó click Save changes Chọn private subnet 1 rồi click Save associations Tạo route table cho 2 private db subnet Thực hiện tương tự các bước trên để tạo ra private-db-route-table: VPC chọn my-vpc Thêm route với Destination là 0.0.0.0/0 và Target là igw đã tạo (mục đích để có thể giao tiếp với db instance từ internet ngoài vpc) Thực hiện gán route table này cho 2 subnet là Private DB Subnet 1 và Private DB Subnet 2 "
 },
 {
-	"uri": "/vi/9-cleanupresources/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/9-cleanupresources/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",
 	"content": "Dọn dẹp tài nguyên Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau:\nXóa NAT Gateway Xóa Elastic IPs Xóa Auto Scaling Group Xóa Load Balancer Xóa Target group Xóa Launch template Xóa AMIs Xóa EC2 instances Xóa Database RDS Xóa Route tables\nTa phải xóa các subnet associations của từng route table trước (vào subnet -\u0026gt; table associations -\u0026gt; edit subnet associations -\u0026gt; unchecked các subnet đã gán -\u0026gt; save) Xóa route table Xóa Internet Gateway\ndetach IGW ra khỏi VPC Xóa IGW Xóa VPC Xóa S3 bucket\nXóa các file trong bucket Xóa bucket "
 },
 {
-	"uri": "/vi/2-preparationsteps/2.9-createsecuritygroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.9-createsecuritygroup/",
 	"title": "Tạo Security Group",
 	"tags": [],
 	"description": "",
 	"content": "Tạo Security Group cho External (Internet Facing) Load Balancer Ở giao diện VPC, chọn Security groups ở sidebar, sau đó click Create security group để tạo SG cho ELB (Elastic load balancer) chuẩn bị tạo Ở giao diện tạo security group:\nName điền InternetFacing-LB-SG Description điền External load balancer security group Thiết lập Inbound rules, bằng cách thêm các rule sau:\nRule đầu tiên cho phép truy cập HTTP, và Source: Anywhere-IPv4 Rule thứ hai cho phép SSH từ My IP tức IP cá nhân, sẽ thay đổi khi bạn thay đổi mạng Rule cuối Type: All ICMP - IPv4 và Source: Anywhere-IPv4 cho phép ping từ bất kì địa chỉ IP nào Kéo xuống cuối và click Create security group Hoàn thành tạo SG cho ELB Tạo SG cho Web tier Lặp lại các bước trên để tạo SG cho Web tier (tầng present với user, có thể hiểu như front-end) Thiết lập Inbound rules, bằng cách thêm các rule sau:\nRule đầu tiên cho phép truy cập bằng HTTP nhưng chỉ với source từ InternetFacing-LB-SG ta vừa tạo ở trên (theo cấu trúc đã thiết kế) Các rule sau tương tự như tạo SG cho ELB Kéo xuống dưới cùng và click Create security group Tạo SG cho Internal load balancer Tạo SG thứ 3 dành cho Internal load balancer Cài đặt Inbound rules:\nType: HTTP chọn Source: WebTier-SG cho phép truy cập HTTP từ SG của web tier Sau đó click Create security group Tạo SG thứ 4 cho App tier (các private instances) Tạo SG thứ 4 cho App tier (các private instances) Cài đặt Inbound rules:\nType: Custom TCP, Port: 8080 và Source: Internal-LB-SG cho phép traffic từ internal load balancer đi vào Và 2 rule tương tự nhưng Source: Anywhere-IPv4 và My IP Sau đó click Create security group Tạo SG thứ 5 cho Data tier (các private instances chứa MySql) Tạo SG thứ 5 cho Data tier (các private instances chứa MySql) Cài đặt Inbound rules:\nType: MYSQL/Aurora và Source: AppTier-SG cho phép traffic từ App tier đi vào Sau đó click Create security group Có thể thêm 2 rule nữa như hình để có thể connect db instance từ ngoài vpc (với mục đích test) Hoàn thành tạo 5 SG cho cấu trúc đã thiết kế "
 },
 {
-	"uri": "/vi/categories/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/vi/tags/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

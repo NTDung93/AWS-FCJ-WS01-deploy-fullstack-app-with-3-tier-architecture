@@ -1,293 +1,293 @@
 [
 {
-	"uri": "/2-preparationsteps/2.1-clonecodefromgithub/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.1-clonecodefromgithub/",
 	"title": "Clone Code from GitHub",
 	"tags": [],
 	"description": "",
 	"content": "Clone Code from GitHub Access the folder where you want to store the code.\nRight-click and select Open Git Bash Here. Type the command git clone https://github.com/NTDung93/library-app.git and press enter. Complete the code clone from GitHub. Checkout to the deploy branch using the command git checkout deploy (the branch has been adjusted the source code for easy deployment). Nếu bạn có mở source code phần Front-end, nó sẽ báo lỗi đỏ khắp màn hình, đừng lo lắng vì source đó đã xóa folder Node_modules để phục vụ cho việc deploy trong các section tới, bạn chỉ cần chạy lệnh npm install để cài đặt lại các package cần thiết. Nhưng nếu bạn không có nhu cầu mở source code phần Front-end, bạn có thể bỏ qua bước này.\n"
 },
 {
-	"uri": "/5-createinternallbandasg/5.1-createapptierami/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.1-createapptierami/",
 	"title": "Create AMI for App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Why do we need AMIs? Reproduce configurations easily - Once you have an instance configured the way you want, with all necessary software, settings etc., you can create an AMI from it. Then launching new instances from that AMI ensures all instances have the same baseline configuration automatically. Standardize environments - AMIs help maintain consistency across your environments. For example, you may have an AMI configured for a web server role that contains the necessary web server software and configurations. All new web server instances would use this standardized AMI. Backup and recovery - AMIs act as machine snapshots that can be used for backup, disaster recovery or to reproduce instances that may have failed. If an existing instance fails or needs to be replaced, launching a new one from the AMI is quicker than reconfiguring from scratch. Auto scaling - When using auto scaling groups to dynamically scale your fleet size based on demand, AMIs ensure all new instances added by auto scaling have the required configuration already in place. Create AMI from EC2 Instance Access EC2 service:\nChoose Instances from the sidebar Select instance My App Server 1 Click Actions, then click Image and template and choose Create image In the create image interface:\nFill in Image name with AppTierImage Fill in Image description with App tier Scroll down to the bottom and click Create image "
 },
 {
-	"uri": "/7-createexternallbandasg/7.1-createwebtierami/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.1-createwebtierami/",
 	"title": "Create AMI for Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Create AMI from EC2 Instance Access EC2 service:\nChoose Instances from the sidebar Select instance My Web Server 1 Click Actions, then click Image and template and choose Create image In the create image interface:\nFill in Image name with WebTierImage Fill in Image description with Web tier Scroll down to the bottom and click Create image "
 },
 {
-	"uri": "/3-createdbwithrds/3.1-createdbsubnetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.1-createdbsubnetgroup/",
 	"title": "Create database subnet group",
 	"tags": [],
 	"description": "",
 	"content": "What is Database subnet group and why do we need it? A database subnet group is a collection of subnets that you create in your VPC. When you create a database instance, you need to specify a database subnet group. The database subnet group must contain at least one subnet in each AZ. The database subnet group ensures that the database instance can be deployed across multiple AZs for high availability.\nCreate database subnet group Find and access the RDS service Choose Subnet groups in the sidebar and click Create DB subnet group In the create DB subnet group interface:\nName fill in db-subnet-group Description fill in db-subnet-group VPC choose my-vpc In the Add subnets section:\nAZ choose ap-southeast-1a and ap-southeast-1b Subnets choose Private DB Subnet 1 and Private DB Subnet 2 (you can go back to the list of subnets, see the CIDR of each subnet to choose the right one) Then click Create Complete creating Subnet group. "
 },
 {
-	"uri": "/4-deployapptier/4.1-createec2/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.1-createec2/",
 	"title": "Create EC2 Server",
 	"tags": [],
 	"description": "",
 	"content": "Create EC2 Instances for App Tier Find and select the EC2 service. Select Instances in the sidebar, then click Launch instances. Name and tags fill in My App Server 1 In the AMI section:\nselect Amazon Linux AMI select Amazon Linux 2 AMI (HVM) In the Key pair section, we choose Proceed without a key pair because we will connect the EC2 instance through AWS Systems Manager Session Manager. In the Network settings section:\nVPC select my-vpc Subnet select Private Subnet 1 Auto-assign public IP select Enable SG select Select existing security group Common SG select AppTier-SG In the Advanced details section, IAM instance profile select ec2role we created above Click Launch instance Complete creating EC2 instance for a server in AppTier in private subnet 1 "
 },
 {
-	"uri": "/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/",
 	"title": "Deploy fullstack app with three-tier architecture",
 	"tags": [],
 	"description": "",
 	"content": "Deploy fullstack app with three-tier architecture Overview In this workshop, we will deploy a fullstack application (Spring Boot, React, MySQL) with three tier architecture. Then find out the definition, feature of each service used in this architecture.\nContent Introduction Preparation steps Create database with RDS Deploy App tier Create Internal LB and ASG Deploy Web tier Create External LB and ASG Clean up resources "
 },
 {
-	"uri": "/1-introduce/1.1-flowexplaination/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/1.1-flowexplaination/",
 	"title": "Flow explaination",
 	"tags": [],
 	"description": "",
 	"content": "Flow explaination of three-tier architecture In the diagram below, we will see the architectural model of a fullstack application implementing three-tier architecture. First, the user operation will go through the Internet gateway and then to the External (Internet facing) Application Load Balancer. Load Balancer will forward traffic to servers in the Web tier. Then the servers in the Web tier will call APIs to the Interal Load Balancer. Load Balancer will then forward traffic to servers in the App tier. Finally, the servers in the App tier will process the request, retrieve data in the Data tier (if necessary) and return results to users in the Web tier. This is the basic three-layer architectural model that we will implement in this workshop.\n"
 },
 {
-	"uri": "/1-introduce/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
 	"content": "Introduction to three-tier architecture The three-tier architecture is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.\nThree-tier architecture includes:\nPresentation tier / Web Tier: interface layer so users can interact directly (eg: website or mobile application UI). Logic tier / App tier: layer to process logic and execute user commands. Data tier: data storage layer of the app. Advantages of implementing three-tier architecture:\nModularity: this architecture helps us modularize the app into independent parts. This helps the dev team focus on developing each layer of the app, resulting in changes being applied as quickly as possible. In addition, it also helps recover the app faster after the server is down due to an error or disaster thanks to being able to localize and repair the faulty part. High availability: because the architecture deploys applications across multiple Availability Zones, the AZs are designed so that there is no failure that affects 2 AZs at the same time (fault isolation). High redundancy: AWS allows deploying a stand by or replica version of the primary database on the remaining AZ. If the main database is down, the application can still retrieve data from the replica database. "
 },
 {
-	"uri": "/6-deploywebtier/6.1-updateconfigfile/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.1-updateconfigfile/",
 	"title": "Update Nginx Configuration File",
 	"tags": [],
 	"description": "",
 	"content": "Update Nginx Configuration File Open the nginx.conf file from the cloned project Then change line 58 in the file to the DNS Name of the app-tier-internal-lb load balancer "
 },
 {
-	"uri": "/4-deployapptier/4.2-connectec2/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.2-connectec2/",
 	"title": "Connect to EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Connect to EC2 instance On the EC2 instances interface, select the instance you just created and click Connect Switch to the Session Manager tab and click Connect Successfully connect to the instance Run the command sudo -su ec2-user to switch from user to ec2-user, and have root administrative rights for the instance Then run the command ping 8.8.8.8 (IP address of Google’s DNS server) to test whether our instance can connect to the outside internet through igw or not "
 },
 {
-	"uri": "/3-createdbwithrds/3.2-createdbinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.2-createdbinstance/",
 	"title": "Create database instance",
 	"tags": [],
 	"description": "",
 	"content": "Create database instance In the Amazon RDS interface, select Databases in the sidebar and then click Create database In the Create database interface:\nCreation method select Standard create Engine type select MySQL Templates select Dev/Test, Deployment options select Multi-AZ DB instance (to create the main instance in the current AZ, and a clone instance in the remaining AZ defined in the db subnet group to prevent failover) → This deployment method will be best practice as it meets the criteria of High availability and Data redundancy But we can choose another option is Free tier to be suitable for the scope of the problem, and save costs In the Settings section:\nDB instance identifier fill in database-1 Master username fill in admin Master password fill in 12345678 In the Connectivity section:\nComputer resource select Dont connect to EC2 VPC select my-vpc DB subnet group select db-subnet-group we created Public access select No (select Yes if you want to test connection from public network) VPC SG select Choose existing Existing VPC SG select DataTier-SG AZ select ap-southeast-1a In the Additional configuration section, fill in the db name as demodb (master name: admin, pass: 12345678) Scroll down to the bottom and select Create database: Complete creating the database instance Reconfigure to test connection from public network To be able to test the connection to the endpoint of the newly created db from the public network, we need to reconfigure some things as follows (after testing, remember to return everything to the initial state)\nGo to the private-db-route-table route table, add a new route with destination 0.0.0.0/0 and target internet gateway we created In the DataTier-SG security group, add a new inbound rule to allow All traffic access Update the status of Public access in the Connectivity section in the db instance from No to Yes Test connection to the endpoint of the newly created db instance In the MySQL Workbench software, create a new connection:\nConnection Name fill in db-ws-01 Hostname copy and paste the endpoint of the newly created db instance Port fill in 3306 Username fill in admin Password click Store in Vault then enter 12345678 Finally, click Test Connection If the connection is successful, the following message will appear: Access file application.properties and reconfigure datasource url, username and password as shown below Run app and check in the connection just created in MySQL, we see that the tables have been auto-generated thanks to the code first mechanism (just for testing because in this workshop we will use database first) "
 },
 {
-	"uri": "/2-preparationsteps/2.2-creates3bucket/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.2-creates3bucket/",
 	"title": "Create S3 Bucket",
 	"tags": [],
 	"description": "",
 	"content": "Create S3 Bucket Access the AWS interface, find the S3 service and then click to select In the S3 interface, click Create bucket In the Create bucket interface: AWS Region select Singapore ap-southeast-1 Bucket name enter demowebapp-workshop-01 Scroll down to the bottom and select Create bucket Complete creating S3 bucket "
 },
 {
-	"uri": "/5-createinternallbandasg/5.2-createtargetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.2-createtargetgroup/",
 	"title": "Create Target group for App Tier",
 	"tags": [],
 	"description": "",
 	"content": "Create Target group for App Tier In the EC2 Dashboard, click on Target Groups under Load Balancing at sidebar, and then click on Create target group. In the interface of creating Target group:\nTarget group name fill in AppTierTargetGroup. Protocol: HTTP, Port: 8080 VPC choose my-vpc Scroll down and click Next then click Create target group. Finish creating target group "
 },
 {
-	"uri": "/7-createexternallbandasg/7.2-createtargetgroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.2-createtargetgroup/",
 	"title": "Create Target group for Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Create Target group for App Tier In the EC2 Dashboard, click on Target Groups under Load Balancing at sidebar, and then click on Create target group. In the interface of creating Target group:\nTarget group name fill in WebTierTargetGroup. Protocol: HTTP, Port: 80 (this is the port that nginx listens). VPC choose my-vpc Scroll down and click Next then click Create target group. Finish creating target group "
 },
 {
-	"uri": "/2-preparationsteps/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/",
 	"title": "Preparation Steps",
 	"tags": [],
 	"description": "",
 	"content": "In this section, we will setup the necessary and important things to perform this workshop.\nContents Clone code from GitHub Create S3 Bucket Create EC2 role Create VPC Create Subnet Create Internet Gateway Create NAT Gateway Create Route Table Create Security Group "
 },
 {
-	"uri": "/6-deploywebtier/6.2-uploadcodetos3/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.2-uploadcodetos3/",
 	"title": "Upload Application Source Code to Amazon S3",
 	"tags": [],
 	"description": "",
 	"content": "Upload Application Source Code to Amazon S3 Go to the library-app-fe folder under local, delete the node_modules folder (if any) Access the created S3 bucket, drag and drop the library-app-fe folder and nginx.config file under local to the bucket to upload the folder and file to the bucket. "
 },
 {
-	"uri": "/3-createdbwithrds/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/",
 	"title": "Create Database with RDS",
 	"tags": [],
 	"description": "",
 	"content": "What is RDS? Amazon Relational Database Service (Amazon RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you to focus on your applications and business.\nContent Create database subnet group Create database instance "
 },
 {
-	"uri": "/6-deploywebtier/6.3-createec2instance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.3-createec2instance/",
 	"title": "Create EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Create EC2 instance Similar to creating an instance for the App server, create an instance for the web server with the following changes:\nInstance name fill in My Web Server 1 Subnet select Public Subnet 1 Security group select WebTier-SG Advanced details, IAM instance profile select ec2role Finally, select Launch instance Complete creating an EC2 instance for the web server "
 },
 {
-	"uri": "/7-createexternallbandasg/7.3-createexternalloadbalancer/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.3-createexternalloadbalancer/",
 	"title": "Create External Load Balancer",
 	"tags": [],
 	"description": "",
 	"content": "Create Internal Load Balancer At EC2 Dashboard, click on Load Balancers from the left-hand menu and then click on Create Load Balancer. In the interface of choosing a load balancer type, select Application Load Balancer and click on Create. In the ALB creation screen:\nLB Name enter web-tier-internal-lb Scheme select Internet-facing In the Network mapping section:\nVPC: my-vpc Tick ap-southeast-1a, then select Public Subnet 1 Tick ap-southeast-1b, then select Public Subnet 2 In the Security groups section, select InternetFacing-LB-SG. In the Listeners and routing section, select WebTierTargetGroup for the default action. Scroll down to the bottom and click on Create load balancer. Complete the load balancer creation for the app tier. "
 },
 {
-	"uri": "/2-preparationsteps/2.3-createec2role/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.3-createec2role/",
 	"title": "Create IAM EC2 Role",
 	"tags": [],
 	"description": "",
 	"content": "Create IAM EC2 Role Find IAM service on the search bar and click on it Choose Roles on the sidebar, then click Create role In the role creation interface, at Select trusted entity step: Trusted entity type choose AWS Service Use case choose EC2 Click Next In the role creation interface, at Add permissions step: Find, choose role AmazonSSMManagedInstanceCore (allow safe connection to instance without SSH key) and AmazonS3ReadOnlyAccess (allow instance to download code from S3) Click Next In the role creation interface, at Name, review, and create step: Fill in the role name as ec2role Review the 3 steps just set up Click Create role Finish creating role "
 },
 {
-	"uri": "/5-createinternallbandasg/5.3-createinternalloadbalancer/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.3-createinternalloadbalancer/",
 	"title": "Create Internal Load Balancer",
 	"tags": [],
 	"description": "",
 	"content": "Create Internal Load Balancer At EC2 Dashboard, click on Load Balancers from the left-hand menu and then click on Create Load Balancer. In the interface of choosing a load balancer type, select Application Load Balancer and click on Create. In the ALB creation screen:\nLB Name enter app-tier-internal-lb Scheme select Internal In the Network mapping section:\nVPC: my-vpc Tick ap-southeast-1a, then select Private Subnet 1 Tick ap-southeast-1b, then select Private Subnet 2 In the Security groups section, select Internal-LB-SG. In the Listeners and routing section, select AppTierTargetGroup for the default action. Scroll down to the bottom and click on Create load balancer. Complete the load balancer creation for the app tier. "
 },
 {
-	"uri": "/4-deployapptier/4.3-downmysqloninstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.3-downmysqloninstance/",
 	"title": "Download MySQL on EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Download MySQL on EC2 instance Run the following commands to download MySQL on the instance:\nsudo yum install -y https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 sudo yum install -y mysql-community-client Connect to RDS database:\nRun command mysql -h -u -p (mysql -h database-1.cbk6is6oozuw.ap-southeast-1.rds.amazonaws.com -u admin -p) Then enter password 12345678 Run create database librarydb; to create a new db Run show database; to show existing dbs Run use librarydb; to use the newly created db Run show tables; to show tables in the db, at this time the db has no tables To create tables for the db, go to the application.properties file of the back-end and reconfigure the information as shown below Then we will run the app. After the app runs successfully, run the show tables; command again to check Run the command insert into librarydb.book (author, category, copies, copies_available, description, img, title) values (\u0026lsquo;John\u0026rsquo;, \u0026lsquo;Programming\u0026rsquo;, 10, 8, \u0026lsquo;Tutorial about Java\u0026rsquo;, \u0026lsquo;\u0026rsquo;, \u0026lsquo;Java Advanced\u0026rsquo;); to add a row of data to the book table Run select * from librarydb.book; to show the rows of data in the book table The above steps are just to test that the db works well according to the queries we have written. But in this workshop, we will use the database first approach, meaning we will create the db first and then create entities and repositories in the app to map with the db.\nOpen MySQL, access the created connection and import the React-Springboot-Add-Tables-Script-1.sql file in the starter-files folder, then run the available scripts to create the db named librarydb and the tables in the db "
 },
 {
-	"uri": "/6-deploywebtier/6.4-connecttoinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.4-connecttoinstance/",
 	"title": "Connect to EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Connect to EC2 instance Similar to connecting to the app server instance, we connect through Session manager. Switch to ec2-user. Check the connection by pinging the ip of the Google DNS server → connected to the internet through IGW. Download NPM to the instance:\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash source ~/.bashrc to reload the bash shell configuration file to apply the npm just downloaded Run nvm install 16 then run nvm use 16 to download and use Node.js version 16 To copy code from the library-app-fe folder from the S3 bucket we run the following commands:\ncd to go to the user’s home directory aws s3 cp s3://demowebapp-workshop-01/library-app-fe/ web-tier --recursive to copy all files from the library-app-fe folder and its sub-folders to the web-tier folder on the instance (if the web-tier folder does not exist, the instance will automatically create a new folder) Download the dependencies:\ncd web-tier to access the folder ls -ltr to list the files and sub-folders of web-tier npm install to download the necessary libraries or dependencies npm run build to build the source code sudo amazon-linux-extras install nginx1 -y to download nginx (nginx acts as a web server to help the app run on port 80, as well as help direct API calls to the internal load balancer) Config Nginx:\ncd /etc/nginx ls We will see the nginx.conf file in the nginx folder. We need to delete this file and replace it with the file we have configured and uploaded to the s3 bucket. sudo rm nginx.conf sudo aws s3 cp s3://demowebapp-workshop-01/nginx.conf . to copy the file from the bucket to the nginx folder sudo service nginx restart to restart Nginx chmod -R 755 /home/ec2-user to grant Nginx access to all files sudo chkconfig nginx on to run the Nginx service automatically every time the instance restarts "
 },
 {
-	"uri": "/5-createinternallbandasg/5.4-createlaunchtemplate/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.4-createlaunchtemplate/",
 	"title": "Create Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Create Launch Template Launch templates and AMIs (Amazon Machine Images) are both fundamental for launching EC2 instances on AWS, but they serve different purposes:\nAMI (Amazon Machine Image): An AMI is a template that captures the entire software environment of a running EC2 instance. It includes the operating system, applications, configurations, and data volumes. AMIs act as blueprints for creating new instances with the same software setup. You can think of them as pre-configured snapshots of a virtual machine. Launch Template: A launch template defines the configuration details needed to launch an EC2 instance. This includes the AMI ID (which specifies the software environment), instance type (hardware capabilities), security groups (network access rules), user data (scripts to run on instance startup), and other launch parameters. It essentially defines how an instance will be provisioned beyond the base software provided by the AMI. Here\u0026rsquo;s an analogy: Imagine an AMI as a recipe for a cake, specifying the ingredients (operating system, applications). A launch template would be like the baking instructions, including the oven temperature (instance type), baking time, and any additional steps (user data scripts). You can use the same cake recipe (AMI) with different baking instructions (launch templates) to create cakes with variations (different instance configurations).\nCreate Launch Template In the EC2 dashboard, select Launch templates in the sidebar, then click Create launch template In the launch template creation interface, under Launch template name and description, fill in Launch template name as AppTier-LaunchTemplate Under the AMI selection, choose Owned by me then select AppTierImage Choose Instance type as t2.micro Keypair to Don’t include in launch template Network settings:\nSubnet to Don’t include in launch template SG to existing sg, then select AppTier-SG Advanced details, IAM instance profile to ec2role Scroll down to the bottom, select Create launch template. Done! "
 },
 {
-	"uri": "/7-createexternallbandasg/7.4-createlaunchtemplate/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.4-createlaunchtemplate/",
 	"title": "Create Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Create Launch Template In the EC2 dashboard, select Launch templates in the sidebar, then click Create launch template In the launch template creation interface, under Launch template name and description, fill in Launch template name as WebTier-LaunchTemplate Under the AMI selection, choose Owned by me then select WebTierImage Choose Instance type as t2.micro Keypair to Don’t include in launch template Network settings:\nSubnet to Don’t include in launch template SG to existing sg, then select WebTier-SG Advanced details, IAM instance profile to ec2role Scroll down to the bottom, select Create launch template. Done! "
 },
 {
-	"uri": "/2-preparationsteps/2.4-createvpc/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.4-createvpc/",
 	"title": "Create VPC",
 	"tags": [],
 	"description": "",
 	"content": "Create VPC Access AWS website and find VPC Choose Your VPCs, then click Create VPC Proceed to create VPC:\nResource, choose VPC only Name tag, enter my-vpc IPv4 CIDR, enter 10.10.0.0/16 Click Create VPC Finish creating VPC View details of the created VPC, go to Edit VPC setting:\nCheck 2 options Enable DNS resolution and Enable DNS hostnames Press button Save "
 },
 {
-	"uri": "/4-deployapptier/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/",
 	"title": "Deploy Application Tier",
 	"tags": [],
 	"description": "",
 	"content": "Deploy Application Tier In this section, we will create an EC2 instance in a private subnet, connect to the instance, install MySQL on the instance, and run our app on the instance.\nContent Create EC2 instance Connect to EC2 instance Install MySQL on instance Run app on instance "
 },
 {
-	"uri": "/4-deployapptier/4.4-runapponinstance/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.4-runapponinstance/",
 	"title": "Run App on EC2 instance",
 	"tags": [],
 	"description": "",
 	"content": "Run App on EC2 instance Idea: We will build the app\u0026rsquo;s jar file, then upload the jar file to the s3 bucket. Then download the jar file to the ec2 instance and run the jar file on the instance.\nDownload java 17 on the instance with the command sudo yum install java-17-amazon-corretto-headless. Then check the download is successful with the command java -version !\nTo generate the app\u0026rsquo;s jar file, we go to the IDE, open the back end project, access Maven, right-click on install in Lifecycle and select Run Maven Build. !\nAfter creating the app\u0026rsquo;s jar file, the jar file just created will be in the target folder !\nAccess S3, access the created bucket, create a new folder named library-app-be. After creating the folder, we upload the jar file just created by dragging and dropping it into the folder !\nBefore downloading s3 to the instance, we need to make s3 public by adding a policy to it:\nSelect the s3 bucket created, go to the tab permission In Bucket policy select edit and paste the following code, then click Save changes {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;PublicReadGetObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: \u0026#34;*\u0026#34;,\r\u0026#34;Action\u0026#34;: \u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:s3:::demowebapp-workshop-01/*\u0026#34;\r}\r]\r} Access the jar file in the bucket and copy the Object URL of it In the session manager, run the command sudo wget (sudo wget https://demowebapp-workshop-01.s3.ap-southeast-1.amazonaws.com/library-app-be/library-app-be-0.0.1-SNAPSHOT.jar) to download the jar file to the instance Run the command java -jar library-app-be-0.0.1-SNAPSHOT.jar to run the app on the instance To be able to temporarily test with Postman, we can temporarily assign public-route-table (for the purpose of being able to use IGW) to private-subnet-1 (subnet containing ec2 instance) Access postman, we can use Public IPv4 address or Public IPv4 DNS to call the APIs use Public IPv4 address use Public IPv4 DNS To keep the app running even after terminating the session, we can use nohup command. For example, nohup java -jar library-app-be-0.0.1-SNAPSHOT.jar \u0026amp;. Then we can close the session and the app will still run. To stop the app, we can run pkill -f 'java -jar library-app-be-0.0.1-SNAPSHOT.jar' But we need to make the app automatically run after the instance is rebooted. We will use systemd to do create service for the app (run java app as a service)\nWe will run the following commands: sudo chmod +x /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar sudo vim /etc/systemd/system/library.service Insert the code below into your-application.service:\n[Unit]\rDescription=Java Application as a Service\rAfter=syslog.target\r[Service]\rUser=ec2-user\rExecStart=ExecStart=/usr/bin/java -jar /home/ec2-user/library-app-be-0.0.1-SNAPSHOT.jar\rSuccessExitStatus=143\r[Install]\rWantedBy=multi-user.target cd /etc/systemd/system/ sudo chmod 777 library.service sudo nano library.service sudo systemctl daemon-reload sudo systemctl enable library.service sudo systemctl start library.service sudo systemctl status library.service -l sudo systemctl stop library.service "
 },
 {
-	"uri": "/5-createinternallbandasg/5.5-createautoscalinggroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.5-createautoscalinggroup/",
 	"title": "Create Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Create Auto Scaling Group In interfatce of EC2, choose Auto scaling group at sidebar, then click Create auto scaling group. In the interface of creating ASG:\nName fill in AppTierASG Launch template choose AppTier-LaunchTemplate Scroll downw and click Next In the interface of configuring Network:\nVPC: my-vpc AZs and subnets choose Private Subnet 1 and Private Subnet 2 Click Next In the next configuration interface:\nLoad balancing choose Attach to an existing load balancer Choose Choose from your load balancer target group then choose AppTierTargetGroup Scroll downw and click Next In the next configuration interface:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Scroll downw and click Next Next to the last step then click Create auto scaling group Finish creating ASG: After creating ASG successfully, 2 new ec2 instances will be created: → Now we have 3 ec2 instances, now we can terminate the My App Server 1 instance (but recommend to keep it for easy troubleshooting later)\n→If terminate any instance in ASG, the new instance will be launched by ASG immediately\nTry to terminate both instances in ASG, 2 new instances will be launched immediately by ASG "
 },
 {
-	"uri": "/7-createexternallbandasg/7.5-createautoscalinggroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.5-createautoscalinggroup/",
 	"title": "Create Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Create Auto Scaling Group In interfatce of EC2, choose Auto scaling group at sidebar, then click Create auto scaling group. In the interface of creating ASG:\nName fill in WebTierASG Launch template choose WebTier-LaunchTemplate Scroll downw and click Next In the interface of configuring Network:\nVPC: my-vpc AZs and subnets choose Public Subnet 1 and Public Subnet 2 Click Next In the next configuration interface:\nLoad balancing choose Attach to an existing load balancer Choose Choose from your load balancer target group then choose WebTierTargetGroup Scroll downw and click Next In the next configuration interface:\nDesired capacity: 2 Min desired capacity: 2 Max desired capacity: 2 Scroll downw and click Next Next to the last step then click Create auto scaling group Finish creating ASG: After creating ASG successfully, 2 new ec2 instances will be created: Now we can open web by DNS name of web-tier-external-lb "
 },
 {
-	"uri": "/5-createinternallbandasg/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/",
 	"title": "Create Internal Load Balancer and Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Introduction In this section, we will create an Internal Load Balancer to balance the traffic from the Web Tier to the App Tier and an Auto Scaling Group for the App Tier.\nContent: Create AMI for App Tier Create Target Group Create Internal Load Balancer Create Launch Template for App Tier Create Auto Scaling Group "
 },
 {
-	"uri": "/2-preparationsteps/2.5-createsubnets/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.5-createsubnets/",
 	"title": "Create Subnets",
 	"tags": [],
 	"description": "",
 	"content": "Create Subnets In VPC interface, choose Subnets on the sidebar, then click Create subnet In Create subnet interface, choose the VPC just created is my-vpc After choosing VPC, the Subnet settings will appear\nSubnet name, enter Public Subnet 1 Availability Zone, choose AZ Singapore ap-southeast-1a IPv4 CIDR block, enter 10.10.1.0/24 Choose Create subnet Finish creating Subnet Perform the same steps to create more subnets\nPublic subnet 2 with CIDR 10.10.2.0/24 and AZ ap-southeast-1b. Private subnet 1 with CIDR 10.10.3.0/24 and AZ ap-southeast-1a. Private subnet 2 with CIDR 10.10.4.0/24 and AZ ap-southeast-1b. Private DB Subnet 1 with CIDR 10.10.5.0/24 and AZ ap-southeast-1a. Private DB Subnet 2 with CIDR 10.10.6.0/24 and AZ ap-southeast-1b. Finish creating 6 subnets. Allow auto-assign public IP address for 2 public subnets In Subnets interface, choose Public Subnet 1, choose Actions and choose Edit subnet settings Tick Enable auto-assign public IPv4 address, then choose Save Repeat the steps above to apply for Public subnet 02 Go back to Your VPCs and view the Resource map of my-vpc "
 },
 {
-	"uri": "/2-preparationsteps/2.6-createigw/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.6-createigw/",
 	"title": "Create Internet Gateway",
 	"tags": [],
 	"description": "",
 	"content": "Create Internet Gateway In the VPC interface, choose Internet gateways on the sidebar, then click Create internet gateway In Create internet gateway interface\nName tag, enter workshop-01-igw Click Create internet gateway In the detail of the created IGW\nChoose Actions Choose Attach to VPC In Attach to VPC\nChoose VPC my-vpc Choose Attach internet gateway Finish creating and attaching IGW to VPC "
 },
 {
-	"uri": "/6-deploywebtier/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/",
 	"title": "Deploy Web Tier",
 	"tags": [],
 	"description": "",
 	"content": "Introduction In this section, we will deploy the Web Tier by uploading the source code of the application to Amazon S3 and deploying the application on Amazon EC2. In addition, we will use Nginx in this workshop. Nginx will act as a web server that we will configure to run the application on port 80, as well as help redirect API requests from the Web Tier to the App Tier through the Internal Load Balancer.\nContents: Update Nginx Configuration File Upload Application Source Code to Amazon S3 Create EC2 Instance Connect to EC2 Instance "
 },
 {
-	"uri": "/7-createexternallbandasg/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/",
 	"title": "Create External Load Balancer and Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": "Introduction In this section, we will create an External Load Balancer to balance the traffic from the users (internet) to the Web Tier and an Auto Scaling Group for the Web Tier.\nContent: Create AMI for Web Tier Create Target Group for Web Tier Create External Load Balancer Create Launch Template for Web Tier Create Auto Scaling Group "
 },
 {
-	"uri": "/2-preparationsteps/2.7-createnatgateway/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.7-createnatgateway/",
 	"title": "Create NAT Gateway",
 	"tags": [],
 	"description": "",
 	"content": "Create NAT Gateway In the VPC interface, click NAT gateways on the sidebar, then click Create NAT gateway In the create NAT gateway interface\nName enter nat-gw-01 Subnet choose Public Subnet 1 EIP click Allocate Elastic IP Click Create NAT gateway Finish creating NAT gateway in Public Subnet 1 of the first AZ Repeat the steps to create NAT gateway in Public Subnet 2 of the second AZ Finish creating NAT gateway in Public Subnet 2 of the second AZ "
 },
 {
-	"uri": "/2-preparationsteps/2.8-createroutetable/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.8-createroutetable/",
 	"title": "Create Route Table",
 	"tags": [],
 	"description": "",
 	"content": "Create Route Table In the VPC interface, click Route Tables on the sidebar, then click Create Route Table In the Create route table interface:\nName enter public-route-table VPC choose my-vpc Click Create route table After successfully creating the route table, click Edit routes In the Edit routes interface, choose Add route Then add a route with Destination is 0.0.0.0/0 and Target is workshop-01-igw then click Save changes After successfully creating, switch to the Subnet associations tab and click Edit subnet associations Choose 2 public subnets we have created then click Save associations Perform the same steps to create private-route-table-01 for private subnet 1 Add a route with Destination is 0.0.0.0/0 and Target is nat-gw-01 then click Save changes Choose private subnet 1 then click Save associations Create route table for 2 private db subnets Perform the same steps to create private-db-route-table: VPC choose my-vpc Add a route with Destination is 0.0.0.0/0 and Target is igw (to communicate with db instance from outside the vpc) Assign this route table to 2 subnets Private DB Subnet 1 and Private DB Subnet 2 "
 },
 {
-	"uri": "/8-demoweb/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/8-demoweb/",
 	"title": "Demo deploy successfully",
 	"tags": [],
 	"description": "",
 	"content": "Demo deploy successfully Access the website using the DNS name of web-tier-external-lb Demo home interface and book load api using pagination To test the successful api call, before accessing the web, we will inspect on the browser and open the Network tab and tick on Fetch/XHR to see the request sent and the response received from the server. select the Headers tab to view the request sent Select the Response tab to view the response from the server Demo book search interface and book search api Access the book search interface by clicking on Search Books on the header Then enter the name of the book you want to search in the search box and click the Search button (you can also filter by book category) Demo page switching using pagination In the Search Books interface, scroll down to the bottom and click on the page number to switch pages (or use the First Page and Last Page buttons) Because the EC2 instance we are using is not powerful enough, when uploading the front-end S3 code, I have cut a lot of the front-end source code, leading to the app only working on some basic features. If you want the app to run completely, you can clone the source code from the Main branch and use a more powerful instance.\n"
 },
 {
-	"uri": "/9-cleanupresources/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/9-cleanupresources/",
 	"title": "Clean Up Resources",
 	"tags": [],
 	"description": "",
 	"content": "Clean Up Resources We will proceed to delete the resources in the following order:\nDelete NAT Gateway Delete Elastic IPs Delete Auto Scaling Group Delete Load Balancer Delete Target group Delete Launch template Delete AMIs Delete EC2 instances Delete Database RDS Delete Route tables\nWe have to delete the subnet associations of each route table first (go to subnet -\u0026gt; table associations -\u0026gt; edit subnet associations -\u0026gt; unchecked the assigned subnets -\u0026gt; save) Delete route table Delete Internet Gateway\ndetach IGW from VPC Delete IGW Delete VPC Delete S3 bucket\nEmpty bucket Delete bucket "
 },
 {
-	"uri": "/2-preparationsteps/2.9-createsecuritygroup/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.9-createsecuritygroup/",
 	"title": "Create Security Group",
 	"tags": [],
 	"description": "",
 	"content": "Create Security Group for External (Internet Facing) Load Balancer In the VPC interface, choose Security groups on the sidebar, then click Create security group to create a security group for the ELB (Elastic load balancer) to be created In the create security group interface:\nName enter InternetFacing-LB-SG Description enter External load balancer security group Set up Inbound rules, by adding the following rules:\nFirst rule allows access to HTTP, and Source: Anywhere-IPv4 Second rule allows SSH from My IP which means personal IP, will change when you change the network Last rule Type: All ICMP - IPv4 and Source: Anywhere-IPv4 allows ping from any IP address Scroll down to the bottom and click Create security group Finish creating SG for ELB Create SG for Web tier Repeat the above steps to create SG for Web tier (present layer with user, can be understood as front-end) Set up Inbound rules, by adding the following rules:\nFirst rule allows access via HTTP but only with source from InternetFacing-LB-SG we just created above (according to the designed structure) The following rules are similar to creating SG for ELB Scroll down to the bottom and click Create security group Create SG for Internal load balancer Create the 3rd SG for Internal load balancer Set up Inbound rules:\nType: HTTP choose Source: WebTier-SG allows access to HTTP from the web tier SG Then click Create security group Create the 4th SG for App tier (private instances) Create the 4th SG for App tier (private instances) Set up Inbound rules:\nType: Custom TCP, Port: 8080 and Source: Internal-LB-SG allows traffic from internal load balancer to enter And 2 similar rules but Source: Anywhere-IPv4 and My IP Then click Create security group Create the 5th SG for DB tier Create the 5th SG for DB tier (private instances containing MySql) Set up Inbound rules:\nType: Custom TCP, Port: 3306 and Source: AppTier-SG allows traffic from app tier to enter Then click Create security group You can add more rules to allow traffic from other sources for testing purposes Finish creating 5 SG for the designed structure "
 },
 {
-	"uri": "/categories/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/",
+	"uri": "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

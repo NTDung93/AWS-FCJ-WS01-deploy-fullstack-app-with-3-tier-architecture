@@ -10,7 +10,7 @@ pre : " <b> 1. </b> "
 
 **The three-tier architecture** is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.
 
-![Three tier example](/images/1-Introduce/3TierExample.png?featherlight=false&width=50pc)
+![Three tier example](/workshop01-AWS-FCJ-2024/images/1-Introduce/3TierExample.png?featherlight=false&width=50pc)
 
 **Three-tier architecture includes**:
 - Presentation tier / Web Tier: interface layer so users can interact directly (eg: website or mobile application UI).

@@ -2,508 +2,508 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/2-preparationsteps/2.1-clonecodefromgithub/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.1-clonecodefromgithub/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.1-clonecodefromgithub/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.1-clonecodefromgithub/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.1-clonecodefromgithub/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.1-clonecodefromgithub/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/5.1-createapptierami/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.1-createapptierami/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/5.1-createapptierami/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.1-createapptierami/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/5.1-createapptierami/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.1-createapptierami/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/7.1-createwebtierami/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.1-createwebtierami/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/7.1-createwebtierami/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.1-createwebtierami/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/7.1-createwebtierami/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.1-createwebtierami/"
                 />
   </url><url>
-    <loc>/3-createdbwithrds/3.1-createdbsubnetgroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.1-createdbsubnetgroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/3.1-createdbsubnetgroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.1-createdbsubnetgroup/"
                 />
   </url><url>
-    <loc>/4-deployapptier/4.1-createec2/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.1-createec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deployapptier/4.1-createec2/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.1-createec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deployapptier/4.1-createec2/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.1-createec2/"
                 />
   </url><url>
-    <loc>/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/"
                 />
   </url><url>
-    <loc>/1-introduce/1.1-flowexplaination/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/1.1-flowexplaination/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/1.1-flowexplaination/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/1-introduce/1.1-flowexplaination/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/1.1-flowexplaination/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/1.1-flowexplaination/"
                 />
   </url><url>
-    <loc>/1-introduce/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/1-introduce/"
                 />
   </url><url>
-    <loc>/6-deploywebtier/6.1-updateconfigfile/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.1-updateconfigfile/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-deploywebtier/6.1-updateconfigfile/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.1-updateconfigfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-deploywebtier/6.1-updateconfigfile/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.1-updateconfigfile/"
                 />
   </url><url>
-    <loc>/4-deployapptier/4.2-connectec2/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.2-connectec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deployapptier/4.2-connectec2/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.2-connectec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deployapptier/4.2-connectec2/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.2-connectec2/"
                 />
   </url><url>
-    <loc>/3-createdbwithrds/3.2-createdbinstance/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.2-createdbinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-createdbwithrds/3.2-createdbinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/3.2-createdbinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-createdbwithrds/3.2-createdbinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/3.2-createdbinstance/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.2-creates3bucket/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.2-creates3bucket/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.2-creates3bucket/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.2-creates3bucket/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.2-creates3bucket/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.2-creates3bucket/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/5.2-createtargetgroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.2-createtargetgroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/5.2-createtargetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.2-createtargetgroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/5.2-createtargetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.2-createtargetgroup/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/7.2-createtargetgroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.2-createtargetgroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/7.2-createtargetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.2-createtargetgroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/7.2-createtargetgroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.2-createtargetgroup/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/"
                 />
   </url><url>
-    <loc>/6-deploywebtier/6.2-uploadcodetos3/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.2-uploadcodetos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-deploywebtier/6.2-uploadcodetos3/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.2-uploadcodetos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-deploywebtier/6.2-uploadcodetos3/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.2-uploadcodetos3/"
                 />
   </url><url>
-    <loc>/3-createdbwithrds/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-createdbwithrds/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/3-createdbwithrds/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-createdbwithrds/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/3-createdbwithrds/"
                 />
   </url><url>
-    <loc>/6-deploywebtier/6.3-createec2instance/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.3-createec2instance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-deploywebtier/6.3-createec2instance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.3-createec2instance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-deploywebtier/6.3-createec2instance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.3-createec2instance/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/7.3-createexternalloadbalancer/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.3-createexternalloadbalancer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/7.3-createexternalloadbalancer/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.3-createexternalloadbalancer/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.3-createec2role/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.3-createec2role/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.3-createec2role/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.3-createec2role/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.3-createec2role/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.3-createec2role/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/5.3-createinternalloadbalancer/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.3-createinternalloadbalancer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/5.3-createinternalloadbalancer/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.3-createinternalloadbalancer/"
                 />
   </url><url>
-    <loc>/4-deployapptier/4.3-downmysqloninstance/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.3-downmysqloninstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deployapptier/4.3-downmysqloninstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.3-downmysqloninstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deployapptier/4.3-downmysqloninstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.3-downmysqloninstance/"
                 />
   </url><url>
-    <loc>/6-deploywebtier/6.4-connecttoinstance/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.4-connecttoinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-deploywebtier/6.4-connecttoinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.4-connecttoinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-deploywebtier/6.4-connecttoinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/6.4-connecttoinstance/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/5.4-createlaunchtemplate/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.4-createlaunchtemplate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/5.4-createlaunchtemplate/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.4-createlaunchtemplate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/5.4-createlaunchtemplate/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.4-createlaunchtemplate/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/7.4-createlaunchtemplate/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.4-createlaunchtemplate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/7.4-createlaunchtemplate/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.4-createlaunchtemplate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/7.4-createlaunchtemplate/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.4-createlaunchtemplate/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.4-createvpc/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.4-createvpc/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.4-createvpc/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.4-createvpc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.4-createvpc/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.4-createvpc/"
                 />
   </url><url>
-    <loc>/4-deployapptier/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deployapptier/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deployapptier/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/"
                 />
   </url><url>
-    <loc>/4-deployapptier/4.4-runapponinstance/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.4-runapponinstance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-deployapptier/4.4-runapponinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.4-runapponinstance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-deployapptier/4.4-runapponinstance/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/4-deployapptier/4.4-runapponinstance/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/5.5-createautoscalinggroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.5-createautoscalinggroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/5.5-createautoscalinggroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/5.5-createautoscalinggroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/5.5-createautoscalinggroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/5.5-createautoscalinggroup/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/7.5-createautoscalinggroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.5-createautoscalinggroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/7.5-createautoscalinggroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.5-createautoscalinggroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/7.5-createautoscalinggroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/7.5-createautoscalinggroup/"
                 />
   </url><url>
-    <loc>/5-createinternallbandasg/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-createinternallbandasg/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/5-createinternallbandasg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-createinternallbandasg/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/5-createinternallbandasg/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.5-createsubnets/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.5-createsubnets/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.5-createsubnets/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.5-createsubnets/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.5-createsubnets/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.5-createsubnets/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.6-createigw/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.6-createigw/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.6-createigw/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.6-createigw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.6-createigw/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.6-createigw/"
                 />
   </url><url>
-    <loc>/6-deploywebtier/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-deploywebtier/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-deploywebtier/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/6-deploywebtier/"
                 />
   </url><url>
-    <loc>/7-createexternallbandasg/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-createexternallbandasg/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-createexternallbandasg/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/7-createexternallbandasg/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.7-createnatgateway/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.7-createnatgateway/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.7-createnatgateway/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.7-createnatgateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.7-createnatgateway/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.7-createnatgateway/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.8-createroutetable/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.8-createroutetable/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.8-createroutetable/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.8-createroutetable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.8-createroutetable/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.8-createroutetable/"
                 />
   </url><url>
-    <loc>/8-demoweb/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/8-demoweb/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/8-demoweb/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/8-demoweb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/8-demoweb/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/8-demoweb/"
                 />
   </url><url>
-    <loc>/9-cleanupresources/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/9-cleanupresources/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/9-cleanupresources/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/9-cleanupresources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/9-cleanupresources/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/9-cleanupresources/"
                 />
   </url><url>
-    <loc>/2-preparationsteps/2.9-createsecuritygroup/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.9-createsecuritygroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparationsteps/2.9-createsecuritygroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.9-createsecuritygroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparationsteps/2.9-createsecuritygroup/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/2-preparationsteps/2.9-createsecuritygroup/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/categories/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/categories/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/tags/"
                 />
   </url>
 </urlset>

@@ -13,8 +13,8 @@ pre : " <b> 6.3 </b> "
     - **Security group** select **WebTier-SG**
     - **Advanced details**, **IAM instance profile** select **ec2role**
     - Finally, select **Launch instance**
-![](../../../images/6-3/01.png?width=50pc)
-![](../../../images/6-3/02.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/01.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/02.png?width=50pc)
 
 2. Complete creating an EC2 instance for the **web server**
-![](../../../images/6-3/03.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/03.png?width=50pc)

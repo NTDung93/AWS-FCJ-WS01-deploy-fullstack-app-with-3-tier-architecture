@@ -11,10 +11,10 @@ pre : " <b> 7.1 </b> "
     - Chọn **Instances** ở sidebar
     - Chọn instance **My Web Server 1**
     - Click **Actions**, sau đó click **Image and template** và chọn **Create image**
-![AMI](../../../images/7-1/01.png?width=50pc)
+![AMI](/workshop01-AWS-FCJ-2024/images/7-1/01.png?width=50pc)
 
 2. Ở giao diện tạo image:
     - **Image name** điền **`WebTierImage`**
     - **Image description** điền **`Web tier`**
     - Lướt xuống dưới cùng, click **Create image**
-![AMI](../../../images/7-1/02.png?width=50pc)
+![AMI](/workshop01-AWS-FCJ-2024/images/7-1/02.png?width=50pc)

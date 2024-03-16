@@ -13,8 +13,8 @@ pre : " <b> 6.3 </b> "
     - **Security group** chọn **WebTier-SG**
     - **Advanced details**, **IAM instance profile** chọn **ec2role**
     - Cuối cùng chọn **Launch instance**
-![](../../../images/6-3/01.png?width=50pc)
-![](../../../images/6-3/02.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/01.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/02.png?width=50pc)
 
 2. Hoàn thành tạo EC2 instance cho **web server**
-![](../../../images/6-3/03.png?width=50pc)
+![](/workshop01-AWS-FCJ-2024/images/6-3/03.png?width=50pc)

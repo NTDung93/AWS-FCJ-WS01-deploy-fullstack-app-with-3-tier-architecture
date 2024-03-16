@@ -17,11 +17,11 @@ pre : " <b> 5.1 </b> "
     - Choose **Instances** from the sidebar
     - Select instance **My App Server 1**
     - Click **Actions**, then click **Image and template** and choose **Create image**
-![AMI](/images/5-1/01.png?width=50pc)
+![AMI](/workshop01-AWS-FCJ-2024/images/5-1/01.png?width=50pc)
 
 2. In the create image interface:
     - Fill in **Image name** with **`AppTierImage`**
     - Fill in **Image description** with **`App tier`**
     - Scroll down to the bottom and click **Create image**
-![AMI](/images/5-1/02.png?width=50pc)
+![AMI](/workshop01-AWS-FCJ-2024/images/5-1/02.png?width=50pc)
 

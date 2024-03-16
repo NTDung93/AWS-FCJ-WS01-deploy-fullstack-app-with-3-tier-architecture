@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tạo AMI cho Web Tier on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
-    <link>/vi/7-createexternallbandasg/7.1-createwebtierami/</link>
+    <link>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.1-createwebtierami/</link>
     <description>Recent content in Tạo AMI cho Web Tier on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <atom:link href="/vi/7-createexternallbandasg/7.1-createwebtierami/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/7-createexternallbandasg/7.1-createwebtierami/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Upaload code lên S3 on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
-    <link>/vi/6-deploywebtier/6.2-uploadcodetos3/</link>
+    <link>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.2-uploadcodetos3/</link>
     <description>Recent content in Upaload code lên S3 on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <atom:link href="/vi/6-deploywebtier/6.2-uploadcodetos3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/6-deploywebtier/6.2-uploadcodetos3/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

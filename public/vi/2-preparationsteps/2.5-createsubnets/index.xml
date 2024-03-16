@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tạo các Subnet on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
-    <link>/vi/2-preparationsteps/2.5-createsubnets/</link>
+    <link>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.5-createsubnets/</link>
     <description>Recent content in Tạo các Subnet on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <atom:link href="/vi/2-preparationsteps/2.5-createsubnets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/2-preparationsteps/2.5-createsubnets/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

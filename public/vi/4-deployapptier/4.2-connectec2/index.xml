@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kết nối tới EC2 instance on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
-    <link>/vi/4-deployapptier/4.2-connectec2/</link>
+    <link>https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.2-connectec2/</link>
     <description>Recent content in Kết nối tới EC2 instance on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <atom:link href="/vi/4-deployapptier/4.2-connectec2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ntdung93.github.io/workshop01-AWS-FCJ-2024/vi/4-deployapptier/4.2-connectec2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

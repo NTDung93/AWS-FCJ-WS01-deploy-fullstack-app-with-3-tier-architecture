@@ -1,5 +1,7 @@
 # relativeURLs = true
 # Change the default theme to be use when building the site with Hugo
+baseURL = "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/"
+BaseURL = "https://ntdung93.github.io/workshop01-AWS-FCJ-2024/"
 theme = "hugo-theme-learn"
 
 # For search functionality
